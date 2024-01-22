@@ -33,6 +33,12 @@ public class outline : MonoBehaviour
             currentPlayer.GetComponent<swapping>().targetIsNearby = true;
             currentPlayer.GetComponent<swapping>().targetedPlayer = this.gameObject;
         }
+
+        if (col.tag == "BigPlayer")
+        {
+            outlineColor.color = Color.green;
+            col.gameObject.GetComponent<throwing>().isThrowable = true;
+        }
         
     }
 
@@ -40,11 +46,12 @@ public class outline : MonoBehaviour
     {
         if (col.tag == "Ghost")
         {
-            outlineColor.color = Color.white;
             currentPlayer.GetComponent<swapping>().targetIsNearby = false;
             currentPlayer.GetComponent<swapping>().targetedPlayer = null;
             currentPlayer = null;
         }
+
+        outlineColor.color = Color.white;
 
     }
 }
