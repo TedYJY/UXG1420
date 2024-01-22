@@ -8,6 +8,10 @@ public class PickUp : MonoBehaviour
     public LayerMask pickUpMask;
     public Vector3 Direction { get; set; }
     public GameObject itemHolding;
+    public float ThrowSpeed = 0.01f;
+    public int ForSpeed = 100;
+    public int ThrowDistance = 5;
+    public GameObject throwMarker;
 
     void Update()
     {
@@ -20,6 +24,7 @@ public class PickUp : MonoBehaviour
                 if (itemHolding.GetComponent<Rigidbody2D>())
                     itemHolding.GetComponent<Rigidbody2D>().simulated = true;
                 itemHolding = null;
+
             }
             else
             {
@@ -43,16 +48,22 @@ public class PickUp : MonoBehaviour
                 itemHolding = null;
             }
         }
+
+        if (itemHolding)
+        {
+            throwMarker.transform.position = transform.position + Direction * ThrowDistance;
+
+        }   
     }
 
     IEnumerator ThrowItem(GameObject item)
     {
         Vector3 startPoint = item.transform.position;
-        Vector3 endPoint = transform.position + Direction * 20;
+        Vector3 endPoint = transform.position + Direction * ThrowDistance;
         item.transform.parent = null;
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < ForSpeed; i++)
         {
-            item.transform.position = Vector3.Lerp(startPoint, endPoint, i * .04f);
+            item.transform.position = Vector3.Lerp(startPoint, endPoint, i * ThrowSpeed);
             yield return null;
         }
         if (item.GetComponent<Rigidbody2D>())
