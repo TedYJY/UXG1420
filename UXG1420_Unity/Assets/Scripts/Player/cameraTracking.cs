@@ -17,6 +17,7 @@ public class cameraTracking : MonoBehaviour
 
     void FixedUpdate()
     {
+
         Vector3 targetPos = target.position;
 
         //align the camera and the target z position

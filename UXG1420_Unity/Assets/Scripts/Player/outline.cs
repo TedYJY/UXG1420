@@ -5,14 +5,14 @@ using UnityEngine;
 public class outline : MonoBehaviour
 {
 
-    public SpriteRenderer outlineColor;
+    private SpriteRenderer outlineColor;
 
-    public GameObject currentPlayer;
+    private GameObject currentPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        outlineColor = this.gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -30,15 +30,14 @@ public class outline : MonoBehaviour
 
             //Tags the current player and changes condition of "swapping" script to enable possessing
             currentPlayer = col.gameObject;
-            currentPlayer.GetComponent<swapping>().targetIsNearby = true;
-            currentPlayer.GetComponent<swapping>().targetedPlayer = this.gameObject;
+            currentPlayer.GetComponent<playerHandler>().outlineNearby(this.gameObject);
         }
 
-        if (col.tag == "BigPlayer")
+        /*if (col.tag == "BigPlayer")
         {
             outlineColor.color = Color.green;
             col.gameObject.GetComponent<throwing>().isThrowable = true;
-        }
+        }*/
         
     }
 
@@ -46,8 +45,7 @@ public class outline : MonoBehaviour
     {
         if (col.tag == "Ghost")
         {
-            currentPlayer.GetComponent<swapping>().targetIsNearby = false;
-            currentPlayer.GetComponent<swapping>().targetedPlayer = null;
+            currentPlayer.GetComponent<playerHandler>().outlineNearby(null);
             currentPlayer = null;
         }
 

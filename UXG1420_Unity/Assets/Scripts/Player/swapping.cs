@@ -34,7 +34,6 @@ public class swapping : MonoBehaviour
         {
             //Change to nearby character
             cameraRef.GetComponent<cameraTracking>().target = targetedPlayer.transform;
-            targetedPlayer.GetComponent<spriteChange>().spritePossess();
             targetedPlayer.GetComponent<movement>().enabled = true;
             targetedPlayer.GetComponent<CapsuleCollider2D>().enabled = true;
             targetedPlayer.GetComponent<swapping>().enabled = true;
@@ -52,8 +51,6 @@ public class swapping : MonoBehaviour
             isGhost = true;
             ghost.transform.position = currentPlayer.transform.position;
             cameraRef.GetComponent<cameraTracking>().target = ghost.transform;
-            currentPlayer.GetComponent<spriteChange>().spriteUnpossess();
-
             currentPlayer.GetComponent<movement>().enabled = false;
             currentPlayer.GetComponent<CapsuleCollider2D>().enabled = false;
             currentPlayer.GetComponent<BoxCollider2D>().enabled = true;
