@@ -6,7 +6,7 @@ public class playerHandler : MonoBehaviour
 {
 
     //Movement assignment
-    private float moveSpeed = 5f;
+    private float moveSpeed = 15f;
     private Rigidbody2D rb;
     private Vector2 movement;
 

@@ -8,11 +8,13 @@ TagManager:
   - Posessable
   - BigPlayer
   - SmallPlayer
+  - EndDoor
+  - 3x3
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Wind Pushes
   - Water
   - UI
   - Pick Up

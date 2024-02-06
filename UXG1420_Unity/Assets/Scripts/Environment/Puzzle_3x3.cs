@@ -11,6 +11,10 @@ public class Puzzle_3x3 : MonoBehaviour
     public GameObject Left;
     public GameObject Right;
 
+    private GameObject EndDoor;
+
+
+
     //Keeps track of the state of the pressure plate
     public bool IsActivated = false;
 
@@ -23,7 +27,7 @@ public class Puzzle_3x3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        EndDoor = GameObject.FindWithTag("EndDoor");
     }
 
     // Update is called once per frame
@@ -37,6 +41,7 @@ public class Puzzle_3x3 : MonoBehaviour
 
             //Activates surrounding pressure plates
             ActivationSurrounding();
+
         }
     }
 
@@ -85,18 +90,41 @@ public class Puzzle_3x3 : MonoBehaviour
         {
             Right.GetComponent<Puzzle_3x3>().Activation();
         }
+
+        //If all plates are on, destroy door and script to prevent from uncompletion
+        if (Tracker == 9)
+        {
+            GameObject[] TempArray = GameObject.FindGameObjectsWithTag("3x3");
+
+            foreach (GameObject T in TempArray)
+            {
+                T.GetComponent<Puzzle_3x3>().enabled = false;
+            }
+
+            EndDoor.SetActive(false);
+
+            Debug.Log("3x3 Completed!");
+
+
+        }
     }
 
 
     //Enters trigger, sets IsOnTop to true to allow Keydown
     private void OnTriggerEnter2D(Collider2D col)
     {
-        IsOnTop = true;
+        if (col.tag == "Ghost")
+        {
+          IsOnTop = true;
+        }
     }
 
     //Exits trigger, sets IsOnTop to false to prevent Keydown
     private void OnTriggerExit2D(Collider2D col)
     {
-        IsOnTop = false;
+        if (col.tag == "Ghost")
+        {
+            IsOnTop = false;
+        }
     }
 }
