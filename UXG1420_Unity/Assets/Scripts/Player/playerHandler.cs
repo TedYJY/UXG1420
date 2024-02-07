@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class playerHandler : MonoBehaviour
 {
+    //Height assignemnt
+    public float height = 0f;
 
     //Movement assignment
     private float moveSpeed = 15f;
@@ -61,7 +63,8 @@ public class playerHandler : MonoBehaviour
     void FixedUpdate()
     {
         //Movement using RigidBody2D
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position  + movement * moveSpeed * Time.fixedDeltaTime);
+
     }
 
     private void AttemptPossession()
@@ -127,4 +130,8 @@ public class playerHandler : MonoBehaviour
         targetedPlayer = target;
     }
 
+    public void attemptFall(GameObject floor)
+    {
+
+    }
 }
