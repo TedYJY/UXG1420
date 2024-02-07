@@ -75,7 +75,7 @@ public class playerHandler : MonoBehaviour
             //Change to nearby character
 
             //Set camera to look at new player
-            cameraRef.GetComponent<cameraTracking>().target = targetedPlayer.transform;
+            cameraRef.GetComponent<cameraTracking>().ChangeTarget(targetedPlayer);
 
             //Enable Collider for the new player
             targetedPlayer.GetComponent<CapsuleCollider2D>().enabled = true;
@@ -107,7 +107,7 @@ public class playerHandler : MonoBehaviour
             ghostPlayer.transform.position = currentPlayer.transform.position;
 
             //Set camera to look at ghost player
-            cameraRef.GetComponent<cameraTracking>().target = ghostPlayer.transform;
+            cameraRef.GetComponent<cameraTracking>().ChangeTarget(ghostPlayer);
 
             //Disable BigPlayer's collider (MIGHT CHANGE FOR THE WIND FAN)
             currentPlayer.GetComponent<CapsuleCollider2D>().enabled = false;

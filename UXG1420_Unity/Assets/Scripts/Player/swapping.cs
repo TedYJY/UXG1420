@@ -33,7 +33,7 @@ public class swapping : MonoBehaviour
         if (targetIsNearby == true && isGhost == true)
         {
             //Change to nearby character
-            cameraRef.GetComponent<cameraTracking>().target = targetedPlayer.transform;
+            cameraRef.GetComponent<cameraTracking>().ChangeTarget(targetedPlayer);
             targetedPlayer.GetComponent<movement>().enabled = true;
             targetedPlayer.GetComponent<CapsuleCollider2D>().enabled = true;
             targetedPlayer.GetComponent<swapping>().enabled = true;
@@ -50,7 +50,7 @@ public class swapping : MonoBehaviour
             //Change into ghost
             isGhost = true;
             ghost.transform.position = currentPlayer.transform.position;
-            cameraRef.GetComponent<cameraTracking>().target = ghost.transform;
+            cameraRef.GetComponent<cameraTracking>().ChangeTarget(ghost);
             currentPlayer.GetComponent<movement>().enabled = false;
             currentPlayer.GetComponent<CapsuleCollider2D>().enabled = false;
             currentPlayer.GetComponent<BoxCollider2D>().enabled = true;
