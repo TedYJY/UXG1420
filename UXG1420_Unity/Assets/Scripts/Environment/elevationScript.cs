@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 
 public class elevationScript : MonoBehaviour
 {
     public float height;
 
-
+    private float maxSpeed = 150;
+    private float fallSpeed = 2f;
+    private float internalCounterSpeed = 0.1f;
     private Collider2D floorCollider;
     private float internalCounter = 0;
     private bool countEnabler = false;
-    private Collision2D collidingObject;
+    private Collider2D collidingObject;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -26,40 +30,46 @@ public class elevationScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        /*if (countEnabler == true)
+        if (countEnabler == true)
         {
-            internalCounter -= 0.01f;
-            if (internalCounter == 0)
-            {
+            internalCounter -=  internalCounterSpeed ;//Time.deltaTime;
+            collidingObject.GetComponent<Rigidbody2D>().gravityScale = Mathf.Clamp(collidingObject.GetComponent<Rigidbody2D>().gravityScale * fallSpeed, 0, maxSpeed);
+            if (internalCounter <= 0) 
+            { 
                 stopFall(collidingObject);
             }
-        }*/
+        }
     }
-    void OnCollisionExit2D(Collision2D collision)
-    { 
-        if (collision.gameObject.GetComponent<playerHandler>().height >= this.height)
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        Debug.Log("exited");
+        //if (collision.gameObject.GetComponent<playerHandler>().height == this.height)
+        if (collidingObject.GetComponent<playerHandler>().height >= height)
         {
-            startFall(collision);
+            startFall(collidingObject);
             //collidingObject.height
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         collidingObject = collision;
+        Debug.Log("entered");
     }
 
-    public void startFall(Collision2D collision)
+    public void startFall(Collider2D collision)
     {
-        //internalCounter = collidingObject.gameObject.GetComponent<playerHandler>().height;
-        collision.rigidbody.gravityScale = 100;
-        //countEnabler = true;
+        internalCounter = collidingObject.GetComponent<playerHandler>().height;
+        collision.GetComponent<Rigidbody2D>().gravityScale = 3;
+        countEnabler = true;
     }
 
-    public void stopFall(Collision2D collision)
+    public void stopFall(Collider2D collision)
     {
-        collision.rigidbody.gravityScale = 0;
-        //countEnabler = false;
-        //internalCounter = 0;
+        collision.GetComponent<Rigidbody2D>().gravityScale = 0;
+        collision.GetComponent<playerHandler>().height = 0;
+        countEnabler = false;
+        internalCounter = 0;
     }
 }
