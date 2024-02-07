@@ -6,14 +6,24 @@ public class cameraTracking : MonoBehaviour
 {
 
     //what we are following
-    public Transform target;
+    private Transform target;
 
     //zeros out velocity
     Vector3 velocity = Vector3.zero;
 
     //time to follow target
-    public float smoothTime = .15f;
+    private float smoothTime = .15f;
 
+    public float leftLimit;
+    public float rightLimit;
+    public float bottomLimit;
+    public float topLimit;
+
+
+    private void Start()
+    {
+        target = GameObject.FindWithTag("Ghost").transform;
+    }
 
     void FixedUpdate()
     {
@@ -24,5 +34,24 @@ public class cameraTracking : MonoBehaviour
         targetPos.z = transform.position.z;
 
         transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothTime);
+
+
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, leftLimit, rightLimit), Mathf.Clamp(transform.position.y, bottomLimit, topLimit), transform.position.z);
+    }
+
+    public void ChangeTarget(GameObject T)
+    {
+        target = T.transform;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(new Vector2(leftLimit, topLimit), new Vector2(rightLimit, topLimit));
+        Gizmos.DrawLine(new Vector2(rightLimit, topLimit), new Vector2(rightLimit, bottomLimit));
+        Gizmos.DrawLine(new Vector2(rightLimit, bottomLimit), new Vector2(leftLimit, bottomLimit));
+        Gizmos.DrawLine(new Vector2(leftLimit, bottomLimit), new Vector2(leftLimit, topLimit));
+
+
     }
 }

@@ -34,7 +34,7 @@ public class Puzzle_3x3 : MonoBehaviour
     void Update()
     {
         //Checks for keydown, when player is colliding with trigger
-        if (Input.GetKeyDown(KeyCode.F) && IsOnTop == true)
+        if (Input.GetKeyDown(KeyCode.E) && IsOnTop == true)
         {
             //Activates the pressure plate
             Activation();
