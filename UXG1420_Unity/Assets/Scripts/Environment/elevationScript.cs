@@ -26,18 +26,18 @@ public class elevationScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (countEnabler == true)
+        /*if (countEnabler == true)
         {
-            internalCounter -= 0.1f;
+            internalCounter -= 0.01f;
             if (internalCounter == 0)
             {
                 stopFall(collidingObject);
             }
-        }
+        }*/
     }
     void OnCollisionExit2D(Collision2D collision)
     { 
-        if (collidingObject.gameObject.GetComponent<playerHandler>().height >= this.height)
+        if (collision.gameObject.GetComponent<playerHandler>().height >= this.height)
         {
             startFall(collision);
             //collidingObject.height
@@ -51,15 +51,15 @@ public class elevationScript : MonoBehaviour
 
     public void startFall(Collision2D collision)
     {
-        internalCounter = collidingObject.gameObject.GetComponent<playerHandler>().height;
+        //internalCounter = collidingObject.gameObject.GetComponent<playerHandler>().height;
         collision.rigidbody.gravityScale = 100;
-        countEnabler = true;
+        //countEnabler = true;
     }
 
     public void stopFall(Collision2D collision)
     {
         collision.rigidbody.gravityScale = 0;
-        countEnabler = false;
-        internalCounter = 0;
+        //countEnabler = false;
+        //internalCounter = 0;
     }
 }

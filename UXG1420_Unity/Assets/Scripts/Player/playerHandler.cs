@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerHandler : MonoBehaviour
 {
     //Height assignemnt
-    public float height = 0f;
+    public float height = 1f;
 
     //Movement assignment
     private float moveSpeed = 15f;
