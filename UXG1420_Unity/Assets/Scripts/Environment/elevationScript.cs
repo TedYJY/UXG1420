@@ -6,6 +6,7 @@ using UnityEngine.Experimental.GlobalIllumination;
 public class elevationScript : MonoBehaviour
 {
     public float height;
+    public GameObject floorCollision;
 
     private float maxSpeed = 150;
     private float fallSpeed = 2f;
@@ -60,6 +61,15 @@ public class elevationScript : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Debug.Log("staying");
+        if (collidingObject.GetComponent<playerHandler>().height >= height)
+            {
+                floorCollision.GetComponentInParent<Collider2D>().enabled = false;
+            }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //on object entering, will store object
@@ -73,6 +83,7 @@ public class elevationScript : MonoBehaviour
         internalCounter = collidingObject.GetComponent<playerHandler>().height;
         collision.GetComponent<Rigidbody2D>().gravityScale = 3;
         countEnabler = true;
+        collidingObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
     }
 
     public void stopFall(Collider2D collision)
@@ -82,5 +93,6 @@ public class elevationScript : MonoBehaviour
         collision.GetComponent<playerHandler>().height = 0;
         countEnabler = false;
         internalCounter = 0;
+        floorCollision.GetComponentInParent<Collider2D>().enabled = true;
     }
 }
