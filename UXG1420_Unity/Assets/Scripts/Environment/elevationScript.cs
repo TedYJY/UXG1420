@@ -83,7 +83,7 @@ public class elevationScript : MonoBehaviour
         internalCounter = collidingObject.GetComponent<playerHandler>().height;
         collision.GetComponent<Rigidbody2D>().gravityScale = 3;
         countEnabler = true;
-        collidingObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+        
     }
 
     public void stopFall(Collider2D collision)
@@ -94,5 +94,6 @@ public class elevationScript : MonoBehaviour
         countEnabler = false;
         internalCounter = 0;
         floorCollision.GetComponentInParent<Collider2D>().enabled = true;
+        collidingObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
     }
 }
