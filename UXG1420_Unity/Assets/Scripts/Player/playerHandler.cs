@@ -40,7 +40,7 @@ public class playerHandler : MonoBehaviour
         //GetInput for movement keys, WASD, Arrows, Controller etc.
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        movement = movement.normalized;
+        //movement = movement.normalized;
 
         //Disables diagonal movement
         if (Mathf.Abs(movement.x) > Mathf.Abs(movement.y))

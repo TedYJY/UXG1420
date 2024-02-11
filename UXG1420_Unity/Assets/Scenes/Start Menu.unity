@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &30365428 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1581272655713670023, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+  m_PrefabInstance: {fileID: 151928279}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &151928279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,13 +136,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1581272655713670023, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f1955d68bfde3824f959463178bf7b40, type: 2}
+    - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+      propertyPath: transition
+      value: 
+      objectReference: {fileID: 30365428}
     - target: {fileID: 8425410549361499159, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
     - target: {fileID: 8425410549361499159, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8425410549361499159, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8914119552138742866, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: m_LocalPosition.x
@@ -184,6 +201,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+--- !u!1 &172475512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8425410549361499159, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+  m_PrefabInstance: {fileID: 151928279}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &217105240
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,7 +282,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -939,6 +961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24073f9667637b44a934cc4540a6fd53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoader: {fileID: 172475512}
 --- !u!1 &1762470739
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,7 +979,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1762470740
 RectTransform:
   m_ObjectHideFlags: 0
