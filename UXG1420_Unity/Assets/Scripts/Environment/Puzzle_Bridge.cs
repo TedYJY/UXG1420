@@ -8,6 +8,7 @@ public class Puzzle_Bridge : MonoBehaviour
     // Start is called before the first frame update
 
     public GameObject DrawbridgeTrigger;
+    public GameObject BridgeSprites;
     public GameObject ExtraPressurePlate = null;
     public bool IsActivated;
 
@@ -48,14 +49,17 @@ public class Puzzle_Bridge : MonoBehaviour
     {
         if (ExtraPressurePlate == null && IsActivated == true)
         {
-            DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = false;
+            /*DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = false;
             DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.green;
+            BridgeSprites.SetActive(false);*/
+            ActivateBridge();
         }
 
         else if (ExtraPressurePlate != null && ExtraPressurePlate.GetComponent<Puzzle_Bridge>().IsActivated && IsActivated == true)
         {
             DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = false;
             DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.green;
+            BridgeSprites.SetActive(false);
         }
 
         else
@@ -71,5 +75,12 @@ public class Puzzle_Bridge : MonoBehaviour
                 Debug.Log("Not enough for bridge!");
             }
         }
+    }
+
+    private void ActivateBridge()
+    {
+        DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = false;
+        DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.green;
+        BridgeSprites.SetActive(true);
     }
 }

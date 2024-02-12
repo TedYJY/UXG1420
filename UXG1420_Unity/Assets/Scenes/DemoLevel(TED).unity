@@ -743,7 +743,7 @@ Transform:
   m_GameObject: {fileID: 138731905}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -70.8, y: -7.1, z: 0}
+  m_LocalPosition: {x: -60.49, y: -1.09, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -937,7 +937,7 @@ Transform:
   m_GameObject: {fileID: 174437057}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.3, y: -14.2, z: 0}
+  m_LocalPosition: {x: -48.36, y: -16.52, z: 0}
   m_LocalScale: {x: 0.61910975, y: 0.61910975, z: 0.61910975}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1075,6 +1075,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93e7ca9c344e7048a152f45a20d63a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &176669610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 176669611}
+  m_Layer: 0
+  m_Name: Bridges
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &176669611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176669610}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -40.932655, y: 11.1588, z: -0.008716308}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 503914566}
+  - {fileID: 1128550404}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &176847667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,7 +1396,7 @@ Transform:
   m_GameObject: {fileID: 221139025}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.86239433, y: 31.2799, z: 0.19463025}
+  m_LocalPosition: {x: -0.86239433, y: 32.59, z: 0.19463025}
   m_LocalScale: {x: 9.202114, y: 56.692898, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1381,6 +1414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e84c41de3285d40ac19716edb5216e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BridgeSprites: {fileID: 0}
 --- !u!61 &221139028
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1866,7 +1900,7 @@ Transform:
   m_GameObject: {fileID: 369556318}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -54.7, y: -11.7, z: 0}
+  m_LocalPosition: {x: -55.53, y: -14.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2068,6 +2102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DrawbridgeTrigger: {fileID: 1353075102}
+  BridgeSprites: {fileID: 503914564}
   ExtraPressurePlate: {fileID: 963509994}
   IsActivated: 0
 --- !u!1 &464579946
@@ -3696,6 +3731,90 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &503914564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 503914566}
+  - component: {fileID: 503914565}
+  m_Layer: 0
+  m_Name: Horizontal log bridge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!212 &503914565
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503914564}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 67055433
+  m_SortingLayer: 1
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: ce9a0127f548a56458024c9905b59d34, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 40.96, y: 20.48}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &503914566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503914564}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 22.452656, y: -24.028801, z: 0.008716308}
+  m_LocalScale: {x: 0.54038, y: 0.54038, z: 0.54038}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 176669611}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &514244467
 GameObject:
   m_ObjectHideFlags: 0
@@ -3776,7 +3895,7 @@ Transform:
   m_GameObject: {fileID: 514244467}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -62.6, y: -41.1, z: 0}
+  m_LocalPosition: {x: -68.9, y: -41.1, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3941,7 +4060,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.3, y: -8.5, z: -10}
+  m_LocalPosition: {x: -36, y: -8.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3959,8 +4078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29c15674d0f25b64ebc1f30159dc949d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftLimit: -31
-  rightLimit: -5
+  leftLimit: -36
+  rightLimit: 0
   bottomLimit: -8.5
   topLimit: 33
 --- !u!1 &590291340
@@ -4284,6 +4403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e84c41de3285d40ac19716edb5216e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BridgeSprites: {fileID: 0}
 --- !u!61 &711924302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4427,6 +4547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e84c41de3285d40ac19716edb5216e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BridgeSprites: {fileID: 0}
 --- !u!61 &759280625
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5036,6 +5157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e84c41de3285d40ac19716edb5216e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BridgeSprites: {fileID: 0}
 --- !u!61 &809958912
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5415,6 +5537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DrawbridgeTrigger: {fileID: 1353075102}
+  BridgeSprites: {fileID: 503914564}
   ExtraPressurePlate: {fileID: 378161327}
   IsActivated: 0
 --- !u!1001 &975281586
@@ -5712,6 +5835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e84c41de3285d40ac19716edb5216e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BridgeSprites: {fileID: 0}
 --- !u!61 &1011838164
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6310,6 +6434,90 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!1 &1128550402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1128550404}
+  - component: {fileID: 1128550403}
+  m_Layer: 0
+  m_Name: Vertical log bridge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!212 &1128550403
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128550402}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 67055433
+  m_SortingLayer: 1
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 0a60a26534b3bf14982ccd4a56c37638, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 20.48, y: 40.96}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1128550404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128550402}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.7673454, y: 0.44120026, z: 0.008716308}
+  m_LocalScale: {x: 0.54038, y: 0.54038, z: 0.54038}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 176669611}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1245746220
 GameObject:
   m_ObjectHideFlags: 0
@@ -6356,6 +6564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e84c41de3285d40ac19716edb5216e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BridgeSprites: {fileID: 0}
 --- !u!61 &1245746223
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6742,7 +6951,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 994e13fb51942064bba7fb2494674d6e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14314,7 +14523,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.86239433, y: -1.248, z: 0.19463025}
-  m_LocalScale: {x: 9.202114, y: 8.334686, z: 1}
+  m_LocalScale: {x: 9.202114, y: 10.829882, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1598140158}
@@ -14331,6 +14540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e84c41de3285d40ac19716edb5216e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BridgeSprites: {fileID: 0}
 --- !u!61 &1353075105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14558,6 +14768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e84c41de3285d40ac19716edb5216e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BridgeSprites: {fileID: 0}
 --- !u!61 &1435002839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14784,7 +14995,7 @@ Transform:
   m_GameObject: {fileID: 1494053296}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -71.4, y: -30.6, z: 0}
+  m_LocalPosition: {x: -53.9, y: -28.5, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14803,6 +15014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DrawbridgeTrigger: {fileID: 809958909}
+  BridgeSprites: {fileID: 1128550402}
   ExtraPressurePlate: {fileID: 0}
   IsActivated: 0
 --- !u!1 &1513224320
@@ -14929,6 +15141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e84c41de3285d40ac19716edb5216e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BridgeSprites: {fileID: 0}
 --- !u!61 &1590113329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15517,6 +15730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e84c41de3285d40ac19716edb5216e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BridgeSprites: {fileID: 0}
 --- !u!61 &1833761301
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15623,7 +15837,7 @@ Transform:
   m_GameObject: {fileID: 1833761299}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.86239433, y: -13.382931, z: 0.19463025}
+  m_LocalPosition: {x: -0.86239433, y: -14.9, z: 0.19463025}
   m_LocalScale: {x: 9.202114, y: 15.954606, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16081,6 +16295,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 975281586}
+  - {fileID: 176669611}
   - {fileID: 990075781}
   - {fileID: 464579947}
   - {fileID: 153938028}

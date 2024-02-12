@@ -5,6 +5,8 @@ using UnityEngine;
 public class River : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject BridgeSprites;
+
     void Start()
     {
         
@@ -21,7 +23,13 @@ public class River : MonoBehaviour
         if (col.tag == "BigPlayer")
         {
             //Upon entering trigger zone, destroys if it is Beary
-            Destroy(col.gameObject);
+            //Destroy(col.gameObject);
+            this.GetComponent<Collider2D>().isTrigger = false;
         }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        this.GetComponent<Collider2D>().isTrigger = true;
     }
 }
