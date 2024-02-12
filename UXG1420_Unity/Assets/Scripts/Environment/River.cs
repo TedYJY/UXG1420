@@ -5,7 +5,6 @@ using UnityEngine;
 public class River : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject BridgeSprites;
 
     void Start()
     {
