@@ -78,7 +78,7 @@ public class playerHandler : MonoBehaviour
             cameraRef.GetComponent<cameraTracking>().ChangeTarget(targetedPlayer);
 
             //Enable Collider for the new player
-            targetedPlayer.GetComponent<CapsuleCollider2D>().enabled = true;
+            targetedPlayer.GetComponent<BoxCollider2D>().enabled = true;
 
             //Enable playerHandler script for new player
             targetedPlayer.GetComponent<playerHandler>().enabled = true;
@@ -90,7 +90,7 @@ public class playerHandler : MonoBehaviour
             targetedPlayer.GetComponent<playerHandler>().ghostPlayer = this.gameObject;
 
             //Disable box collider (trigger) for the outlining
-            targetedPlayer.GetComponent<BoxCollider2D>().enabled = false;
+            targetedPlayer.GetComponent<CapsuleCollider2D>().enabled = false;
 
             //Sets targetIsNearby to false, to prevent accidental triggering
             targetIsNearby = false;
