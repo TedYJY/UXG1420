@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class outline : MonoBehaviour
@@ -26,11 +27,13 @@ public class outline : MonoBehaviour
         if (col.tag == "Ghost")
         {
             //Outlines the nearby player
-            outlineColor.color = Color.red;
+            outlineColor.color = UnityEngine.Color.red;
 
             //Tags the current player and changes condition of "swapping" script to enable possessing
             currentPlayer = col.gameObject;
             currentPlayer.GetComponent<playerHandler>().outlineNearby(this.gameObject);
+
+
         }
 
         /*if (col.tag == "BigPlayer")
@@ -49,7 +52,7 @@ public class outline : MonoBehaviour
             currentPlayer = null;
         }
 
-        outlineColor.color = Color.white;
+        outlineColor.color = UnityEngine.Color.white;
 
     }
 }

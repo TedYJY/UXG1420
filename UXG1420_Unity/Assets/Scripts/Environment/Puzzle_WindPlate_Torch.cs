@@ -7,6 +7,7 @@ public class Puzzle_WindPlate_Torch : MonoBehaviour
 {
 
     public GameObject BridgeSprites;
+    public Sprite TorchLit;
 
     private GameObject TorchCollider;
     private GameObject SpiritBridge;
@@ -31,6 +32,7 @@ public class Puzzle_WindPlate_Torch : MonoBehaviour
             BridgeSprites.SetActive(true);
             TorchCollider.SetActive(false);
             IsActivated = true;
+            this.gameObject.GetComponent<SpriteRenderer>().sprite =  TorchLit;
 
         }
 

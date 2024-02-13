@@ -14,7 +14,9 @@ public class UIScripts : MonoBehaviour
     public GameObject D_Pressed;
     public GameObject D_Unpressed;
 
-    private string Keypressed;
+    public GameObject E_Parent;
+
+    private bool WASDActive = true;
 
     // Start is called before the first frame update
     void Start()
@@ -27,43 +29,43 @@ public class UIScripts : MonoBehaviour
     {
 
 
-        if (Input.GetKeyDown("w"))
+        if (Input.GetKeyDown("w") && WASDActive == true)
         {
             W_Pressed.SetActive(true);
             W_Unpressed.SetActive(false);
-        } 
-        else if (Input.GetKeyDown("a")) 
+        }
+        else if (Input.GetKeyDown("a") && WASDActive == true)
         {
             A_Pressed.SetActive(true);
             A_Unpressed.SetActive(false);
         }
-        else if (Input.GetKeyDown("s"))
+        else if (Input.GetKeyDown("s") && WASDActive == true)
         {
             S_Pressed.SetActive(true);
             S_Unpressed.SetActive(false);
         }
-        else if (Input.GetKeyDown("d"))
+        else if (Input.GetKeyDown("d") && WASDActive == true)
         {
             D_Pressed.SetActive(true);
             D_Unpressed.SetActive(false);
         }
 
-        if (Input.GetKeyUp("w"))
+        if (Input.GetKeyUp("w") && WASDActive == true)
         {
             W_Pressed.SetActive(false);
             W_Unpressed.SetActive(true);
         }
-        else if (Input.GetKeyUp("a"))
+        else if (Input.GetKeyUp("a") && WASDActive == true)
         {
             A_Pressed.SetActive(false);
             A_Unpressed.SetActive(true);
         }
-        else if (Input.GetKeyUp("s"))
+        else if (Input.GetKeyUp("s") && WASDActive == true)
         {
             S_Pressed.SetActive(false);
             S_Unpressed.SetActive(true);
         }
-        else if (Input.GetKeyUp("d"))
+        else if (Input.GetKeyUp("d") && WASDActive == true)
         {
             D_Pressed.SetActive(false);
             D_Unpressed.SetActive(true);
@@ -75,5 +77,26 @@ public class UIScripts : MonoBehaviour
         // waits for two seconds before continuing
         yield return new WaitForSeconds(15f);
 
+    }
+
+    public void TurnEActive()
+    {
+        E_Parent.SetActive(true);
+
+        WASDActive = false;
+        W_Pressed.SetActive(false);
+        W_Unpressed.SetActive(false);
+        A_Pressed.SetActive(false);
+        A_Unpressed.SetActive(false);
+        S_Pressed.SetActive(false);
+        S_Unpressed.SetActive(false);
+        D_Pressed.SetActive(false);
+        D_Unpressed.SetActive(false);
+    }
+
+    public void TurnEInactive()
+    {
+        E_Parent.SetActive(false);
+        WASDActive = true;
     }
 }
