@@ -12,6 +12,7 @@ TagManager:
   - 3x3
   - Rock
   - MainMenu
+  - UI
   layers:
   - Default
   - TransparentFX
@@ -54,4 +55,7 @@ TagManager:
     locked: 0
   - name: Interactable Elements
     uniqueID: 4182504305
+    locked: 0
+  - name: UI Elements
+    uniqueID: 779345091
     locked: 0
