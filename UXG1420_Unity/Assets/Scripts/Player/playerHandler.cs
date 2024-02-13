@@ -110,10 +110,10 @@ public class playerHandler : MonoBehaviour
             cameraRef.GetComponent<cameraTracking>().ChangeTarget(ghostPlayer);
 
             //Disable BigPlayer's collider (MIGHT CHANGE FOR THE WIND FAN)
-            currentPlayer.GetComponent<CapsuleCollider2D>().enabled = false;
+            currentPlayer.GetComponent<BoxCollider2D>().enabled = false;
 
             //Enable trigger for outlining
-            currentPlayer.GetComponent<BoxCollider2D>().enabled = true;
+            currentPlayer.GetComponent<CapsuleCollider2D>().enabled = true;
 
             //Disables playerHandler script for bear
             currentPlayer.GetComponent<playerHandler>().enabled = false;

@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DemoLevel(TED).unity
     guid: a5ee73765dc32b149a4dead55320c51d
+  - enabled: 1
+    path: Assets/Scenes/EndStory.unity
+    guid: 467064f6e9f9bee4f8436a754c1434f0
   m_configObjects: {}
