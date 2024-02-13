@@ -14,6 +14,7 @@ public class playerHandler : MonoBehaviour
 
     //possession assignments
     private GameObject cameraRef;
+    private GameObject UIRef;
     private GameObject currentPlayer;
     private GameObject targetedPlayer;
     private GameObject ghostPlayer;
@@ -30,6 +31,7 @@ public class playerHandler : MonoBehaviour
         targetedPlayer = null;
         targetIsNearby = false;
         cameraRef = GameObject.FindWithTag("MainCamera");
+        UIRef = GameObject.FindWithTag("UI");
 
 
     }
@@ -76,6 +78,9 @@ public class playerHandler : MonoBehaviour
 
             //Set camera to look at new player
             cameraRef.GetComponent<cameraTracking>().ChangeTarget(targetedPlayer);
+
+            //Set UI to look at new player
+            UIRef.GetComponent<cameraTracking>().ChangeTarget(targetedPlayer);
 
             //Enable Collider for the new player
             targetedPlayer.GetComponent<BoxCollider2D>().enabled = true;

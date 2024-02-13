@@ -5,9 +5,13 @@ using UnityEngine.XR;
 
 public class Puzzle_WindPlate_Torch : MonoBehaviour
 {
+
+    public GameObject BridgeSprites;
+
     private GameObject TorchCollider;
     private GameObject SpiritBridge;
     private bool IsAble;
+    private bool IsActivated = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +28,10 @@ public class Puzzle_WindPlate_Torch : MonoBehaviour
         {
             SpiritBridge.GetComponent<BoxCollider2D>().enabled = false;
             SpiritBridge.GetComponent<SpriteRenderer>().color = Color.green;
+            BridgeSprites.SetActive(true);
             TorchCollider.SetActive(false);
+            IsActivated = true;
+
         }
 
     }
@@ -37,5 +44,10 @@ public class Puzzle_WindPlate_Torch : MonoBehaviour
     private void OnTriggerExit2D(Collider2D coll)
     {
         IsAble = false;
+    }
+
+    public bool IsActivatedCheck()
+    {
+        return IsActivated;
     }
 }

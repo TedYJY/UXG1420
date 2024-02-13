@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Puzzle_WindPlate_PlateTimer : MonoBehaviour
 {
+    public GameObject Torch;
+
     private GameObject TorchCollider;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +31,7 @@ public class Puzzle_WindPlate_PlateTimer : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D coll)
     {
-        if (coll.tag == "BigPlayer")
+        if (coll.tag == "BigPlayer" && Torch.GetComponent<Puzzle_WindPlate_Torch>().IsActivatedCheck() == false)
         {
             TorchCollider.SetActive(true);
         }
