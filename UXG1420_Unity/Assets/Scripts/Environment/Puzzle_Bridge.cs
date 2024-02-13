@@ -30,7 +30,7 @@ public class Puzzle_Bridge : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
             IsActivated = true;
             CheckRequirement();
-
+            
         }
     }
 
@@ -42,6 +42,7 @@ public class Puzzle_Bridge : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             IsActivated = false;
             CheckRequirement();
+            BridgeSprites.SetActive(false);
         }
     }
 
@@ -57,9 +58,10 @@ public class Puzzle_Bridge : MonoBehaviour
 
         else if (ExtraPressurePlate != null && ExtraPressurePlate.GetComponent<Puzzle_Bridge>().IsActivated && IsActivated == true)
         {
-            DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = false;
-            DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.green;
-            BridgeSprites.SetActive(false);
+            //DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = false;
+            //DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.green;
+            //BridgeSprites.SetActive(false);
+            ActivateBridge();
         }
 
         else
