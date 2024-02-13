@@ -102,6 +102,16 @@ public class playerHandler : MonoBehaviour
 
             //Disables the ghost
             this.gameObject.SetActive(false);
+
+            try
+            {
+                UIRef.SetActive(false);
+            }
+
+            catch
+            {
+                Debug.Log("UI Prompt Already Inactive");
+            }
         }
 
         else if (this.gameObject.tag == ("BigPlayer") && targetIsNearby == false)
@@ -133,6 +143,16 @@ public class playerHandler : MonoBehaviour
     {
         targetIsNearby = !targetIsNearby;
         targetedPlayer = target;
+
+        try
+        {
+            UIRef.GetComponent<UIScripts>().TurnEActive();
+        }
+
+        catch
+        {
+
+        }
     }
 
     public void attemptFall(GameObject floor)
