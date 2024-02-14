@@ -50,6 +50,8 @@ public class outline : MonoBehaviour
         {
             currentPlayer.GetComponent<playerHandler>().outlineNearby(null);
             currentPlayer = null;
+
+
         }
 
         outlineColor.color = UnityEngine.Color.white;
