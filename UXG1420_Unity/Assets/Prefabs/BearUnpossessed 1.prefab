@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4455953512406462856}
   - component: {fileID: 3160487185723706371}
   - component: {fileID: 4481651738853066941}
+  - component: {fileID: 483518916054262284}
   m_Layer: 3
   m_Name: BearUnpossessed 1
   m_TagString: BigPlayer
@@ -221,3 +222,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93e7ca9c344e7048a152f45a20d63a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &483518916054262284
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7839722819839364176}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

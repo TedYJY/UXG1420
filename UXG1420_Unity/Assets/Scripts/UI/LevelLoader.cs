@@ -9,10 +9,6 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
     public float transitionTime = 1f;
     // Update is called once per frame
-    private void Awake()
-    {
-        Screen.SetResolution(1920, 1080, false);
-    }
 
     void Update()
     {
