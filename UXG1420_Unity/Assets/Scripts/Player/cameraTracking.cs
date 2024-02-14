@@ -23,6 +23,7 @@ public class cameraTracking : MonoBehaviour
     private void Start()
     {
         target = GameObject.FindWithTag("Ghost").transform;
+        Debug.Log("Ghost found for camera");
     }
 
     void FixedUpdate()
