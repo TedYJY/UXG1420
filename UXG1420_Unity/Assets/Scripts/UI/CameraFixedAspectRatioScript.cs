@@ -16,7 +16,7 @@ public class CameraFixedAspectRatioScript : MonoBehaviour
 
     private float scaleheight;
 
-    private Camera camera;
+    private new Camera camera;
 
     
 

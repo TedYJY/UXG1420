@@ -51,7 +51,15 @@ public class outline : MonoBehaviour
             currentPlayer.GetComponent<playerHandler>().outlineNearby(null);
             currentPlayer = null;
 
+            try
+            {
+                GameObject.FindWithTag("UI").GetComponent<UIScripts>().TurnEInactive();
+            }
 
+            catch
+            {
+
+            }
         }
 
         outlineColor.color = UnityEngine.Color.white;

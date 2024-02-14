@@ -18,8 +18,6 @@ public class UIScripts : MonoBehaviour
 
     private bool WASDActive = true;
 
-    private bool EActive = false;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -99,6 +97,5 @@ public class UIScripts : MonoBehaviour
     public void TurnEInactive()
     {
         E_Parent.SetActive(false);
-        WASDActive = true;
     }
 }
