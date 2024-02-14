@@ -19,11 +19,18 @@ public class River : MonoBehaviour
 
     private void OnTriggerEnter2D (Collider2D col)
     {
-        if (col.tag == "BigPlayer")
-        {
+
             //Upon entering trigger zone, destroys if it is Beary
             //Destroy(col.gameObject);
+
+        if (col.gameObject.tag != "Ghost")
+        {
             this.GetComponent<Collider2D>().isTrigger = false;
+        }
+
+        else
+        {
+
         }
     }
 
