@@ -8,6 +8,9 @@ public class Puzzle_WindPlate_PlateTimer : MonoBehaviour
 
     private GameObject TorchCollider;
 
+    public Sprite Unpressed;
+    public Sprite Pressed;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +28,15 @@ public class Puzzle_WindPlate_PlateTimer : MonoBehaviour
     {
         if (coll.tag == "BigPlayer")
         {
-            TorchCollider.SetActive(false);
+            try
+            {
+                TorchCollider.SetActive(false);
+                this.GetComponent<SpriteRenderer>().sprite = Pressed;
+            }
+            catch
+            {
+
+            }
         }
     }
 
@@ -33,7 +44,17 @@ public class Puzzle_WindPlate_PlateTimer : MonoBehaviour
     {
         if (coll.tag == "BigPlayer" && Torch.GetComponent<Puzzle_WindPlate_Torch>().IsActivatedCheck() == false)
         {
-            TorchCollider.SetActive(true);
+            try
+            {
+                TorchCollider.SetActive(true);
+                this.GetComponent<SpriteRenderer>().sprite = Unpressed;
+            }
+
+            catch
+            {
+
+            }
+
         }
     }
 }

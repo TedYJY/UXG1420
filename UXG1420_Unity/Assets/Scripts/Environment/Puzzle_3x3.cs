@@ -13,6 +13,9 @@ public class Puzzle_3x3 : MonoBehaviour
 
     private GameObject EndDoor;
 
+    public Sprite Unlit;
+    public Sprite Lit;
+
 
 
     //Keeps track of the state of the pressure plate
@@ -51,7 +54,7 @@ public class Puzzle_3x3 : MonoBehaviour
         //Checks if IsActivated is true, and changes the SpriteRenderer
         if (!IsActivated)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Lit;
             IsActivated = true;
             Tracker++;
         }
@@ -59,7 +62,7 @@ public class Puzzle_3x3 : MonoBehaviour
         //Checks if IsActivated is false, and changes the SpriteRenderer
         else if (IsActivated)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Unlit;
             IsActivated = false;
             Tracker--;
         }

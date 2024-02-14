@@ -12,6 +12,9 @@ public class Puzzle_Bridge : MonoBehaviour
     public GameObject ExtraPressurePlate = null;
     public bool IsActivated;
 
+    public Sprite Unpressed;
+    public Sprite Pressed;
+
     void Start()
     {
         
@@ -27,9 +30,9 @@ public class Puzzle_Bridge : MonoBehaviour
     {
         if (coll.tag == "Rock")
         {
-            this.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
             IsActivated = true;
             CheckRequirement();
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Pressed;
             
         }
     }
@@ -39,10 +42,18 @@ public class Puzzle_Bridge : MonoBehaviour
         if (coll.tag == "Rock")
         {
 
-            this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Unpressed;
             IsActivated = false;
             CheckRequirement();
-            BridgeSprites.SetActive(false);
+            try
+            {
+                BridgeSprites.SetActive(false);
+            }
+
+            catch
+            {
+
+            }
         }
     }
 
