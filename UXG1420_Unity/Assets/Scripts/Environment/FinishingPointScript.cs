@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FinishingPointScript : MonoBehaviour
+public class finishingPointScript : MonoBehaviour
 {
     public LevelLoader LevelLoader;
 

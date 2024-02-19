@@ -51,7 +51,7 @@ public class CameraFixedAspectRatioScript : MonoBehaviour
 
             camera.rect = rect;
 
-            Debug.Log("Rescaling Width");
+            //Debug.Log("Rescaling Width");
         }
         else // add pillarbox
         {
@@ -66,7 +66,7 @@ public class CameraFixedAspectRatioScript : MonoBehaviour
 
             camera.rect = rect;
 
-            Debug.Log("Rescaling Height");
+            //Debug.Log("Rescaling Height");
         }
     }
 }

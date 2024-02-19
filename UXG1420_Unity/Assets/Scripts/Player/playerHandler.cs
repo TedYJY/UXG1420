@@ -80,8 +80,15 @@ public class playerHandler : MonoBehaviour
             cameraRef.GetComponent<cameraTracking>().ChangeTarget(targetedPlayer);
 
             //Set UI to look at new player
-            UIRef.GetComponent<cameraTracking>().ChangeTarget(targetedPlayer);
+            try
+            {
+                UIRef.GetComponent<cameraTracking>().ChangeTarget(targetedPlayer);
+            }
 
+            catch 
+            {
+                Debug.Log("No UI Found");
+            }
             //Enable Collider for the new player
             targetedPlayer.GetComponent<BoxCollider2D>().enabled = true;
 

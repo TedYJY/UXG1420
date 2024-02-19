@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PressurePlate : MonoBehaviour
+public class pressurePlate : MonoBehaviour
 {
 
     public GameObject triggerableObject;

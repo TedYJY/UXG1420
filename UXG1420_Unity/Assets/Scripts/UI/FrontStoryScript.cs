@@ -11,7 +11,7 @@ public class FrontStoryScript : MonoBehaviour
     void Start()
     {
         StartCoroutine(CutSceneStart());
-        Debug.Log("Started");
+        //Debug.Log("Started");
     }
 
     IEnumerator CutSceneStart()
@@ -19,7 +19,7 @@ public class FrontStoryScript : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         
         transition.SetTrigger("Next");
-        Debug.Log("Triggered");
+        //Debug.Log("Triggered");
 
         yield return new WaitForSeconds(transitionTime);
         levelLoader.GetComponent<LevelLoader>().LoadNextLevel();

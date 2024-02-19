@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class River : MonoBehaviour
+public class river : MonoBehaviour
 {
     // Start is called before the first frame update
 
