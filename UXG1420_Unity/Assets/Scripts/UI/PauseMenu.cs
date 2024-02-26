@@ -52,4 +52,12 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void RestartGame()
+    {
+        Debug.Log("restart");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
 }
