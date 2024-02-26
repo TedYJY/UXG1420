@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
-public class puzzleBridge : MonoBehaviour
+public class pressurePlateWind : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public GameObject DrawbridgeTrigger;
+    public GameObject WindToTrigger;
     public GameObject BridgeSprites;
     public GameObject ExtraPressurePlate = null;
     public bool IsActivated;
@@ -27,7 +25,7 @@ public class puzzleBridge : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.tag == "Rock")
+        if (coll.tag == "Rock" || coll.tag == "BigPlayer")
         {
             IsActivated = true;
             CheckRequirement();
@@ -38,7 +36,7 @@ public class puzzleBridge : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D coll)
     {
-        if (coll.tag == "Rock")
+        if (coll.tag == "Rock" || coll.tag == "BigPlayer")
         {
 
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Unpressed;
@@ -46,7 +44,7 @@ public class puzzleBridge : MonoBehaviour
             CheckRequirement();
             try
             {
-                BridgeSprites.SetActive(false);
+                DeActivateWind();
             }
 
             catch
@@ -63,7 +61,7 @@ public class puzzleBridge : MonoBehaviour
             /*DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = false;
             DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.green;
             BridgeSprites.SetActive(false);*/
-            ActivateBridge();
+            ActivateWind();
         }
 
         else if (ExtraPressurePlate != null && ExtraPressurePlate.GetComponent<puzzleBridge>().IsActivated && IsActivated == true)
@@ -71,15 +69,15 @@ public class puzzleBridge : MonoBehaviour
             //DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = false;
             //DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.green;
             //BridgeSprites.SetActive(false);
-            ActivateBridge();
+            ActivateWind();
         }
 
         else
         {
             try
             {
-                DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = true;
-                DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.red;
+                WindToTrigger.GetComponent<BoxCollider2D>().enabled = true;
+                WindToTrigger.GetComponent<SpriteRenderer>().color = Color.red;
             }
 
             catch
@@ -89,11 +87,14 @@ public class puzzleBridge : MonoBehaviour
         }
     }
 
-    private void ActivateBridge()
+    private void ActivateWind()
     {
-        DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = false;
-        DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.green;
-        BridgeSprites.SetActive(true);
+        WindToTrigger.GetComponent<BoxCollider2D>().enabled = true;
+        //BridgeSprites.SetActive(true);
     }
-    
+
+    private void DeActivateWind()
+    {
+        WindToTrigger.GetComponent<BoxCollider2D>().enabled = false;
+    }
 }
