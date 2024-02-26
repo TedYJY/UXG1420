@@ -5,7 +5,7 @@ using UnityEngine;
 public class pressurePlateWind : MonoBehaviour
 {
     public GameObject WindToTrigger;
-    public GameObject BridgeSprites;
+    public GameObject WindSprite;
     public GameObject ExtraPressurePlate = null;
     public bool IsActivated;
 
@@ -90,11 +90,13 @@ public class pressurePlateWind : MonoBehaviour
     private void ActivateWind()
     {
         WindToTrigger.GetComponent<BoxCollider2D>().enabled = true;
+        WindSprite.SetActive(true);
         //BridgeSprites.SetActive(true);
     }
 
     private void DeActivateWind()
     {
         WindToTrigger.GetComponent<BoxCollider2D>().enabled = false;
+        WindSprite.SetActive(false);
     }
 }
