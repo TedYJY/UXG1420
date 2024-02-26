@@ -64,6 +64,30 @@ public class playerHandler : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
+        if (movement.x > 0)
+        {
+            animator.SetFloat("IdleHorizontal", 1);
+            animator.SetFloat("IdleVertical", 0);
+        }
+
+        else if (movement.y > 0)
+        {
+            animator.SetFloat("IdleVertical", 1);
+            animator.SetFloat("IdleHorizontal", 0);
+        }
+
+        else if (movement.x < 0)
+        {
+            animator.SetFloat("IdleHorizontal", -1);
+            animator.SetFloat("IdleVertical", 0);
+        }
+
+        else if (movement.y < 0)
+        {
+            animator.SetFloat("IdleVertical", -1);
+            animator.SetFloat("IdleHorizontal", 0);
+        }
+
         //Checks keydown to start possession method
         if (Input.GetKeyDown("e"))
         {
@@ -175,5 +199,23 @@ public class playerHandler : MonoBehaviour
     public void attemptFall(GameObject floor)
     {
 
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Detect collision for pushing animation
+        if (collision.gameObject.tag == "Rock")
+        {
+            animator.SetBool("Pushing", true);
+        }
+    }
+
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        //Detect collision for pushing animation
+        if (collision.gameObject.tag == "Rock")
+        {
+            animator.SetBool("Pushing", false);
+        }
     }
 }
