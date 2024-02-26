@@ -12,13 +12,16 @@ public class playerHandler : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
 
-    //possession assignments
+    //Possession assignments
     private GameObject cameraRef;
     private GameObject UIRef;
     private GameObject currentPlayer;
     private GameObject targetedPlayer;
     private GameObject ghostPlayer;
     private bool targetIsNearby;
+
+    //Animation assignment
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +36,8 @@ public class playerHandler : MonoBehaviour
         cameraRef = GameObject.FindWithTag("MainCamera");
         UIRef = GameObject.FindWithTag("UI");
 
+        //Assign animator of player
+        animator = this.gameObject.GetComponent<Animator>();
 
     }
 
@@ -53,6 +58,11 @@ public class playerHandler : MonoBehaviour
         {
             movement.x = 0;
         }
+
+        //Sends values to animator
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
 
         //Checks keydown to start possession method
         if (Input.GetKeyDown("e"))
