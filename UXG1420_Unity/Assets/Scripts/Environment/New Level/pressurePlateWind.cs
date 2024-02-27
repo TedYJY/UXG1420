@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pressurePlateWind : MonoBehaviour
+public class PressurePlateWind : MonoBehaviour
 {
     public GameObject WindToTrigger;
     public GameObject WindSprite;

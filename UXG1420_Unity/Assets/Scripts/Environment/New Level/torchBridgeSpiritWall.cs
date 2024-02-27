@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-public class torchBridgeSpiritWall : MonoBehaviour
+public class TorchBridgeSpiritWall : MonoBehaviour
 {
 
     public GameObject BridgeSprites;
     public Sprite TorchLit;
     public Sprite TorchUnLit;
+    public GameObject TorchCollider;
     
 
-    private GameObject TorchCollider;
     private GameObject BridgeCollision;
     private bool IsAble;
     private bool IsActivated = false;
@@ -19,8 +19,7 @@ public class torchBridgeSpiritWall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TorchCollider = GameObject.Find("Spirit_Collider");
-        BridgeCollision = GameObject.Find("Bridge");
+        BridgeCollision = GameObject.Find("Bridge_Collidor");
         IsAble = false;
     }
 
@@ -29,9 +28,11 @@ public class torchBridgeSpiritWall : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && IsAble == true)
         {
-            if (IsActivated == false)
+            if (IsActivatedCheck() == false)
             {
+                
                 BridgeCollision.GetComponent<BoxCollider2D>().enabled = false;
+                
                 BridgeCollision.GetComponent<SpriteRenderer>().color = Color.green;
                 BridgeSprites.SetActive(true);
                 TorchCollider.SetActive(true);
@@ -40,7 +41,9 @@ public class torchBridgeSpiritWall : MonoBehaviour
             }
             else 
             {
+                
                 BridgeCollision.GetComponent<BoxCollider2D>().enabled = true;
+                
                 BridgeCollision.GetComponent<SpriteRenderer>().color = Color.red;
                 BridgeSprites.SetActive(false);
                 TorchCollider.SetActive(false);
