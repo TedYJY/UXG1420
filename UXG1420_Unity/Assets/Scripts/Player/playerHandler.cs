@@ -72,27 +72,32 @@ public class playerHandler : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
-        if (movement.x > 0)
+        if (movement.x == 0 && movement.y == 0)
+        {
+            animator.SetBool("Pushing", false);
+        }
+
+        if (movement.x > 0.01)
         {
             animator.SetFloat("IdleHorizontal", 1);
             IsFacingLeft = false;
             animator.SetFloat("IdleVertical", 0);
         }
 
-        else if (movement.y > 0)
+        else if (movement.y > 0.01)
         {
             animator.SetFloat("IdleVertical", 1);
             animator.SetFloat("IdleHorizontal", 0);
         }
 
-        else if (movement.x < 0)
+        else if (movement.x < -0.01)
         {
             animator.SetFloat("IdleHorizontal", -1);
             IsFacingLeft = true;
             animator.SetFloat("IdleVertical", 0);
         }
 
-        else if (movement.y < 0)
+        else if (movement.y < -0.01)
         {
             animator.SetFloat("IdleVertical", -1);
             animator.SetFloat("IdleHorizontal", 0);
@@ -140,6 +145,9 @@ public class playerHandler : MonoBehaviour
                 Debug.Log("No UI Found");
             }
 
+
+            targetedPlayer.GetComponent<Animator>().enabled = true;
+
             //Enable Collider for the new player
             targetedPlayer.GetComponent<BoxCollider2D>().enabled = true;
 
@@ -154,6 +162,8 @@ public class playerHandler : MonoBehaviour
 
             //Disable Capsule collider (trigger) for the outlining
             targetedPlayer.GetComponent<CapsuleCollider2D>().enabled = false;
+
+            
 
             //Sets targetIsNearby to false, to prevent accidental triggering
             targetIsNearby = false;
@@ -184,6 +194,8 @@ public class playerHandler : MonoBehaviour
 
             //Disable BigPlayer's collider (MIGHT CHANGE FOR THE WIND FAN)
             currentPlayer.GetComponent<BoxCollider2D>().enabled = false;
+
+            currentPlayer.GetComponent <Animator>().enabled = false;
 
             //Enable trigger for outlining
             currentPlayer.GetComponent<CapsuleCollider2D>().enabled = true;
@@ -223,7 +235,7 @@ public class playerHandler : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         //Detect collision for pushing animation
-        if (collision.gameObject.tag == "Rock")
+        if (collision.gameObject.tag == "Rock" && movement.sqrMagnitude > 0.01)
         {
             animator.SetBool("Pushing", true);
         }

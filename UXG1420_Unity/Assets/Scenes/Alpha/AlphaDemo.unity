@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 76604089}
   - component: {fileID: 76604091}
   - component: {fileID: 76604090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End Door_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 137977489}
   - component: {fileID: 137977491}
   - component: {fileID: 137977490}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End Door_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1284,7 +1284,7 @@ GameObject:
   - component: {fileID: 176847670}
   - component: {fileID: 176847669}
   - component: {fileID: 176847668}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Torch_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2349,11 +2349,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3337109896700398781, guid: 06a46d737574b4441aa09a3782b2f606, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.27703
+      value: -40.2
       objectReference: {fileID: 0}
     - target: {fileID: 3337109896700398781, guid: 06a46d737574b4441aa09a3782b2f606, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.420696
+      value: -14.1
       objectReference: {fileID: 0}
     - target: {fileID: 3337109896700398781, guid: 06a46d737574b4441aa09a3782b2f606, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2390,6 +2390,10 @@ PrefabInstance:
     - target: {fileID: 3337109896700398781, guid: 06a46d737574b4441aa09a3782b2f606, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705268259951770997, guid: 06a46d737574b4441aa09a3782b2f606, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8484967548834612656, guid: 06a46d737574b4441aa09a3782b2f606, type: 3}
       propertyPath: m_Name
@@ -4517,7 +4521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687847696}
   - component: {fileID: 687847697}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Torch_Collider_Sprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6643,7 +6647,7 @@ EdgeCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -6954,11 +6958,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3253611994604623229, guid: e236654dfd123cf4a9f123984172db19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -47.93363
+      value: -48.9
       objectReference: {fileID: 0}
     - target: {fileID: 3253611994604623229, guid: e236654dfd123cf4a9f123984172db19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.071381
+      value: -9.6
       objectReference: {fileID: 0}
     - target: {fileID: 3253611994604623229, guid: e236654dfd123cf4a9f123984172db19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6999,6 +7003,18 @@ PrefabInstance:
     - target: {fileID: 5729991662917099103, guid: e236654dfd123cf4a9f123984172db19, type: 3}
       propertyPath: m_Name
       value: Ghosty
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600139275392946805, guid: e236654dfd123cf4a9f123984172db19, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600139275392946805, guid: e236654dfd123cf4a9f123984172db19, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600139275392946805, guid: e236654dfd123cf4a9f123984172db19, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7540,7 +7556,7 @@ GameObject:
   - component: {fileID: 1324222463}
   - component: {fileID: 1324222462}
   - component: {fileID: 1324222461}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End Door_Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16525,7 +16541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1352157195}
   - component: {fileID: 1352157196}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Torch_Collider_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18142,7 +18158,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1602544498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End Door
   m_TagString: EndDoor
   m_Icon: {fileID: 0}
@@ -19021,7 +19037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1777733036}
   - component: {fileID: 1777733037}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Torch_Collider_Sprite (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19105,7 +19121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1785767696}
   - component: {fileID: 1785767697}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Torch_Collider_Sprite (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

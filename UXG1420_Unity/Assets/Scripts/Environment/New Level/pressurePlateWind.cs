@@ -8,6 +8,7 @@ public class PressurePlateWind : MonoBehaviour
     public GameObject WindSprite;
     public GameObject ExtraPressurePlate = null;
     public bool IsActivated;
+    public int ItemsOnPlate;
 
     public Sprite Unpressed;
     public Sprite Pressed;
@@ -27,18 +28,19 @@ public class PressurePlateWind : MonoBehaviour
     {
         if (coll.tag == "Rock" || coll.tag == "BigPlayer")
         {
+            ItemsOnPlate++;
             IsActivated = true;
             CheckRequirement();
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Pressed;
-
         }
     }
 
     public void OnTriggerExit2D(Collider2D coll)
     {
-        if (coll.tag == "Rock" || coll.tag == "BigPlayer")
+        if ((coll.tag == "Rock" || coll.tag == "BigPlayer") && ItemsOnPlate == 1)
         {
 
+            ItemsOnPlate--;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Unpressed;
             IsActivated = false;
             CheckRequirement();
@@ -51,7 +53,15 @@ public class PressurePlateWind : MonoBehaviour
             {
 
             }
+
+         
         }
+        
+        else if (coll.tag == "Rock" || coll.tag == "BigPlayer")
+        {
+            ItemsOnPlate--;
+        }
+        
     }
 
     private void CheckRequirement()
