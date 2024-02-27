@@ -37,7 +37,7 @@ public class playerHandler : MonoBehaviour
         UIRef = GameObject.FindWithTag("UI");
 
         //Assign animator of player
-        animator = this.gameObject.GetComponent<Animator>();
+        animator = GetComponent<Animator>();
 
     }
 

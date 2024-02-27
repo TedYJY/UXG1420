@@ -5,6 +5,8 @@ using UnityEngine;
 public class windTurbine : MonoBehaviour
 {
     public float distance = 10f;
+    public float rightforce = 1500f;
+    public float upforce = 500f;
 
     public Transform castPoint;
 
@@ -29,11 +31,16 @@ public class windTurbine : MonoBehaviour
         {
             if (hit.collider.gameObject.CompareTag("Rock"))
             {
-                Debug.Log("Rock hit by RC");
                 hit = Physics2D.Linecast(castPoint.position, hit.point);
                 Debug.DrawLine(castPoint.position, hit.point, Color.blue);
             }
 
+            else if (hit.collider.gameObject.CompareTag("BigPlayer"))
+            {
+                hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * rightforce);
+                hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * upforce);
+                Debug.DrawLine(castPoint.position, hit.point, Color.red);
+            }
 
 
         }
