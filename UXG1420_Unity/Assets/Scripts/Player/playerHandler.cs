@@ -8,20 +8,27 @@ public class playerHandler : MonoBehaviour
     public float height = 1f;
 
     //Movement assignment
-    private float moveSpeed = 15f;
+    private float moveSpeed = 10f;
     private Rigidbody2D rb;
     private Vector2 movement;
 
     //Possession assignments
     private GameObject cameraRef;
     private GameObject UIRef;
+
+    [SerializeField]
     private GameObject currentPlayer;
+    [SerializeField]
     private GameObject targetedPlayer;
+    [SerializeField]
     private GameObject ghostPlayer;
+    [SerializeField]
     private bool targetIsNearby;
 
     //Animation assignment
     private Animator animator;
+    private bool IsFacingLeft = false;
+    private SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +45,7 @@ public class playerHandler : MonoBehaviour
 
         //Assign animator of player
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 
@@ -67,6 +75,7 @@ public class playerHandler : MonoBehaviour
         if (movement.x > 0)
         {
             animator.SetFloat("IdleHorizontal", 1);
+            IsFacingLeft = false;
             animator.SetFloat("IdleVertical", 0);
         }
 
@@ -79,6 +88,7 @@ public class playerHandler : MonoBehaviour
         else if (movement.x < 0)
         {
             animator.SetFloat("IdleHorizontal", -1);
+            IsFacingLeft = true;
             animator.SetFloat("IdleVertical", 0);
         }
 
@@ -94,6 +104,12 @@ public class playerHandler : MonoBehaviour
             AttemptPossession();
         }
 
+        if (IsFacingLeft == true)
+        {
+            spriteRenderer.flipX = true;
+        }
+
+        else { spriteRenderer.flipX = false; }
     }
 
     void FixedUpdate()
@@ -123,8 +139,9 @@ public class playerHandler : MonoBehaviour
             {
                 Debug.Log("No UI Found");
             }
+
             //Enable Collider for the new player
-            targetedPlayer.GetComponent<BoxCollider2D>().enabled = true;
+            targetedPlayer.GetComponent<CapsuleCollider2D>().enabled = true;
 
             //Enable playerHandler script for new player
             targetedPlayer.GetComponent<playerHandler>().enabled = true;
@@ -136,7 +153,7 @@ public class playerHandler : MonoBehaviour
             targetedPlayer.GetComponent<playerHandler>().ghostPlayer = this.gameObject;
 
             //Disable box collider (trigger) for the outlining
-            targetedPlayer.GetComponent<CapsuleCollider2D>().enabled = false;
+            targetedPlayer.GetComponent<BoxCollider2D>().enabled = false;
 
             //Sets targetIsNearby to false, to prevent accidental triggering
             targetIsNearby = false;
@@ -166,16 +183,18 @@ public class playerHandler : MonoBehaviour
             cameraRef.GetComponent<cameraTracking>().ChangeTarget(ghostPlayer);
 
             //Disable BigPlayer's collider (MIGHT CHANGE FOR THE WIND FAN)
-            currentPlayer.GetComponent<BoxCollider2D>().enabled = false;
+            currentPlayer.GetComponent<CapsuleCollider2D>().enabled = false;
 
             //Enable trigger for outlining
-            currentPlayer.GetComponent<CapsuleCollider2D>().enabled = true;
+            currentPlayer.GetComponent<BoxCollider2D>().enabled = true;
 
             //Disables playerHandler script for bear
             currentPlayer.GetComponent<playerHandler>().enabled = false;
 
             //Enables the ghost
             ghostPlayer.SetActive(true);
+
+            ghostPlayer.GetComponent<playerHandler>().targetIsNearby = false;
         }
     }
 

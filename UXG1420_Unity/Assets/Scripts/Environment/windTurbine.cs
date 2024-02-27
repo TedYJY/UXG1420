@@ -25,6 +25,7 @@ public class windTurbine : MonoBehaviour
     {
         Vector2 endPos = castPoint.position + Vector3.right * distance;
 
+        //Creates Raycast
         RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endPos);
 
         if (hit.collider != null)
