@@ -17,7 +17,7 @@ public class playerHandler : MonoBehaviour
     private GameObject UIRef;
 
     [SerializeField]
-    private GameObject currentPlayer;
+    public GameObject currentPlayer;
     [SerializeField]
     private GameObject targetedPlayer;
     [SerializeField]
