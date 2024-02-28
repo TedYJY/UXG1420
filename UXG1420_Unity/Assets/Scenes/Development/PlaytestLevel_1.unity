@@ -946,7 +946,7 @@ GameObject:
   - component: {fileID: 176847670}
   - component: {fileID: 176847669}
   - component: {fileID: 176847668}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spirit_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3117,7 +3117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6600139275392946805, guid: e236654dfd123cf4a9f123984172db19, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3134,7 +3134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687847696}
   - component: {fileID: 687847697}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Torch_Collider_Sprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14368,7 +14368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1352157195}
   - component: {fileID: 1352157196}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Torch_Collider_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15510,7 +15510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1777733036}
   - component: {fileID: 1777733037}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Torch_Collider_Sprite (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15594,7 +15594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1785767696}
   - component: {fileID: 1785767697}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Torch_Collider_Sprite (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
