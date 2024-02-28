@@ -31,7 +31,7 @@ public class outline : MonoBehaviour
 
             //Tags the current player and changes condition of "swapping" script to enable possessing
             currentPlayer = col.gameObject;
-            currentPlayer.GetComponent<playerHandler>().outlineNearby(this.gameObject);
+            currentPlayer.GetComponent<playerHandler>().outlineNearby(this.gameObject, true);
 
 
         }
@@ -48,7 +48,7 @@ public class outline : MonoBehaviour
     {
         if (col.tag == "Ghost")
         {
-            currentPlayer.GetComponent<playerHandler>().outlineNearby(null);
+            currentPlayer.GetComponent<playerHandler>().outlineNearby(null, false);    
             currentPlayer = null;
 
             try

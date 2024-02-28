@@ -17,7 +17,7 @@ public class playerHandler : MonoBehaviour
     private GameObject UIRef;
 
     [SerializeField]
-    public GameObject currentPlayer;
+    private GameObject currentPlayer;
     [SerializeField]
     private GameObject targetedPlayer;
     [SerializeField]
@@ -211,9 +211,9 @@ public class playerHandler : MonoBehaviour
     }
 
     //Used to outline the BigPlayer (Script has been separated due to disabling playerHandler script, use this as setter to access private variables)
-    public void outlineNearby(GameObject target)
+    public void outlineNearby(GameObject target, bool isTargetNearby)
     {
-        targetIsNearby = !targetIsNearby;
+        targetIsNearby = isTargetNearby;
         targetedPlayer = target;
 
         try
