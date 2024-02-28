@@ -13,8 +13,11 @@ public class TorchBridgeSpiritWall : MonoBehaviour
     
 
     private GameObject BridgeCollision;
+    [SerializeField]
     private bool IsAble;
     private bool IsActivated = false;
+
+    public GameObject BridgeCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -31,24 +34,38 @@ public class TorchBridgeSpiritWall : MonoBehaviour
             if (IsActivatedCheck() == false)
             {
                 
-                BridgeCollision.GetComponent<BoxCollider2D>().enabled = false;
+                //BridgeCollision.GetComponent<BoxCollider2D>().enabled = false;
                 
                 BridgeCollision.GetComponent<SpriteRenderer>().color = Color.green;
                 BridgeSprites.SetActive(true);
                 TorchCollider.SetActive(true);
                 IsActivated = true;
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchLit;
+
+                try
+                {
+                    BridgeCollider.SetActive(false);
+                }
+
+                catch { }
             }
             else 
             {
                 
-                BridgeCollision.GetComponent<BoxCollider2D>().enabled = true;
+               // BridgeCollision.GetComponent<BoxCollider2D>().enabled = true;
                 
                 BridgeCollision.GetComponent<SpriteRenderer>().color = Color.red;
                 BridgeSprites.SetActive(false);
                 TorchCollider.SetActive(false);
-                IsActivated = true;
+                IsActivated = false;
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchUnLit;
+
+                try
+                {
+                    BridgeCollider.SetActive(true);
+                }
+
+                catch { }
             }
         }
 
@@ -73,6 +90,8 @@ public class TorchBridgeSpiritWall : MonoBehaviour
 
     public bool IsActivatedCheck()
     {
+        
+        Debug.Log(IsActivated);
         return IsActivated;
     }
 }
