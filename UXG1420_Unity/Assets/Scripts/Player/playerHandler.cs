@@ -232,6 +232,11 @@ public class playerHandler : MonoBehaviour
 
     }
 
+    public GameObject grabCurrentPlayer()
+    {
+        return currentPlayer;
+    }
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
         //Detect collision for pushing animation

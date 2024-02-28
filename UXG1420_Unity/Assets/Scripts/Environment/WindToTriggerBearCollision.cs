@@ -18,7 +18,7 @@ public class WindToTriggerBearCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "BigPlayer")
+        if (collision.tag == "BigPlayer" )
         {
             collision.GetComponent<BoxCollider2D>().enabled = true;
         }
@@ -26,7 +26,7 @@ public class WindToTriggerBearCollision : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "BigPlayer")
+        if (collision.tag == "BigPlayer" && collision.GetComponent<playerHandler>().isActiveAndEnabled == false)
         {
             collision.GetComponent<BoxCollider2D>().enabled = false;
         }
