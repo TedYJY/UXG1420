@@ -9,6 +9,14 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
     public float transitionTime = 1f;
     // Update is called once per frame
+    [SerializeField] //
+    private GameObject dialogueUI; //
+
+    void Start()
+    {
+        Invoke("balls", 3);
+    }
+
 
     void Update()
     {
@@ -32,6 +40,17 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(levelIndex);
+    }
+
+
+
+    void balls()
+    {
+        //dialogueUI.SetActive(true); 
+        //anim.Play("cringe");
+        //need to have animator, set initial alpha to 0, then to 100
+        Debug.Log("ballsballsballs");
+        //
     }
 
 }

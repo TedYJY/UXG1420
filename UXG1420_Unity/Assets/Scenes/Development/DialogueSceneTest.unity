@@ -4043,6 +4043,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+      propertyPath: dialogueUI
+      value: 
+      objectReference: {fileID: 1931364768}
+    - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: transition
       value: 
       objectReference: {fileID: 975281587}
@@ -4052,7 +4056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8425410549361499159, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8914119552138742866, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15012,7 +15016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 188}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 354.7185, y: 75.816}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1534458111
