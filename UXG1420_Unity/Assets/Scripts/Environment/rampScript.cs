@@ -32,12 +32,10 @@ public class rampScript : MonoBehaviour
 
         if (exitCollider != null)
         {
-            collidingObject.GetComponent<playerHandler>().height = exitHeight;
             collidingObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
         }
         else
         {
-            collidingObject.GetComponent<playerHandler>().height = enterHeight;
             collidingObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
         }
     }
