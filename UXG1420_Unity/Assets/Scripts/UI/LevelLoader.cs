@@ -7,8 +7,12 @@ public class LevelLoader : MonoBehaviour
 {
 
     public Animator transition;
+
+    [SerializeField]
+    private Animator DialogueAnim;
     public float transitionTime = 1f;
     // Update is called once per frame
+
     [SerializeField] //
     private GameObject dialogueUI; //
 
@@ -47,7 +51,7 @@ public class LevelLoader : MonoBehaviour
     void balls()
     {
         //dialogueUI.SetActive(true); 
-        //anim.Play("cringe");
+        DialogueAnim.Play("DialogueBox");
         //need to have animator, set initial alpha to 0, then to 100
         Debug.Log("ballsballsballs");
         //
