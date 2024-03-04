@@ -99,14 +99,16 @@ public class PressurePlateWind : MonoBehaviour
 
     private void ActivateWind()
     {
-        WindToTrigger.GetComponent<BoxCollider2D>().enabled = true;
+        WindToTrigger.GetComponent<windTurbine>().ActivateHead();
         WindSprite.SetActive(true);
+        //WindToTrigger.GetComponent<BoxCollider2D>().enabled = true;
         //BridgeSprites.SetActive(true);
     }
 
     private void DeActivateWind()
     {
-        WindToTrigger.GetComponent<BoxCollider2D>().enabled = false;
+        WindToTrigger.GetComponent<windTurbine>().DeactivateHead();
         WindSprite.SetActive(false);
+        //WindToTrigger.GetComponent<BoxCollider2D>().enabled = false;
     }
 }
