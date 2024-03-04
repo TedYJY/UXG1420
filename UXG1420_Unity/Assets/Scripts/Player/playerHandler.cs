@@ -143,8 +143,8 @@ public class playerHandler : MonoBehaviour
 
             targetedPlayer.GetComponent<Animator>().enabled = true;
 
-            //Enable Collider for the new player
-            targetedPlayer.GetComponent<BoxCollider2D>().enabled = true;
+            //Enable Collider for the new player (DISABLED AS OF BETA)
+            //targetedPlayer.GetComponent<BoxCollider2D>().enabled = true;
 
             //Enable playerHandler script for new player
             targetedPlayer.GetComponent<playerHandler>().enabled = true;
@@ -187,8 +187,8 @@ public class playerHandler : MonoBehaviour
             //Set camera to look at ghost player
             cameraRef.GetComponent<cameraTracking>().ChangeTarget(ghostPlayer);
 
-            //Disable BigPlayer's collider (MIGHT CHANGE FOR THE WIND FAN)
-            currentPlayer.GetComponent<BoxCollider2D>().enabled = false;
+            //Disable BigPlayer's collider (MIGHT CHANGE FOR THE WIND FAN) (DISABLED AS OF BETA)
+            //currentPlayer.GetComponent<BoxCollider2D>().enabled = false;
 
             currentPlayer.GetComponent <Animator>().enabled = false;
 
