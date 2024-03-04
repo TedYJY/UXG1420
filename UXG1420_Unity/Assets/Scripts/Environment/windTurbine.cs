@@ -9,6 +9,7 @@ public class windTurbine : MonoBehaviour
     public float upforce = 500f;
 
     public Transform castPoint;
+    public bool IsActive;
 
     public Sprite Activated_Head;
     public Sprite Deactivated_Head;
@@ -31,7 +32,7 @@ public class windTurbine : MonoBehaviour
         //Creates Raycast
         RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endPos);
 
-        if (hit.collider != null)
+        if (hit.collider != null && IsActive == true)
         {
             if (hit.collider.gameObject.CompareTag("Rock"))
             {
@@ -58,10 +59,12 @@ public class windTurbine : MonoBehaviour
     public void ActivateHead()
     {
         this.GetComponent<SpriteRenderer>().sprite = Activated_Head;
+        IsActive = true;
     }
 
     public void DeactivateHead()
     {
         this.GetComponent<SpriteRenderer>().sprite = Deactivated_Head;
+        IsActive = false;
     }
 }

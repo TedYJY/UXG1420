@@ -3094,11 +3094,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3337109896700398781, guid: 06a46d737574b4441aa09a3782b2f606, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.63
+      value: -41.57
       objectReference: {fileID: 0}
     - target: {fileID: 3337109896700398781, guid: 06a46d737574b4441aa09a3782b2f606, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.13
+      value: 32.17
       objectReference: {fileID: 0}
     - target: {fileID: 3337109896700398781, guid: 06a46d737574b4441aa09a3782b2f606, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3140,6 +3140,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6782088903817596918, guid: 06a46d737574b4441aa09a3782b2f606, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 2304
+      objectReference: {fileID: 0}
     - target: {fileID: 7974671091233964405, guid: 06a46d737574b4441aa09a3782b2f606, type: 3}
       propertyPath: m_Size.x
       value: 5.6
@@ -3150,11 +3154,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7974671091233964405, guid: 06a46d737574b4441aa09a3782b2f606, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7974671091233964405, guid: 06a46d737574b4441aa09a3782b2f606, type: 3}
       propertyPath: m_Offset.y
       value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7974671091233964405, guid: 06a46d737574b4441aa09a3782b2f606, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 8484967548834612656, guid: 06a46d737574b4441aa09a3782b2f606, type: 3}
       propertyPath: m_Name
@@ -3568,9 +3576,9 @@ GameObject:
   - component: {fileID: 556049371}
   - component: {fileID: 556049374}
   - component: {fileID: 556049373}
-  - component: {fileID: 556049372}
+  - component: {fileID: 556049375}
   m_Layer: 0
-  m_Name: Torch (2)
+  m_Name: Torch_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3591,20 +3599,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 764741586}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &556049372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556049370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9ff2ae5e1e25ab48ba9e767b7cb3fb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BridgeSprites: {fileID: 0}
-  TorchLit: {fileID: 21300000, guid: ab8355ced1596f947aa8625d789db3d6, type: 3}
 --- !u!61 &556049373
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3702,6 +3696,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &556049375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556049370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8f7245f86c7d243a2317fbad608744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAble: 0
+  isActivated: 0
+  activatedTorch: {fileID: 21300000, guid: ab8355ced1596f947aa8625d789db3d6, type: 3}
+  deactivatedTorch: {fileID: 21300000, guid: d9f810b0c980fba43b2ab3d02446c4c0, type: 3}
+  finishedTorch: {fileID: 0}
+  lPressure: {fileID: 1199918805}
+  rPressure: {fileID: 2068636984}
 --- !u!1 &577683466
 GameObject:
   m_ObjectHideFlags: 0
@@ -4724,6 +4737,7 @@ MonoBehaviour:
   BridgeSprites: {fileID: 1128550402}
   ExtraPressurePlate: {fileID: 1489761796}
   IsActivated: 0
+  ItemsOnPlate: 0
   Unpressed: {fileID: 21300000, guid: 8b919f5a442219240b5ec1f1ef9dc993, type: 3}
   Pressed: {fileID: 21300000, guid: da003c597442b884ca032016d11e65ff, type: 3}
 --- !u!212 &825264989
@@ -5677,7 +5691,7 @@ GameObject:
   - component: {fileID: 1031548973}
   - component: {fileID: 1031548974}
   m_Layer: 0
-  m_Name: Torch
+  m_Name: Torch_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5804,11 +5818,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1031548970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9ff2ae5e1e25ab48ba9e767b7cb3fb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c8f7245f86c7d243a2317fbad608744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BridgeSprites: {fileID: 0}
-  TorchLit: {fileID: 21300000, guid: ab8355ced1596f947aa8625d789db3d6, type: 3}
+  isAble: 0
+  isActivated: 0
+  activatedTorch: {fileID: 21300000, guid: ab8355ced1596f947aa8625d789db3d6, type: 3}
+  deactivatedTorch: {fileID: 21300000, guid: d9f810b0c980fba43b2ab3d02446c4c0, type: 3}
+  finishedTorch: {fileID: 0}
+  lPressure: {fileID: 1199918805}
+  rPressure: {fileID: 2068636984}
 --- !u!1 &1047759754
 GameObject:
   m_ObjectHideFlags: 0
@@ -6263,11 +6282,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3253611994604623229, guid: e236654dfd123cf4a9f123984172db19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -44.83
+      value: -46.77
       objectReference: {fileID: 0}
     - target: {fileID: 3253611994604623229, guid: e236654dfd123cf4a9f123984172db19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.2099996
+      value: 33.089996
       objectReference: {fileID: 0}
     - target: {fileID: 3253611994604623229, guid: e236654dfd123cf4a9f123984172db19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6312,18 +6331,6 @@ PrefabInstance:
     - target: {fileID: 5729991662917099103, guid: e236654dfd123cf4a9f123984172db19, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6600139275392946805, guid: e236654dfd123cf4a9f123984172db19, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6600139275392946805, guid: e236654dfd123cf4a9f123984172db19, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 6600139275392946805, guid: e236654dfd123cf4a9f123984172db19, type: 3}
-      propertyPath: m_IncludeLayers.m_Bits
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6469,10 +6476,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1199918806}
   - component: {fileID: 1199918809}
-  - component: {fileID: 1199918808}
   - component: {fileID: 1199918807}
-  m_Layer: 0
-  m_Name: Pressure Plate (Top_2) (1)
+  - component: {fileID: 1199918810}
+  m_Layer: 11
+  m_Name: Pressure Plate (Top Left)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6487,7 +6494,7 @@ Transform:
   m_GameObject: {fileID: 1199918805}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -52.05999, y: 42.72, z: 0.5485419}
+  m_LocalPosition: {x: -52.05999, y: 43.840004, z: 0.5485419}
   m_LocalScale: {x: 0.726, y: 0.726, z: 0.726}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6538,24 +6545,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.02, y: 4.34}
   m_EdgeRadius: 0
---- !u!114 &1199918808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1199918805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42dd6d85b6a18db4b8b735ce872e13e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DrawbridgeTrigger: {fileID: 0}
-  BridgeSprites: {fileID: 1128550402}
-  ExtraPressurePlate: {fileID: 2068636984}
-  IsActivated: 0
-  Unpressed: {fileID: 21300000, guid: 8b919f5a442219240b5ec1f1ef9dc993, type: 3}
-  Pressed: {fileID: 21300000, guid: da003c597442b884ca032016d11e65ff, type: 3}
 --- !u!212 &1199918809
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6608,6 +6597,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1199918810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199918805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908daa570bf7cdb4690a204890c3c974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftTorch: {fileID: 1031548970}
+  rightTorch: {fileID: 556049370}
+  middleTorch: {fileID: 1255662016}
+  isLeft: 1
 --- !u!1 &1235761590
 GameObject:
   m_ObjectHideFlags: 0
@@ -6787,9 +6792,9 @@ GameObject:
   - component: {fileID: 1255662017}
   - component: {fileID: 1255662020}
   - component: {fileID: 1255662019}
-  - component: {fileID: 1255662018}
+  - component: {fileID: 1255662021}
   m_Layer: 0
-  m_Name: Torch (1)
+  m_Name: Torch_Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6810,20 +6815,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 764741586}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1255662018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255662016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9ff2ae5e1e25ab48ba9e767b7cb3fb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BridgeSprites: {fileID: 0}
-  TorchLit: {fileID: 21300000, guid: ab8355ced1596f947aa8625d789db3d6, type: 3}
 --- !u!61 &1255662019
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6921,6 +6912,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1255662021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255662016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8f7245f86c7d243a2317fbad608744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAble: 0
+  isActivated: 0
+  activatedTorch: {fileID: 21300000, guid: ab8355ced1596f947aa8625d789db3d6, type: 3}
+  deactivatedTorch: {fileID: 21300000, guid: d9f810b0c980fba43b2ab3d02446c4c0, type: 3}
+  finishedTorch: {fileID: 0}
+  lPressure: {fileID: 1199918805}
+  rPressure: {fileID: 2068636984}
 --- !u!1 &1267253237
 GameObject:
   m_ObjectHideFlags: 0
@@ -15016,6 +15026,7 @@ MonoBehaviour:
   BridgeSprites: {fileID: 1128550402}
   ExtraPressurePlate: {fileID: 825264985}
   IsActivated: 0
+  ItemsOnPlate: 0
   Unpressed: {fileID: 21300000, guid: 8b919f5a442219240b5ec1f1ef9dc993, type: 3}
   Pressed: {fileID: 21300000, guid: da003c597442b884ca032016d11e65ff, type: 3}
 --- !u!212 &1489761799
@@ -15617,6 +15628,7 @@ MonoBehaviour:
   BridgeSprites: {fileID: 503914564}
   ExtraPressurePlate: {fileID: 0}
   IsActivated: 0
+  ItemsOnPlate: 0
   Unpressed: {fileID: 21300000, guid: 8b919f5a442219240b5ec1f1ef9dc993, type: 3}
   Pressed: {fileID: 21300000, guid: da003c597442b884ca032016d11e65ff, type: 3}
 --- !u!212 &1741259451
@@ -16939,10 +16951,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2068636988}
   - component: {fileID: 2068636987}
-  - component: {fileID: 2068636986}
   - component: {fileID: 2068636985}
-  m_Layer: 0
-  m_Name: Pressure Plate (Top 1) (1)
+  - component: {fileID: 2068636989}
+  m_Layer: 11
+  m_Name: Pressure Plate (Top Right)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16993,24 +17005,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.02, y: 4.34}
   m_EdgeRadius: 0
---- !u!114 &2068636986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2068636984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42dd6d85b6a18db4b8b735ce872e13e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DrawbridgeTrigger: {fileID: 0}
-  BridgeSprites: {fileID: 1128550402}
-  ExtraPressurePlate: {fileID: 1199918805}
-  IsActivated: 0
-  Unpressed: {fileID: 21300000, guid: 8b919f5a442219240b5ec1f1ef9dc993, type: 3}
-  Pressed: {fileID: 21300000, guid: da003c597442b884ca032016d11e65ff, type: 3}
 --- !u!212 &2068636987
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17072,12 +17066,28 @@ Transform:
   m_GameObject: {fileID: 2068636984}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48.12, y: 42.719997, z: 0.5485419}
+  m_LocalPosition: {x: -48.12, y: 43.84, z: 0.5485419}
   m_LocalScale: {x: 0.726, y: 0.726, z: 0.726}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 764741586}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2068636989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068636984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908daa570bf7cdb4690a204890c3c974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftTorch: {fileID: 1031548970}
+  rightTorch: {fileID: 556049370}
+  middleTorch: {fileID: 1255662016}
+  isLeft: 0
 --- !u!1 &2077774355
 GameObject:
   m_ObjectHideFlags: 0
