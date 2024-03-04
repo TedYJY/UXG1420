@@ -27,7 +27,7 @@ public class outline : MonoBehaviour
         if (col.tag == "Ghost")
         {
             //Outlines the nearby player
-            outlineColor.color = UnityEngine.Color.red;
+            outlineColor.color = UnityEngine.Color.cyan;
 
             //Tags the current player and changes condition of "swapping" script to enable possessing
             currentPlayer = col.gameObject;
