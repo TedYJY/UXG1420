@@ -36,7 +36,13 @@ public class LevelLoader : MonoBehaviour
         /*if (Input.GetMouseButtonDown(0))//Input.GetMouseButtonDown(0)
         {
             LoadNextLevel();
-        } //*/
+        } 
+
+        if (Input.GetKeyDown("e"))
+        {
+            Invoke("DialogueBoxFadeInAnim", 3);
+        }//*/
+
     }
 
     public void LoadNextLevel()
