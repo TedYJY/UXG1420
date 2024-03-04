@@ -22,7 +22,7 @@ public class cameraTracking : MonoBehaviour
 
     private void Start()
     {
-        target = GameObject.FindWithTag("Ghost").transform;
+        target = GameObject.FindWithTag("Ghost").trsansform;
         Debug.Log("Ghost found for camera");
 
         Invoke("fasterCam", 6);
