@@ -61,10 +61,21 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(levelIndex);
     }
 
+    /*
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Detect collision for pushing animation
+        if (collision.gameObject.tag == "BigPlayer")
+        {
+            //animator.SetBool("Pushing", true);
+            Invoke("DialogueBoxFadeInAnim", 2);
+            Debug.Log("collide with torch");
+        }
+    }//*/
 
 
 
-    void DialogueBoxFadeInAnim()
+    public void DialogueBoxFadeInAnim()
     {
         //dialogueUI.SetActive(true); 
         DialogueAnim.Play("DialogueBox");

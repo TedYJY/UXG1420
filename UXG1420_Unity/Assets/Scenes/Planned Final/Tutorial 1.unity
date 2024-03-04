@@ -237,7 +237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3253611994604623229, guid: e236654dfd123cf4a9f123984172db19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -58
+      value: -59.12
       objectReference: {fileID: 0}
     - target: {fileID: 3253611994604623229, guid: e236654dfd123cf4a9f123984172db19, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5709,9 +5709,10 @@ GameObject:
   - component: {fileID: 1286415387}
   - component: {fileID: 1286415386}
   - component: {fileID: 1286415389}
+  - component: {fileID: 1286415390}
   m_Layer: 0
   m_Name: Torch
-  m_TagString: Untagged
+  m_TagString: Torch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5845,6 +5846,22 @@ MonoBehaviour:
   TorchCollider: {fileID: 1753990463}
   IsAble: 0
   BridgeCollider: {fileID: 0}
+--- !u!114 &1286415390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286415384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c1e0fa34d50bdf4d988024749b8a2ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences: []
+  dialogueTracker: 1
 --- !u!1 &1302451389
 GameObject:
   m_ObjectHideFlags: 0
@@ -7009,6 +7026,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8425410549361499159, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 8425410549361499159, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+      propertyPath: m_TagString
       value: LevelLoader
       objectReference: {fileID: 0}
     - target: {fileID: 8914119552138742866, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}

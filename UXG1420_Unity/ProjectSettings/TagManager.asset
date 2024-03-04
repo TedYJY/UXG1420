@@ -13,6 +13,8 @@ TagManager:
   - Rock
   - MainMenu
   - UI
+  - Torch
+  - LevelLoader
   layers:
   - Default
   - TransparentFX
