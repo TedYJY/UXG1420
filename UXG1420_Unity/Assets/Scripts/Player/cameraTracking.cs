@@ -12,7 +12,7 @@ public class cameraTracking : MonoBehaviour
     Vector3 velocity = Vector3.zero;
 
     //time to follow target
-    private float smoothTime = .15f;
+    private float smoothTime = 2.5f;
 
     public float leftLimit;
     public float rightLimit;
@@ -24,6 +24,8 @@ public class cameraTracking : MonoBehaviour
     {
         target = GameObject.FindWithTag("Ghost").transform;
         Debug.Log("Ghost found for camera");
+
+        Invoke("fasterCam", 6);
     }
 
     void FixedUpdate()
@@ -54,5 +56,10 @@ public class cameraTracking : MonoBehaviour
         Gizmos.DrawLine(new Vector2(leftLimit, bottomLimit), new Vector2(leftLimit, topLimit));
 
 
+    }
+
+    private void fasterCam()
+    {
+        smoothTime = 0.15f;
     }
 }
