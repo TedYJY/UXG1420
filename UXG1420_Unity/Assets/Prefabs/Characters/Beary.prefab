@@ -105,7 +105,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -209,11 +209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9b3b6948b2eec84a97626b33c7391cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height: 1
-  currentPlayer: {fileID: 0}
-  targetedPlayer: {fileID: 0}
-  ghostPlayer: {fileID: 0}
-  targetIsNearby: 0
 --- !u!114 &8967635009595688641
 MonoBehaviour:
   m_ObjectHideFlags: 0
