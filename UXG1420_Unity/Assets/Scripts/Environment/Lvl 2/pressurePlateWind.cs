@@ -87,7 +87,6 @@ public class PressurePlateWind : MonoBehaviour
             try
             {
                 WindToTrigger.GetComponent<BoxCollider2D>().enabled = true;
-                WindToTrigger.GetComponent<SpriteRenderer>().color = Color.red;
             }
 
             catch

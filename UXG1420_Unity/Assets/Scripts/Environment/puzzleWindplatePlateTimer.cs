@@ -5,8 +5,7 @@ using UnityEngine;
 public class puzzleWindplatePlateTimer : MonoBehaviour
 {
     public GameObject Torch;
-
-    private GameObject TorchCollider;
+    public GameObject TorchCollider;
 
     public Sprite Unpressed;
     public Sprite Pressed;
@@ -15,7 +14,7 @@ public class puzzleWindplatePlateTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TorchCollider = GameObject.Find("Torch_Collider");
+
     }
 
     // Update is called once per frame
