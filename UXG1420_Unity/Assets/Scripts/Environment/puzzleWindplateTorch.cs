@@ -10,7 +10,6 @@ public class puzzleWindplateTorch : MonoBehaviour
     public Sprite TorchLit;
 
     private GameObject TorchCollider;
-    private GameObject SpiritBridge;
     private bool IsAble;
     private bool IsActivated = false;
 
@@ -18,7 +17,6 @@ public class puzzleWindplateTorch : MonoBehaviour
     void Start()
     {
         TorchCollider = GameObject.Find("Torch_Collider");
-        SpiritBridge = GameObject.Find("Bridge_East");
         IsAble = false;
     }
 
@@ -27,8 +25,6 @@ public class puzzleWindplateTorch : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && IsAble == true)
         {
-            SpiritBridge.GetComponent<BoxCollider2D>().enabled = false;
-            SpiritBridge.GetComponent<SpriteRenderer>().color = Color.green;
             BridgeSprites.SetActive(true);
             TorchCollider.SetActive(false);
             IsActivated = true;

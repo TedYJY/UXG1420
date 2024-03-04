@@ -35,8 +35,7 @@ public class TorchBridgeSpiritWall : MonoBehaviour
             {
                 
                 //BridgeCollision.GetComponent<BoxCollider2D>().enabled = false;
-                
-                BridgeCollision.GetComponent<SpriteRenderer>().color = Color.green;
+               
                 BridgeSprites.SetActive(true);
                 TorchCollider.SetActive(true);
                 IsActivated = true;
@@ -54,7 +53,6 @@ public class TorchBridgeSpiritWall : MonoBehaviour
                 
                // BridgeCollision.GetComponent<BoxCollider2D>().enabled = true;
                 
-                BridgeCollision.GetComponent<SpriteRenderer>().color = Color.red;
                 BridgeSprites.SetActive(false);
                 TorchCollider.SetActive(false);
                 IsActivated = false;

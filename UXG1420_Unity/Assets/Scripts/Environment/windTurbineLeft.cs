@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class windTurbine : MonoBehaviour
+public class windTurbineLeft : MonoBehaviour
 {
     public float distance = 10f;
     public float rightforce = 1500f;
@@ -27,7 +27,7 @@ public class windTurbine : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 endPos = castPoint.position + Vector3.down * distance;
+        Vector2 endPos = castPoint.position + Vector3.left * distance;
 
         //Creates Raycast
         RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endPos);
