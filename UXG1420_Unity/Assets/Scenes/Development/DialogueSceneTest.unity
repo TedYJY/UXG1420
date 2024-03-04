@@ -4137,7 +4137,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
   m_PrefabInstance: {fileID: 975281586}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1409990774}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 023d9a7c1bf901949a46c2368ff18857, type: 3}
@@ -14870,6 +14870,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &1409990774 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8425410549361499159, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+  m_PrefabInstance: {fileID: 975281586}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1456659154
 GameObject:
   m_ObjectHideFlags: 0
@@ -16995,6 +17000,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01152e5b026e0b14d8fc2dbfa735dc53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueAnimDisappear: {fileID: 0}
+  LvlLoader: {fileID: 1409990774}
+  dialogue:
+    name: 
+    sentences: []
   nameText: {fileID: 1541101377}
   dialogueText: {fileID: 1761196432}
 --- !u!4 &2080427943

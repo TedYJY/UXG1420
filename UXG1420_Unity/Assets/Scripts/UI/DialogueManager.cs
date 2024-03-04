@@ -7,6 +7,15 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
 
+    [SerializeField] //pairs along with private objects
+    private Animator DialogueAnimDisappear; //to drag the dialogueAnimation in the inspector
+
+    [SerializeField]
+    private GameObject LvlLoader; // drag manager into levelloader inspector
+
+
+    public Dialogue dialogue; //needed for dialogue code to run
+
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
@@ -16,6 +25,7 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Invoke("DialogueBoxFadeInAnim", 3);
         sentences = new Queue<string>();
     }
 
@@ -50,7 +60,7 @@ public class DialogueManager : MonoBehaviour
     }
 
 
-    IEnumerator TypeSentence(string sentence)
+    IEnumerator TypeSentence(string sentence) //animation for letters
     {
         dialogueText.text = "";
 
@@ -64,7 +74,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        Debug.Log("end of convo");
+        LvlLoader.GetComponent<LevelLoader>().DialogueBoxFadeOutAnim();       
     }
 
 

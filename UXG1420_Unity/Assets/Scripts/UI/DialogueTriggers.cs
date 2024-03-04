@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class DialogueTriggers : MonoBehaviour
 {
+
+
+    //THIS SCRIPT IS OBSOLETE
+
     public Dialogue dialogue;
 
 

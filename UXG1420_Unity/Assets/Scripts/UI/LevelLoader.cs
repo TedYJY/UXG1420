@@ -10,19 +10,26 @@ public class LevelLoader : MonoBehaviour
 
     public Animator transition;
 
-    [SerializeField]
-    private Animator DialogueAnim;
+    [SerializeField] //pairs along with private objects
+    private Animator DialogueAnim; //to drag the dialogueAnimation in the inspector
+
+
     public float transitionTime = 1f;
     // Update is called once per frame
 
-    [SerializeField] //
-    private GameObject dialogueUI; //
+    [SerializeField] //pairs along with private objects
+    private GameObject dialogueUI; //to drag dialogueSystem in the inspector
 
     void Start()
     {
-        Invoke("balls", 3);
+        Invoke("DialogueBoxFadeInAnim", 3);
     }
 
+
+    /*public void AutoCallDialogue()
+    {
+        Invoke("DialogueBoxFadeInAnim", 3);
+    }*/
 
     void Update()
     {
@@ -50,16 +57,20 @@ public class LevelLoader : MonoBehaviour
 
 
 
-    void balls()
+
+    void DialogueBoxFadeInAnim()
     {
         //dialogueUI.SetActive(true); 
         DialogueAnim.Play("DialogueBox");
         //need to have animator, set initial alpha to 0, then to 100
-        Debug.Log("ballsballsballs");
-
         //moved dialogue trigger script code to here so that it will start along with level loader
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        //
+        
+    }
+
+    public void DialogueBoxFadeOutAnim()
+    {
+        DialogueAnim.Play("DialogueBoxFadeOut");
     }
 
 }
