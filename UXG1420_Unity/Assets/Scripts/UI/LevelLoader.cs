@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
 
+    public Dialogue dialogue; //needed for dialogue code to run
+
     public Animator transition;
 
     [SerializeField]
@@ -54,6 +56,9 @@ public class LevelLoader : MonoBehaviour
         DialogueAnim.Play("DialogueBox");
         //need to have animator, set initial alpha to 0, then to 100
         Debug.Log("ballsballsballs");
+
+        //moved dialogue trigger script code to here so that it will start along with level loader
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         //
     }
 

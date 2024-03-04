@@ -44,7 +44,22 @@ public class DialogueManager : MonoBehaviour
         //testing purpose
         string sentence = sentences.Dequeue();
         //Debug.Log(sentence);
-        dialogueText.text = sentence;
+        //dialogueText.text = sentence;
+        StopAllCoroutines(); // to prevent user from starting a new sentence before the current has finished animating
+        StartCoroutine(TypeSentence(sentence)); //start coroutine, then pass in the sentence to type
+    }
+
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        dialogueText.text = "";
+
+        foreach (char letters in sentence.ToCharArray()) //converts a string into a character array
+        {
+            dialogueText.text+= letters;
+            yield return new WaitForSeconds(0.05f); //wait 1 second for letters
+            //yield return null;
+        }
     }
 
     void EndDialogue()

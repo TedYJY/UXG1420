@@ -4054,6 +4054,26 @@ PrefabInstance:
       propertyPath: DialogueAnim
       value: 
       objectReference: {fileID: 1187807426}
+    - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+      propertyPath: dialogue.name
+      value: ur mom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: cook this nuts
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: eat these nuts
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: lick these nuts
+      objectReference: {fileID: 0}
     - target: {fileID: 8425410549361499159, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: m_Name
       value: LevelLoader
@@ -15037,7 +15057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1534458110
 RectTransform:
   m_ObjectHideFlags: 0
