@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerHandler : MonoBehaviour
 {
     //Height assignemnt
-    public float height = 1f;
+    //public float height = 1f;
 
     //Movement assignment
     private float moveSpeed = 10f;
@@ -15,14 +15,9 @@ public class playerHandler : MonoBehaviour
     //Possession assignments
     private GameObject cameraRef;
     private GameObject UIRef;
-
-    [SerializeField]
     private GameObject currentPlayer;
-    [SerializeField]
     private GameObject targetedPlayer;
-    [SerializeField]
     private GameObject ghostPlayer;
-    [SerializeField]
     private bool targetIsNearby;
 
     //Animation assignment
@@ -55,17 +50,17 @@ public class playerHandler : MonoBehaviour
         //GetInput for movement keys, WASD, Arrows, Controller etc.
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        //movement = movement.normalized;
+        movement = movement.normalized;
 
-        //Disables diagonal movement
-        if (Mathf.Abs(movement.x) > Mathf.Abs(movement.y))
+        //Disables diagonal movement (Disabled as of Alpha Playtest)
+        /*if (Mathf.Abs(movement.x) > Mathf.Abs(movement.y))
         {
             movement.y = 0;
         }
         else
         {
             movement.x = 0;
-        }
+        }*/
 
         //Sends values to animator
         animator.SetFloat("Horizontal", movement.x);

@@ -10,6 +10,9 @@ public class windTurbine : MonoBehaviour
 
     public Transform castPoint;
 
+    public Sprite Activated_Head;
+    public Sprite Deactivated_Head;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +26,7 @@ public class windTurbine : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 endPos = castPoint.position + Vector3.right * distance;
+        Vector2 endPos = castPoint.position + Vector3.down * distance;
 
         //Creates Raycast
         RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endPos);
@@ -50,5 +53,15 @@ public class windTurbine : MonoBehaviour
         {
             Debug.DrawLine(castPoint.position, endPos, Color.white);
         }
+    }
+
+    public void ActivateHead()
+    {
+        this.GetComponent<SpriteRenderer>().sprite = Activated_Head;
+    }
+
+    public void DeactivateHead()
+    {
+        this.GetComponent<SpriteRenderer>().sprite = Deactivated_Head;
     }
 }
