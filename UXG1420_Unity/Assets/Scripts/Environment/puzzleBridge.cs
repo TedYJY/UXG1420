@@ -10,6 +10,7 @@ public class puzzleBridge : MonoBehaviour
     public GameObject BridgeSprites;
     public GameObject ExtraPressurePlate = null;
     public bool IsActivated;
+    public int ItemsOnPlate;
 
     public Sprite Unpressed;
     public Sprite Pressed;
@@ -27,18 +28,24 @@ public class puzzleBridge : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.tag == "Rock")
-        {
-            IsActivated = true;
-            CheckRequirement();
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = Pressed;
+            if (coll.tag == "Rock" || coll.tag == "BigPlayer")
+            {
+                ItemsOnPlate++;
+                IsActivated = true;
+                CheckRequirement();
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = Pressed;
 
-        }
+            }
+    }
+
+    public void OnTriggerStay2D(Collider2D coll)
+    {
+        
     }
 
     public void OnTriggerExit2D(Collider2D coll)
     {
-        if (coll.tag == "Rock")
+        if ((coll.tag == "Rock" || coll.tag == "BigPlayer") && ItemsOnPlate == 1)
         {
 
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Unpressed;
@@ -78,8 +85,7 @@ public class puzzleBridge : MonoBehaviour
         {
             try
             {
-                DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = true;
-                DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.red;
+                DeactivateBridge();
             }
 
             catch
@@ -92,8 +98,30 @@ public class puzzleBridge : MonoBehaviour
     private void ActivateBridge()
     {
         DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = false;
-        DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.green;
+        try
+        { 
+            DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.green; 
+        }
+        catch
+        {
+
+        }
         BridgeSprites.SetActive(true);
     }
-    
+
+    private void DeactivateBridge()
+    {
+        DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = true;
+        try
+        {
+            DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.red;
+        }
+        catch
+        {
+
+        }
+        BridgeSprites.SetActive(false);
+    }
+
+
 }
