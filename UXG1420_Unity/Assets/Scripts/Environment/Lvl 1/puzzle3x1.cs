@@ -10,6 +10,9 @@ public class puzzle3x1 : MonoBehaviour
     [SerializeField] private GameObject rightTorch;
     [SerializeField] private GameObject middleTorch;
 
+    public Sprite Unpressed;
+    public Sprite Pressed;
+
     [SerializeField] private bool isLeft;
 
     // Start is called before the first frame update
