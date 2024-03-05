@@ -38,9 +38,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        //Debug.Log("Starting Convo" + dialogue.name);
-        //WASDActivator = GameObject.FindWithTag("UI");
-        //WASDActivator.GetComponent<UIScripts>().enabled = false;
+        Debug.Log("Starting Convo" + dialogue.name);
 
         if (GameObject.FindWithTag("Ghost")==true)
         {
@@ -100,8 +98,6 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         LvlLoader.GetComponent<LevelLoader>().DialogueBoxFadeOutAnim();
-        //WASDActivator = GameObject.FindWithTag("UI");
-        //WASDActivator.GetComponent<UIScripts>().enabled = true;
         DialoguePlayerTracker.GetComponent<playerHandler>().enabled = true;
     }
 
