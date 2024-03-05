@@ -41,8 +41,20 @@ public class DialogueManager : MonoBehaviour
         //Debug.Log("Starting Convo" + dialogue.name);
         //WASDActivator = GameObject.FindWithTag("UI");
         //WASDActivator.GetComponent<UIScripts>().enabled = false;
-        DialoguePlayerTracker = GameObject.FindWithTag("Ghost");
-        DialoguePlayerTracker.GetComponent<playerHandler>().enabled = false;
+
+        if (GameObject.FindWithTag("Ghost")==true)
+        {
+            DialoguePlayerTracker = GameObject.FindWithTag("Ghost");
+            DialoguePlayerTracker.GetComponent<playerHandler>().enabled = false;
+        }
+        else
+        {
+            DialoguePlayerTracker = GameObject.FindWithTag("BigPlayer");
+            DialoguePlayerTracker.GetComponent<playerHandler>().enabled = false;
+        }
+
+        //DialoguePlayerTracker = GameObject.FindWithTag("Ghost");
+        //DialoguePlayerTracker.GetComponent<playerHandler>().enabled = false;
 
         nameText.text = dialogue.name;
 

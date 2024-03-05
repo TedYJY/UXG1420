@@ -42,4 +42,16 @@ public class DialogueTriggers : MonoBehaviour
 
     }
 
+    /*
+        public void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Detect collision for pushing animation
+        if (collision.gameObject.tag == "Rock" && movement.sqrMagnitude > 0.01)
+        {
+            animator.SetBool("Pushing", true);
+        }
+
+    }
+    //*/
+
 }

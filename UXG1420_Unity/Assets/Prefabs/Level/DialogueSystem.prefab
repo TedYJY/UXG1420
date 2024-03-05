@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4010484992141420610}
   - component: {fileID: 372155394016841594}
   - component: {fileID: 1880014086928859169}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: ContinueButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 2227867441717560150}
   - component: {fileID: 7949928568359673066}
   - component: {fileID: 6566249325812341177}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: ButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 7156805099158624594}
   - component: {fileID: 6980417233311321340}
   - component: {fileID: 1444015836961284186}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: TestText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 3857148499173839028}
   - component: {fileID: 8619658854060912888}
   - component: {fileID: 2202565249131807674}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: TestButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 4207084470332397743}
   - component: {fileID: 6332159579922332670}
   - component: {fileID: 1774241117836759481}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: CharacterDialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 7431192058917843651}
   - component: {fileID: 5978694282257459691}
   - component: {fileID: 1365695574423601684}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: DialogueSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 1875128487602096022}
   - component: {fileID: 1475181212693958292}
   - component: {fileID: 8439450404148009967}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: DialogueBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -915,7 +915,7 @@ GameObject:
   - component: {fileID: 2171487866263246653}
   - component: {fileID: 5741785606547357885}
   - component: {fileID: 8500699166403360167}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: CharacterName
   m_TagString: Untagged
   m_Icon: {fileID: 0}

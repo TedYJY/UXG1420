@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 8285344421712882550}
   m_Layer: 0
   m_Name: LevelLoader
-  m_TagString: Untagged
+  m_TagString: LevelLoader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,5 +257,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023d9a7c1bf901949a46c2368ff18857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences: []
   transition: {fileID: 1581272655713670023}
+  DialogueAnim: {fileID: 0}
   transitionTime: 1
+  dialogueUI: {fileID: 0}
