@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class FirstBridgeDialogueTrigger : MonoBehaviour
+public class Tut2_FirstBridgeDialogueTrigger : MonoBehaviour
 {
 
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lvl1_TorchUITrigger : MonoBehaviour
+public class Tut1_TorchUITrigger : MonoBehaviour
 {
 
     private void OnTriggerEnter2D(Collider2D collision)
