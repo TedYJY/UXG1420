@@ -239,10 +239,7 @@ public class playerHandler : MonoBehaviour
         {
             animator.SetBool("Pushing", true);
         }
-
     }
-
-
 
     public void OnCollisionExit2D(Collision2D collision)
     {
