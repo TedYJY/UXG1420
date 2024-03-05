@@ -173,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitLayers:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 8
   distance: 30
   rightforce: 0
   upforce: -500
@@ -3256,7 +3256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 698164299}
   - component: {fileID: 698164300}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bridge_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16381,7 +16381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1822210451}
   - component: {fileID: 1822210452}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bridge_Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

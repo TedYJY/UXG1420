@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Planned Final/Lvl 2.unity
     guid: 3ff9e40f1bf0cd3438e80afa64e9f7dc
   - enabled: 1
+    path: Assets/Scenes/Alpha/BackStoryBoard.unity
+    guid: 7cc27ae24b4fbea46b4b9253daee0ff3
+  - enabled: 1
     path: Assets/Scenes/Alpha/EndStory.unity
     guid: 467064f6e9f9bee4f8436a754c1434f0
   m_configObjects: {}
