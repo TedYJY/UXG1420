@@ -47,10 +47,10 @@ public class windTurbineLeft : MonoBehaviour
                 hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * rightforce);
                 hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * upforce);
                 Debug.DrawLine(castPoint.position, hit.point, Color.red);
-                Debug.Log("blowing his ass");
+                //Debug.Log("blowing his ass");
             }
 
-            Debug.Log("Is stuck");
+            //Debug.Log("Is stuck");
 
         }
         

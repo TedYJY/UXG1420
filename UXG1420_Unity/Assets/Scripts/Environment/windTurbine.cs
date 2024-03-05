@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class windTurbine : MonoBehaviour
 {
+
+    public LayerMask IgnoreThese;
+
     public float distance = 10f;
     public float rightforce = 1500f;
     public float upforce = 500f;
@@ -47,10 +50,10 @@ public class windTurbine : MonoBehaviour
                 hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * rightforce);
                 hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * upforce);
                 Debug.DrawLine(castPoint.position, hit.point, Color.red);
-                Debug.Log("blowing his ass");
+                //Debug.Log("blowing his ass");
             }
 
-            Debug.Log("Is stuck");
+            //Debug.Log("Is stuck");
 
         }
         

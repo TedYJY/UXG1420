@@ -137,7 +137,7 @@ public class playerHandler : MonoBehaviour
 
             catch 
             {
-                Debug.Log("No UI Found");
+                //Debug.Log("No UI Found");
             }
 
 
@@ -173,7 +173,7 @@ public class playerHandler : MonoBehaviour
 
             catch
             {
-                Debug.Log("UI Prompt Already Inactive");
+                //Debug.Log("UI Prompt Already Inactive");
             }
         }
 

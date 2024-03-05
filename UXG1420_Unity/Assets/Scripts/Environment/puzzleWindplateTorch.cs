@@ -9,6 +9,7 @@ public class puzzleWindplateTorch : MonoBehaviour
     public GameObject BridgeSprites;
     public Sprite TorchLit;
 
+    [SerializeField]
     private GameObject TorchCollider;
     private bool IsAble;
     private bool IsActivated = false;
@@ -28,7 +29,7 @@ public class puzzleWindplateTorch : MonoBehaviour
             BridgeSprites.SetActive(true);
             TorchCollider.SetActive(false);
             IsActivated = true;
-            this.gameObject.GetComponent<SpriteRenderer>().sprite =  TorchLit;
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchLit;
 
         }
 

@@ -31,7 +31,7 @@ public class puzzleBridge : MonoBehaviour
             if (coll.tag == "Rock" || coll.tag == "BigPlayer")
             {
                 ItemsOnPlate++;
-                Debug.Log(this.ItemsOnPlate);
+                //Debug.Log(this.ItemsOnPlate);
                 IsActivated = true;
                 CheckRequirement();
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = Pressed;
@@ -52,7 +52,7 @@ public class puzzleBridge : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Unpressed;
             IsActivated = false;
             ItemsOnPlate--;
-            Debug.Log(this.ItemsOnPlate);
+            //Debug.Log(this.ItemsOnPlate);
             CheckRequirement();
             try
             {
