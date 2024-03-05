@@ -4380,7 +4380,7 @@ Transform:
   m_GameObject: {fileID: 513342353}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7193,7 +7193,7 @@ PrefabInstance:
     - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: DialogueAnim
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1642725412}
     - target: {fileID: 8425410549361499159, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: m_Name
       value: LevelLoader
@@ -17965,6 +17965,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!95 &1642725412 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1475181212693958292, guid: ae9a8d90d35dce544896de15e9e62827, type: 3}
+  m_PrefabInstance: {fileID: 948710291}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1682843301
 GameObject:
   m_ObjectHideFlags: 0

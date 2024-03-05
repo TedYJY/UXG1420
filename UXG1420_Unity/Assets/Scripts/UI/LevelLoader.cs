@@ -22,7 +22,15 @@ public class LevelLoader : MonoBehaviour
 
     void Start()
     {
-        Invoke("DialogueBoxFadeInAnim", 3);
+        if (SceneManager.GetActiveScene().buildIndex==4)
+        {
+            //NewDialogueBoxAnim();
+        }
+        else
+        {
+            Invoke("NewDialogueBoxAnim", 3);
+        }//*/
+        //Invoke("DialogueBoxFadeInAnim", 3);
     }
 
 
@@ -44,6 +52,10 @@ public class LevelLoader : MonoBehaviour
         
     }
 
+
+
+
+
     IEnumerator LoadLevel(int levelIndex)
     {
         transition.SetTrigger("Start");
@@ -54,12 +66,33 @@ public class LevelLoader : MonoBehaviour
     }
 
 
-    public void DialogueBoxFadeInAnim()
+    public void DialogueBoxFadeInAnim(Dialogue FadeInDialogue) //this method will trigger a dialogue box based on something that you drop in the inspector
     {
 
         try
         {
+
+            Debug.Log("fade in dialogue box");
             //dialogueUI.SetActive(true); 
+            DialogueAnim.Play("DialogueBox");
+            //need to have animator, set initial alpha to 0, then to 100
+            //moved dialogue trigger script code to here so that it will start along with level loader
+            FindObjectOfType<DialogueManager>().StartDialogue(FadeInDialogue);
+        }
+        catch
+        {
+            
+        }
+        
+        
+    }
+
+    public void NewDialogueBoxAnim() //this method will trigger a dialogue box based on serialized field
+    {
+        try
+        {
+
+            Debug.Log("fade in dialogue box");
             DialogueAnim.Play("DialogueBox");
             //need to have animator, set initial alpha to 0, then to 100
             //moved dialogue trigger script code to here so that it will start along with level loader
@@ -67,14 +100,9 @@ public class LevelLoader : MonoBehaviour
         }
         catch
         {
-
+            
         }
-        
-        
     }
-
-
-
 
 
     public void DialogueBoxFadeOutAnim()
