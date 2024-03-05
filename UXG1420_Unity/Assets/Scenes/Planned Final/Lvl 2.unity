@@ -14129,7 +14129,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.03, y: 4.34}
+    oldSize: {x: 5.12, y: 5.12}
     newSize: {x: 5.03, y: 4.34}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -14152,8 +14152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Torch: {fileID: 2018825950}
   TorchCollider: {fileID: 1774752567}
-  Unpressed: {fileID: 21300000, guid: 803ef9ec46668eb4bb294871ccf0614d, type: 3}
-  Pressed: {fileID: 21300000, guid: 5144827578030ad43a0758f7ff9f8374, type: 3}
+  Unpressed: {fileID: 21300000, guid: 6965cc07d49fb6b40bb70216730b0768, type: 3}
+  Pressed: {fileID: 21300000, guid: b7243b24ffbf1604cbf4b71ee9e7075a, type: 3}
 --- !u!212 &1603351857
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14195,7 +14195,7 @@ SpriteRenderer:
   m_SortingLayerID: -112462991
   m_SortingLayer: 2
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 803ef9ec46668eb4bb294871ccf0614d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6965cc07d49fb6b40bb70216730b0768, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
