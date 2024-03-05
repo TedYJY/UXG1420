@@ -33,15 +33,7 @@ public class LevelLoader : MonoBehaviour
 
     void Update()
     {
-        /*if (Input.GetMouseButtonDown(0))//Input.GetMouseButtonDown(0)
-        {
-            LoadNextLevel();
-        } 
 
-        if (Input.GetKeyDown("e"))
-        {
-            Invoke("DialogueBoxFadeInAnim", 3);
-        }//*/
 
     }
 
@@ -61,19 +53,6 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(levelIndex);
     }
 
-    /*
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        //Detect collision for pushing animation
-        if (collision.gameObject.tag == "BigPlayer")
-        {
-            //animator.SetBool("Pushing", true);
-            Invoke("DialogueBoxFadeInAnim", 2);
-            Debug.Log("collide with torch");
-        }
-    }//*/
-
-
 
     public void DialogueBoxFadeInAnim()
     {
@@ -85,17 +64,6 @@ public class LevelLoader : MonoBehaviour
         
     }
 
-
-    /*public void DialogueBoxFadeInAnimTEST()
-    {
-        //dialogueUI.SetActive(true); 
-        DialogueAnim.Play("DialogueBox");
-        //need to have animator, set initial alpha to 0, then to 100
-        //moved dialogue trigger script code to here so that it will start along with level loader
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        Debug.Log("Levelloader test");
-
-    }//*/
 
     public void DialogueBoxFadeOutAnim()
     {

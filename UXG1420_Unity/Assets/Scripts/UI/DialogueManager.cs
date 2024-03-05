@@ -55,17 +55,10 @@ public class DialogueManager : MonoBehaviour
         if (sentences.Count==0)
         {
             EndDialogue();
-            Debug.Log("dialoguedialogue");
             return;
         }
-        /*if (sentences.Count!=0)
-        {
-            Debug.Log("dialoguedialogue");
-        }//*/
-        //testing purpose
+
         string sentence = sentences.Dequeue();
-        //Debug.Log(sentence);
-        //dialogueText.text = sentence;
         StopAllCoroutines(); // to prevent user from starting a new sentence before the current has finished animating
         StartCoroutine(TypeSentence(sentence)); //start coroutine, then pass in the sentence to type
     }
