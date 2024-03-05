@@ -283,6 +283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghosty
       objectReference: {fileID: 0}
+    - target: {fileID: 7016926720374084021, guid: e236654dfd123cf4a9f123984172db19, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -661,6 +665,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1021800885}
+    - target: {fileID: 2590865110530363676, guid: ae9a8d90d35dce544896de15e9e62827, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2635889527291916600, guid: ae9a8d90d35dce544896de15e9e62827, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134133984716277223, guid: ae9a8d90d35dce544896de15e9e62827, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3895444856197383022, guid: ae9a8d90d35dce544896de15e9e62827, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5698603632132831297, guid: ae9a8d90d35dce544896de15e9e62827, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -741,9 +761,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5991143303361151718, guid: ae9a8d90d35dce544896de15e9e62827, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6369452960507383172, guid: ae9a8d90d35dce544896de15e9e62827, type: 3}
       propertyPath: m_Name
       value: DialogueSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6369452960507383172, guid: ae9a8d90d35dce544896de15e9e62827, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861937859108653463, guid: ae9a8d90d35dce544896de15e9e62827, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062509453217477079, guid: ae9a8d90d35dce544896de15e9e62827, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4028,6 +4064,14 @@ PrefabInstance:
     - target: {fileID: 1910173029645959579, guid: 6f9bcd5f9b55a624da17665335635235, type: 3}
       propertyPath: m_Name
       value: UI Prompts
+      objectReference: {fileID: 0}
+    - target: {fileID: 1910173029645959579, guid: 6f9bcd5f9b55a624da17665335635235, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7406832838593173218, guid: 6f9bcd5f9b55a624da17665335635235, type: 3}
+      propertyPath: initialResumeTime
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8695,12 +8739,12 @@ SpriteRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1010680441}
   - {fileID: 481840277}
   - {fileID: 320761439}
   - {fileID: 1615594649}
   - {fileID: 771500064}
   - {fileID: 1465247839}
-  - {fileID: 1010680441}
   - {fileID: 496579986}
   - {fileID: 1862924593}
   - {fileID: 579275492}

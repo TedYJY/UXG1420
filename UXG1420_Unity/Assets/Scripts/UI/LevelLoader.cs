@@ -56,13 +56,25 @@ public class LevelLoader : MonoBehaviour
 
     public void DialogueBoxFadeInAnim()
     {
-        //dialogueUI.SetActive(true); 
-        DialogueAnim.Play("DialogueBox");
-        //need to have animator, set initial alpha to 0, then to 100
-        //moved dialogue trigger script code to here so that it will start along with level loader
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+
+        try
+        {
+            //dialogueUI.SetActive(true); 
+            DialogueAnim.Play("DialogueBox");
+            //need to have animator, set initial alpha to 0, then to 100
+            //moved dialogue trigger script code to here so that it will start along with level loader
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        }
+        catch
+        {
+
+        }
+        
         
     }
+
+
+
 
 
     public void DialogueBoxFadeOutAnim()
