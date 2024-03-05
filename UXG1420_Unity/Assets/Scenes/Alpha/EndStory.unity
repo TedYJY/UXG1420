@@ -182,8 +182,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: THE END
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d830fa6ace106b24bb64d100d151eab5, type: 2}
+  m_sharedMaterial: {fileID: -4541270436084411892, guid: d830fa6ace106b24bb64d100d151eab5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -411,8 +411,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: QUIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d830fa6ace106b24bb64d100d151eab5, type: 2}
+  m_sharedMaterial: {fileID: -4541270436084411892, guid: d830fa6ace106b24bb64d100d151eab5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -696,6 +696,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 272787403}
+  audioManager: {fileID: 0}
+  bwangSound: {fileID: 0}
 --- !u!1 &1048187315
 GameObject:
   m_ObjectHideFlags: 0
