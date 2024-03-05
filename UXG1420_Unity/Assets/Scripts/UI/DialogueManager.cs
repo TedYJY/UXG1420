@@ -58,6 +58,8 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        
+
         string sentence = sentences.Dequeue();
         StopAllCoroutines(); // to prevent user from starting a new sentence before the current has finished animating
         StartCoroutine(TypeSentence(sentence)); //start coroutine, then pass in the sentence to type

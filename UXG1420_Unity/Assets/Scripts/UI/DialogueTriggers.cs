@@ -15,7 +15,7 @@ public class DialogueTriggers : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 
 
@@ -23,9 +23,24 @@ public class DialogueTriggers : MonoBehaviour
     {
         if (collision.gameObject.tag=="Ghost" && dialogueTracker==true)
         {
-            Debug.Log("no more CONVO");
+            //stops triggering dialogue box after colliding once with torch
+            Debug.Log("stops triggering dialogue box after colliding once with torch");
             dialogueTracker = false;
             GameObject.FindWithTag("LevelLoader").GetComponent<LevelLoader>().DialogueBoxFadeInAnim();
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue); 
+            //GameObject.FindWithTag("LevelLoader").GetComponent<LevelLoader>().DialogueBoxFadeInAnimTEST();
+
+            //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        }
+
+
+        if (collision.gameObject.tag == "BigPlayer" && dialogueTracker == true)
+        {
+            //stops triggering dialogue box after colliding once with torch
+            Debug.Log("stops triggering dialogue box after colliding once with torch");
+            dialogueTracker = false;
+            GameObject.FindWithTag("LevelLoader").GetComponent<LevelLoader>().DialogueBoxFadeInAnim();
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
             //GameObject.FindWithTag("LevelLoader").GetComponent<LevelLoader>().DialogueBoxFadeInAnimTEST();
 
             //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
