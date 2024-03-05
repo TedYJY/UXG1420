@@ -18,6 +18,9 @@ public class puzzle3x1Torch : MonoBehaviour
     [SerializeField] private GameObject lPressure;
     [SerializeField] private GameObject rPressure;
 
+    public GameObject Bridge_Collider;
+    public GameObject Bridge_Sprite;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +39,20 @@ public class puzzle3x1Torch : MonoBehaviour
         if (tracker == 3)
         {
             this.GetComponent<SpriteRenderer>().color = Color.green;
+
             lPressure.GetComponent<puzzle3x1>().enabled = false;
             rPressure.GetComponent<puzzle3x1>().enabled = false;
             this.GetComponent<puzzle3x1Torch>().enabled = false;
+
+            try
+            {
+                Bridge_Collider.SetActive(false);
+                Bridge_Sprite.SetActive(true);
+            }
+            catch
+            {
+                
+            }
         }
     }
 
@@ -86,4 +100,8 @@ public class puzzle3x1Torch : MonoBehaviour
         Activate();
     }
 
+    public void Solved ()
+    {
+
+    }
 }

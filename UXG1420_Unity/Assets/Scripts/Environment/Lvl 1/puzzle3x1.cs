@@ -50,7 +50,7 @@ public class puzzle3x1 : MonoBehaviour
         if (collision.tag == "BigPlayer")
         {
             SwapStates();
-            
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Pressed;
         }
     }
 
@@ -59,6 +59,7 @@ public class puzzle3x1 : MonoBehaviour
         if (collision.tag == "BigPlayer")
         {
             SwapStates();
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Unpressed;
         }
     }
 
