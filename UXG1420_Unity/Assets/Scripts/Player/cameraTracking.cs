@@ -14,6 +14,9 @@ public class cameraTracking : MonoBehaviour
     //time to follow target
     private float smoothTime = 2.5f;
 
+    //
+    private float initialPauseTime = 1f;
+
     public float leftLimit;
     public float rightLimit;
     public float bottomLimit;
@@ -26,6 +29,8 @@ public class cameraTracking : MonoBehaviour
         //Debug.Log("Ghost found for camera");
 
         Invoke("fasterCam", 6);
+        
+
     }
 
     void FixedUpdate()
@@ -62,4 +67,5 @@ public class cameraTracking : MonoBehaviour
     {
         smoothTime = 0.15f;
     }
+
 }
