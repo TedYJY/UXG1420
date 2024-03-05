@@ -7,8 +7,11 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-
+    //[SerializeField] //pairs along with private objects
     private GameObject DialoguePlayerTracker;
+    //private GameObject WASDActivator;
+
+
 
     [SerializeField] //pairs along with private objects
     private Animator DialogueAnimDisappear; //to drag the dialogueAnimation in the inspector
@@ -30,13 +33,16 @@ public class DialogueManager : MonoBehaviour
     {
         //Invoke("DialogueBoxFadeInAnim", 3);
         sentences = new Queue<string>();
-        DialoguePlayerTracker = GameObject.FindWithTag("Ghost");
-        DialoguePlayerTracker.GetComponent<playerHandler>().enabled = false;
+        
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
         //Debug.Log("Starting Convo" + dialogue.name);
+        //WASDActivator = GameObject.FindWithTag("UI");
+        //WASDActivator.GetComponent<UIScripts>().enabled = false;
+        DialoguePlayerTracker = GameObject.FindWithTag("Ghost");
+        DialoguePlayerTracker.GetComponent<playerHandler>().enabled = false;
 
         nameText.text = dialogue.name;
 
@@ -49,10 +55,6 @@ public class DialogueManager : MonoBehaviour
         }
         DisplayNextSentence();
 
-        /*if (sentences.Count!=0)
-        {
-            Debug.Log("fuck");
-        }//*/
     }
 
     public void DisplayNextSentence()
@@ -86,8 +88,9 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         LvlLoader.GetComponent<LevelLoader>().DialogueBoxFadeOutAnim();
+        //WASDActivator = GameObject.FindWithTag("UI");
+        //WASDActivator.GetComponent<UIScripts>().enabled = true;
         DialoguePlayerTracker.GetComponent<playerHandler>().enabled = true;
-        Debug.Log("Ghost works");
     }
 
 

@@ -6,8 +6,8 @@ using UnityEngine;
 public class DialogueTriggers : MonoBehaviour
 {
 
-
-    //THIS SCRIPT IS OBSOLETE
+    [SerializeField] //pairs along with private objects
+    private GameObject WASDActivator;
 
     public Dialogue dialogue;
 
@@ -27,10 +27,10 @@ public class DialogueTriggers : MonoBehaviour
             Debug.Log("stops triggering dialogue box after colliding once with torch");
             dialogueTracker = false;
             GameObject.FindWithTag("LevelLoader").GetComponent<LevelLoader>().DialogueBoxFadeInAnim();
-            FindObjectOfType<DialogueManager>().StartDialogue(dialogue); 
-            //GameObject.FindWithTag("LevelLoader").GetComponent<LevelLoader>().DialogueBoxFadeInAnimTEST();
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
 
-            //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            //WASDActivator = GameObject.FindWithTag("UI");
+            //WASDActivator.GetComponent<UIScripts>().enabled = true;
         }
 
 
@@ -41,15 +41,7 @@ public class DialogueTriggers : MonoBehaviour
             dialogueTracker = false;
             GameObject.FindWithTag("LevelLoader").GetComponent<LevelLoader>().DialogueBoxFadeInAnim();
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-            //GameObject.FindWithTag("LevelLoader").GetComponent<LevelLoader>().DialogueBoxFadeInAnimTEST();
-
-            //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }
-
-        /*if (GameObject.FindWithTag("DialogueManager").GetComponent<DialogueManager>().sentences.count==)
-        {
-
-        }//*/
 
     }
 

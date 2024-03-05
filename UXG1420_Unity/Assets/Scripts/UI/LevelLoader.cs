@@ -74,20 +74,7 @@ public class LevelLoader : MonoBehaviour
     }
 
 
-    /*
-    
-    void VFXControl()
-    {
-        try
-        {
-            // your code segment which might throw an exception
-        }
-        catch (Exception ex)
-        {
-            Debug.LogException(ex, this);
-        }
-    }
-    //*/
+
 
 
     public void DialogueBoxFadeOutAnim()
