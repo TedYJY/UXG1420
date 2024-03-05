@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+
+    private GameObject DialoguePlayerTracker;
 
     [SerializeField] //pairs along with private objects
     private Animator DialogueAnimDisappear; //to drag the dialogueAnimation in the inspector
@@ -27,6 +30,8 @@ public class DialogueManager : MonoBehaviour
     {
         //Invoke("DialogueBoxFadeInAnim", 3);
         sentences = new Queue<string>();
+        DialoguePlayerTracker = GameObject.FindWithTag("Ghost");
+        DialoguePlayerTracker.GetComponent<playerHandler>().enabled = false;
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -80,7 +85,9 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        LvlLoader.GetComponent<LevelLoader>().DialogueBoxFadeOutAnim();       
+        LvlLoader.GetComponent<LevelLoader>().DialogueBoxFadeOutAnim();
+        DialoguePlayerTracker.GetComponent<playerHandler>().enabled = true;
+        Debug.Log("Ghost works");
     }
 
 

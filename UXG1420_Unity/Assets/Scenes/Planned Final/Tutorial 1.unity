@@ -283,6 +283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghosty
       objectReference: {fileID: 0}
+    - target: {fileID: 7016926720374084021, guid: e236654dfd123cf4a9f123984172db19, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
