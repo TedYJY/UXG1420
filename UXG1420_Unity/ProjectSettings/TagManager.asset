@@ -15,6 +15,7 @@ TagManager:
   - UI
   - Torch
   - LevelLoader
+  - DialogueManager
   layers:
   - Default
   - TransparentFX

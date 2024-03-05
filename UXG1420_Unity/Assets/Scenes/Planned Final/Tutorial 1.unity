@@ -3894,6 +3894,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2642592051529627333, guid: a69e5bdb9fee64d4aa190235856540f6, type: 3}
+      propertyPath: m_TagString
+      value: DialogueManager
+      objectReference: {fileID: 0}
     - target: {fileID: 3950315711729326898, guid: a69e5bdb9fee64d4aa190235856540f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7006,7 +7010,7 @@ PrefabInstance:
       objectReference: {fileID: 539870255}
     - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: dialogue.name
-      value: ur mom
+      value: GHOSTY
       objectReference: {fileID: 0}
     - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -7014,15 +7018,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: "cook this nuts\t"
+      value: Hmm
       objectReference: {fileID: 0}
     - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: eat this nuts
+      value: "Dialogue 1\t"
       objectReference: {fileID: 0}
     - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: lick these nuts
+      value: Dialogue 2
       objectReference: {fileID: 0}
     - target: {fileID: 8425410549361499159, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: m_Name

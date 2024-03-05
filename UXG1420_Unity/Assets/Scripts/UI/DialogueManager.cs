@@ -40,8 +40,14 @@ public class DialogueManager : MonoBehaviour
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
+            //Debug.Log("dialogue continue");
         }
         DisplayNextSentence();
+
+        /*if (sentences.Count!=0)
+        {
+            Debug.Log("fuck");
+        }//*/
     }
 
     public void DisplayNextSentence()
@@ -49,8 +55,13 @@ public class DialogueManager : MonoBehaviour
         if (sentences.Count==0)
         {
             EndDialogue();
+            Debug.Log("dialoguedialogue");
             return;
         }
+        /*if (sentences.Count!=0)
+        {
+            Debug.Log("dialoguedialogue");
+        }//*/
         //testing purpose
         string sentence = sentences.Dequeue();
         //Debug.Log(sentence);
