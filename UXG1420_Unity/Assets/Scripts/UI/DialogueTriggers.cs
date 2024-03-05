@@ -6,8 +6,6 @@ using UnityEngine;
 public class DialogueTriggers : MonoBehaviour
 {
 
-    [SerializeField] //pairs along with private objects
-    private GameObject WASDActivator;
 
     public Dialogue dialogue;
 
@@ -28,7 +26,6 @@ public class DialogueTriggers : MonoBehaviour
             dialogueTracker = false;
             GameObject.FindWithTag("LevelLoader").GetComponent<LevelLoader>().DialogueBoxFadeInAnim();
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-
             //WASDActivator = GameObject.FindWithTag("UI");
             //WASDActivator.GetComponent<UIScripts>().enabled = true;
         }
