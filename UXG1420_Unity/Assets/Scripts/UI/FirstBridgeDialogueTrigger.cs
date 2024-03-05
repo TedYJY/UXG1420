@@ -26,8 +26,8 @@ public class FirstBridgeDialogueTrigger : MonoBehaviour
             //stops triggering dialogue box after colliding once with torch
             Debug.Log("stops triggering dialogue box after colliding once with torch");
             dialogueTracker = false;
-            GameObject.FindWithTag("LevelLoader").GetComponent<LevelLoader>().DialogueBoxFadeInAnim();
-            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            GameObject.FindWithTag("LevelLoader").GetComponent<LevelLoader>().DialogueBoxFadeInAnim(dialogue);
+            //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }
 
     }
