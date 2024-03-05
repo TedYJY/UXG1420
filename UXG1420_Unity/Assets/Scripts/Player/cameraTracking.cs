@@ -12,11 +12,16 @@ public class cameraTracking : MonoBehaviour
     Vector3 velocity = Vector3.zero;
 
     //time to follow target
-    private float smoothTime = 2.5f;
+    private float smoothTime = 2f;
 
     //
+    [Header("Initial camera timings")]
+    [SerializeField]
     private float initialPauseTime = 1f;
+    [SerializeField]
+    private float initialResumeTime = 4.8f;
 
+    [Header("Camera boundaries")]
     public float leftLimit;
     public float rightLimit;
     public float bottomLimit;
@@ -25,26 +30,33 @@ public class cameraTracking : MonoBehaviour
 
     private void Start()
     {
-        target = GameObject.FindWithTag("Ghost").transform;
+        Invoke("findGhost", initialPauseTime);
         //Debug.Log("Ghost found for camera");
 
-        Invoke("fasterCam", 6);
+        Invoke("fasterCam", initialResumeTime);
         
 
     }
 
     void FixedUpdate()
     {
+        try
+        {
+            Vector3 targetPos = target.position;
 
-        Vector3 targetPos = target.position;
+            //align the camera and the target z position
+            targetPos.z = transform.position.z;
 
-        //align the camera and the target z position
-        targetPos.z = transform.position.z;
-
-        transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothTime);
+            transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothTime);
 
 
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, leftLimit, rightLimit), Mathf.Clamp(transform.position.y, bottomLimit, topLimit), transform.position.z);
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, leftLimit, rightLimit), Mathf.Clamp(transform.position.y, bottomLimit, topLimit), transform.position.z);
+        }
+        catch
+        {
+            //Debug.Log("Camera has stopped")
+        }
+
     }
 
     public void ChangeTarget(GameObject T)
@@ -63,6 +75,10 @@ public class cameraTracking : MonoBehaviour
 
     }
 
+    void findGhost()
+    {
+        target = GameObject.FindWithTag("Ghost").transform;
+    }
     private void fasterCam()
     {
         smoothTime = 0.15f;
