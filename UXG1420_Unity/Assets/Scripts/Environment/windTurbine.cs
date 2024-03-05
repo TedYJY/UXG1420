@@ -5,7 +5,7 @@ using UnityEngine;
 public class windTurbine : MonoBehaviour
 {
 
-    public LayerMask IgnoreThese;
+    public LayerMask hitLayers;
 
     public float distance = 10f;
     public float rightforce = 1500f;
@@ -33,7 +33,7 @@ public class windTurbine : MonoBehaviour
         Vector2 endPos = castPoint.position + Vector3.down * distance;
 
         //Creates Raycast
-        RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endPos);
+        RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endPos, hitLayers);
         
 
         if (hit.collider != null && IsActive == true)
@@ -41,7 +41,7 @@ public class windTurbine : MonoBehaviour
             
             if (hit.collider.gameObject.CompareTag("Rock"))
             {
-                hit = Physics2D.Linecast(castPoint.position, hit.point);
+                hit = Physics2D.Linecast(castPoint.position, hit.point, hitLayers);
                 Debug.DrawLine(castPoint.position, hit.point, Color.blue);
             }
 

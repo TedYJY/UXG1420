@@ -133,8 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1252765}
   - component: {fileID: 1252769}
-  - component: {fileID: 1252768}
-  - component: {fileID: 1252767}
   - component: {fileID: 1252766}
   m_Layer: 0
   m_Name: Fan (1)
@@ -173,9 +171,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572ba510608bd1046b3c064ba3e1b3a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IgnoreThese:
+  hitLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 72
   distance: 30
   rightforce: 0
   upforce: -500
@@ -183,71 +181,6 @@ MonoBehaviour:
   IsActive: 0
   Activated_Head: {fileID: 21300000, guid: aca8be3d7e3083245be59f364bf4af93, type: 3}
   Deactivated_Head: {fileID: 21300000, guid: 7b185cd1194b2a848bcbddfd39892315, type: 3}
---- !u!61 &1252767
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252764}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.024716496, y: 0.71}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.11}
-    oldSize: {x: 5.12, y: 5.12}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.68, y: 2.34}
-  m_EdgeRadius: 0
---- !u!249 &1252768
-AreaEffector2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252764}
-  m_Enabled: 0
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 8
-  m_UseGlobalAngle: 0
-  m_ForceAngle: 90
-  m_ForceMagnitude: 750
-  m_ForceVariation: 0
-  m_ForceTarget: 0
-  m_Drag: 0
-  m_AngularDrag: 0
 --- !u!212 &1252769
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -407,8 +340,6 @@ GameObject:
   m_Component:
   - component: {fileID: 89565819}
   - component: {fileID: 89565818}
-  - component: {fileID: 89565817}
-  - component: {fileID: 89565816}
   - component: {fileID: 89565820}
   m_Layer: 0
   m_Name: Fan
@@ -417,71 +348,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &89565816
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89565815}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.024716496, y: 4.2747755}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.11}
-    oldSize: {x: 5.12, y: 5.12}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.93924, y: 9.126884}
-  m_EdgeRadius: 0
---- !u!249 &89565817
-AreaEffector2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89565815}
-  m_Enabled: 0
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 8
-  m_UseGlobalAngle: 0
-  m_ForceAngle: 90
-  m_ForceMagnitude: 750
-  m_ForceVariation: 0
-  m_ForceTarget: 0
-  m_Drag: 0
-  m_AngularDrag: 0
 --- !u!212 &89565818
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -564,9 +430,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572ba510608bd1046b3c064ba3e1b3a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IgnoreThese:
+  hitLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 72
   distance: 15
   rightforce: 500
   upforce: -1500
@@ -2026,7 +1892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &503914565
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2786,7 +2652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 698164299}
   - component: {fileID: 698164300}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Bridge_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12673,8 +12539,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1800098179}
   - component: {fileID: 1800098183}
-  - component: {fileID: 1800098182}
-  - component: {fileID: 1800098181}
   - component: {fileID: 1800098184}
   m_Layer: 0
   m_Name: Fan (2)
@@ -12701,71 +12565,6 @@ Transform:
   - {fileID: 1075285307}
   m_Father: {fileID: 1827069513}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1800098181
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1800098178}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.024716496, y: 0.71}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.11}
-    oldSize: {x: 5.12, y: 5.12}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.68, y: 2.34}
-  m_EdgeRadius: 0
---- !u!249 &1800098182
-AreaEffector2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1800098178}
-  m_Enabled: 0
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 8
-  m_UseGlobalAngle: 0
-  m_ForceAngle: 90
-  m_ForceMagnitude: 750
-  m_ForceVariation: 0
-  m_ForceTarget: 0
-  m_Drag: 0
-  m_AngularDrag: 0
 --- !u!212 &1800098183
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12837,6 +12636,9 @@ MonoBehaviour:
   IsActive: 1
   Activated_Head: {fileID: 21300000, guid: 84f17e321a888db45ae7c5664c6ad64e, type: 3}
   Deactivated_Head: {fileID: 21300000, guid: 4e9a5b354c6a9c842814944e1b47b602, type: 3}
+  hitLayers:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &1815036849
 GameObject:
   m_ObjectHideFlags: 0
@@ -13015,7 +12817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1822210451}
   - component: {fileID: 1822210452}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Bridge_Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14107,7 +13909,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BridgeSprites: {fileID: 1957845175}
   TorchLit: {fileID: 21300000, guid: ab8355ced1596f947aa8625d789db3d6, type: 3}
-  TorchCollider: {fileID: 0}
+  BridgeCollider: {fileID: 1822210450}
+  TorchCollider: {fileID: 1774752567}
 --- !u!61 &2018825953
 BoxCollider2D:
   m_ObjectHideFlags: 0

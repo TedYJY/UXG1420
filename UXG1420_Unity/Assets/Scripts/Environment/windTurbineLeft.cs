@@ -14,6 +14,8 @@ public class windTurbineLeft : MonoBehaviour
     public Sprite Activated_Head;
     public Sprite Deactivated_Head;
 
+    public LayerMask hitLayers;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +32,7 @@ public class windTurbineLeft : MonoBehaviour
         Vector2 endPos = castPoint.position + Vector3.left * distance;
 
         //Creates Raycast
-        RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endPos);
+        RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endPos, hitLayers);
         
 
         if (hit.collider != null && IsActive == true)
@@ -38,7 +40,7 @@ public class windTurbineLeft : MonoBehaviour
             
             if (hit.collider.gameObject.CompareTag("Rock"))
             {
-                hit = Physics2D.Linecast(castPoint.position, hit.point);
+                hit = Physics2D.Linecast(castPoint.position, hit.point, hitLayers);
                 Debug.DrawLine(castPoint.position, hit.point, Color.blue);
             }
 
