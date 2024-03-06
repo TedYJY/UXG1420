@@ -94,7 +94,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letters in sentence.ToCharArray()) //converts a string into a character array
         {
             dialogueText.text+= letters;
-            yield return new WaitForSeconds(0.05f); //wait 1 second for letters
+            yield return new WaitForSeconds(0.027f); //wait 1 second for letters
             //yield return null;
         }
     }
