@@ -11,6 +11,7 @@ public class puzzleBridge : MonoBehaviour
     public GameObject ExtraPressurePlate = null;
     public bool IsActivated;
     public int ItemsOnPlate;
+    public int CurrentItemsOnPlate;
 
     public Sprite Unpressed;
     public Sprite Pressed;
@@ -28,7 +29,9 @@ public class puzzleBridge : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D coll)
     {
-            if (coll.tag == "Rock" || coll.tag == "BigPlayer" && ItemsOnPlate == 0)
+
+        CurrentItemsOnPlate++;
+        if (coll.tag == "Rock" || coll.tag == "BigPlayer" && ItemsOnPlate == 0 && CurrentItemsOnPlate == 1)
             {
                 ItemsOnPlate++;
                 //Debug.Log(this.ItemsOnPlate);
@@ -37,6 +40,8 @@ public class puzzleBridge : MonoBehaviour
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = Pressed;
 
             }
+
+        
     }
 
     public void OnTriggerStay2D(Collider2D coll)
@@ -46,7 +51,8 @@ public class puzzleBridge : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D coll)
     {
-        if ((coll.tag == "Rock" || coll.tag == "BigPlayer") && ItemsOnPlate == 1)
+
+        if ((coll.tag == "Rock" || coll.tag == "BigPlayer") && ItemsOnPlate == 1 && CurrentItemsOnPlate == 1)
         {
 
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Unpressed;
@@ -64,6 +70,10 @@ public class puzzleBridge : MonoBehaviour
 
             }
         }
+
+        CurrentItemsOnPlate--;
+
+
     }
 
     private void CheckRequirement()
