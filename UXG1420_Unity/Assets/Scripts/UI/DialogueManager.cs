@@ -38,17 +38,21 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("Starting Convo" + dialogue.name);
+        //Debug.Log("Starting Convo" + dialogue.name);
 
         if (GameObject.FindWithTag("Ghost")==true)
         {
             DialoguePlayerTracker = GameObject.FindWithTag("Ghost");
             DialoguePlayerTracker.GetComponent<playerHandler>().enabled = false;
+
+            DialoguePlayerTracker.GetComponent<Animator>().enabled = false;
         }
         else
         {
             DialoguePlayerTracker = GameObject.FindWithTag("BigPlayer");
             DialoguePlayerTracker.GetComponent<playerHandler>().enabled = false;
+
+            DialoguePlayerTracker.GetComponent<Animator>().enabled = false;
         }
 
         //DialoguePlayerTracker = GameObject.FindWithTag("Ghost");
@@ -99,6 +103,7 @@ public class DialogueManager : MonoBehaviour
     {
         LvlLoader.GetComponent<LevelLoader>().DialogueBoxFadeOutAnim();
         DialoguePlayerTracker.GetComponent<playerHandler>().enabled = true;
+        DialoguePlayerTracker.GetComponent<Animator>().enabled = true;
     }
 
 

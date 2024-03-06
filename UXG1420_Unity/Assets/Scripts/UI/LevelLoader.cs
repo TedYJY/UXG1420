@@ -72,7 +72,7 @@ public class LevelLoader : MonoBehaviour
         try
         {
 
-            Debug.Log("fade in dialogue box");
+            //Debug.Log("fade in dialogue box");
             //dialogueUI.SetActive(true); 
             DialogueAnim.Play("DialogueBox");
             //need to have animator, set initial alpha to 0, then to 100
@@ -92,7 +92,7 @@ public class LevelLoader : MonoBehaviour
         try
         {
 
-            Debug.Log("fade in dialogue box");
+            //Debug.Log("fade in dialogue box");
             DialogueAnim.Play("DialogueBox");
             //need to have animator, set initial alpha to 0, then to 100
             //moved dialogue trigger script code to here so that it will start along with level loader

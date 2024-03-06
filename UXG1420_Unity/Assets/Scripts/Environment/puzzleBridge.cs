@@ -28,7 +28,7 @@ public class puzzleBridge : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D coll)
     {
-            if (coll.tag == "Rock" || coll.tag == "BigPlayer")
+            if (coll.tag == "Rock" || coll.tag == "BigPlayer" && ItemsOnPlate == 0)
             {
                 ItemsOnPlate++;
                 //Debug.Log(this.ItemsOnPlate);
@@ -63,10 +63,6 @@ public class puzzleBridge : MonoBehaviour
             {
 
             }
-        }
-        else
-        {
-            ItemsOnPlate--;
         }
     }
 

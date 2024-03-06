@@ -24,7 +24,7 @@ public class Tut2_FirstBridgeDialogueTrigger : MonoBehaviour
         if ((collision.gameObject.tag == "BigPlayer" || collision.gameObject.tag == "Rock") && dialogueTracker == true && GetComponentInParent<SpriteRenderer>().sprite == GetComponentInParent<puzzleBridge>().Pressed)
         {
             //stops triggering dialogue box after colliding once with torch
-            Debug.Log("stops triggering dialogue box after colliding once with torch");
+            //Debug.Log("stops triggering dialogue box after colliding once with torch");
             dialogueTracker = false;
             GameObject.FindWithTag("LevelLoader").GetComponent<LevelLoader>().DialogueBoxFadeInAnim(dialogue);
             //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);

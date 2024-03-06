@@ -22,7 +22,7 @@ public class DialogueTriggers : MonoBehaviour
         if (collision.gameObject.tag=="Ghost" && dialogueTracker==true)
         {
             //stops triggering dialogue box after colliding once with torch
-            Debug.Log("stops triggering dialogue box after colliding once with torch");
+            //Debug.Log("stops triggering dialogue box after colliding once with torch");
             dialogueTracker = false;
             GameObject.FindWithTag("LevelLoader").GetComponent<LevelLoader>().DialogueBoxFadeInAnim(dialogue);
 
@@ -32,7 +32,7 @@ public class DialogueTriggers : MonoBehaviour
         if (collision.gameObject.tag == "BigPlayer" && dialogueTracker == true)
         {
             //stops triggering dialogue box after colliding once with torch
-            Debug.Log("stops triggering dialogue box after colliding once with torch");
+            //Debug.Log("stops triggering dialogue box after colliding once with torch");
             dialogueTracker = false;
             GameObject.FindWithTag("LevelLoader").GetComponent<LevelLoader>().DialogueBoxFadeInAnim(dialogue);
             //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
