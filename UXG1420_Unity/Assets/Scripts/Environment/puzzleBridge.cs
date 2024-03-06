@@ -11,7 +11,6 @@ public class puzzleBridge : MonoBehaviour
     public GameObject ExtraPressurePlate = null;
     public bool IsActivated;
     public int ItemsOnPlate;
-    public int CurrentItemsOnPlate;
 
     public Sprite Unpressed;
     public Sprite Pressed;
@@ -29,9 +28,7 @@ public class puzzleBridge : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D coll)
     {
-
-        CurrentItemsOnPlate++;
-        if (coll.tag == "Rock" || coll.tag == "BigPlayer" && ItemsOnPlate == 0 && CurrentItemsOnPlate == 1)
+            if (coll.tag == "Rock" || coll.tag == "BigPlayer" /*&& ItemsOnPlate == 0*/)
             {
                 ItemsOnPlate++;
                 //Debug.Log(this.ItemsOnPlate);
@@ -40,40 +37,37 @@ public class puzzleBridge : MonoBehaviour
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = Pressed;
 
             }
-
-        
     }
 
-    public void OnTriggerStay2D(Collider2D coll)
-    {
-        
-    }
 
     public void OnTriggerExit2D(Collider2D coll)
     {
-
-        if ((coll.tag == "Rock" || coll.tag == "BigPlayer") && ItemsOnPlate == 1 && CurrentItemsOnPlate == 1)
+        if (coll.tag == "Rock" || coll.tag == "BigPlayer")
         {
-
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = Unpressed;
-            IsActivated = false;
-            ItemsOnPlate--;
-            //Debug.Log(this.ItemsOnPlate);
-            CheckRequirement();
-            try
+            if (ItemsOnPlate > 1)
             {
-                BridgeSprites.SetActive(false);
+                ItemsOnPlate--;
             }
 
-            catch
+            else if (ItemsOnPlate == 1)
             {
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = Unpressed;
+                IsActivated = false;
+                ItemsOnPlate--;
+                //Debug.Log(this.ItemsOnPlate);
+                CheckRequirement();
+                try
+                {
+                    BridgeSprites.SetActive(false);
+                }
 
+                catch
+                {
+
+                }
             }
+            
         }
-
-        CurrentItemsOnPlate--;
-
-
     }
 
     private void CheckRequirement()
