@@ -377,7 +377,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.29}
+  m_Offset: {x: 0, y: 1.99}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8978,10 +8978,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09, y: -1.12}
+  m_Offset: {x: -0.09, y: 2.3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.18}
     oldSize: {x: 5.12, y: 10.24}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
@@ -8989,7 +8989,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.4, y: 6.63}
+  m_Size: {x: 3.36, y: 8.84}
   m_EdgeRadius: 0
 --- !u!212 &1286415387
 SpriteRenderer:
@@ -9032,7 +9032,7 @@ SpriteRenderer:
   m_SortingLayerID: -112462991
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d9f810b0c980fba43b2ab3d02446c4c0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 463b66412bfdc4243a85ebac2ce8252a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9042,7 +9042,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!4 &1286415388
 Transform:
   m_ObjectHideFlags: 0
@@ -9052,7 +9052,7 @@ Transform:
   m_GameObject: {fileID: 1286415384}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -55.7, y: -6.7, z: 0}
+  m_LocalPosition: {x: -55.73, y: -7.96, z: 0}
   m_LocalScale: {x: 0.63, y: 0.63, z: 0.63}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -9071,8 +9071,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2744d2d0bdd3e5047976b2198de0e1e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TorchLit: {fileID: 21300000, guid: ab8355ced1596f947aa8625d789db3d6, type: 3}
-  TorchUnLit: {fileID: 21300000, guid: d9f810b0c980fba43b2ab3d02446c4c0, type: 3}
+  TorchLit: {fileID: 21300000, guid: 08225a8b4458fc44794cbb1d9c335c98, type: 3}
+  TorchUnLit: {fileID: 21300000, guid: 463b66412bfdc4243a85ebac2ce8252a, type: 3}
   TorchCollider: {fileID: 1753990463}
   IsAble: 0
   BridgeCollider: {fileID: 0}
