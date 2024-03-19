@@ -20,7 +20,6 @@ public class puzzleWindplateTorch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TorchCollider = GameObject.Find("Torch_Collider");
         IsAble = false;
     }
 
