@@ -37,7 +37,7 @@ public class TorchBridgeSpiritWall : MonoBehaviour
                 //BridgeCollision.GetComponent<BoxCollider2D>().enabled = false;
                
                 BridgeSprites.SetActive(true);
-                TorchCollider.SetActive(true);
+                TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerBarrier();
                 IsActivated = true;
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchLit;
 
@@ -54,7 +54,7 @@ public class TorchBridgeSpiritWall : MonoBehaviour
                // BridgeCollision.GetComponent<BoxCollider2D>().enabled = true;
                 
                 BridgeSprites.SetActive(false);
-                TorchCollider.SetActive(false);
+                TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerBarrier();
                 IsActivated = false;
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchUnLit;
 

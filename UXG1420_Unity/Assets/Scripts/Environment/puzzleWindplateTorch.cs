@@ -26,11 +26,11 @@ public class puzzleWindplateTorch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && IsAble == true)
+        if (Input.GetKeyDown(KeyCode.E) && IsAble == true && IsActivated == false)
         {
             BridgeSprites.SetActive(true);
             BridgeCollider.SetActive(false);
-            TorchCollider.SetActive(false);
+            //TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerBarrier();
             IsActivated = true;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchLit;
 
