@@ -31,6 +31,12 @@ public class Spirit_Barrier_Active_Script : MonoBehaviour
         animator.SetTrigger("Fade");
     }
 
+    public void TriggerOnlyDeactivate()
+    {
+        this_Collider.enabled = false;
+        animator.SetTrigger("Fade");
+    }
+
     public void ActivateBarrier()
     {
         this.GetComponent<Animator>().SetBool(Is_On_Hash, true);

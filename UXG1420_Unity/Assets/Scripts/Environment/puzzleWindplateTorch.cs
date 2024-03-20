@@ -30,7 +30,7 @@ public class puzzleWindplateTorch : MonoBehaviour
         {
             BridgeSprites.SetActive(true);
             BridgeCollider.SetActive(false);
-            //TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerBarrier();
+            TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerOnlyDeactivate();
             IsActivated = true;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchLit;
 
