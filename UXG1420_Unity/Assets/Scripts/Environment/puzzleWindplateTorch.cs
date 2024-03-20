@@ -34,6 +34,8 @@ public class puzzleWindplateTorch : MonoBehaviour
             IsActivated = true;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchLit;
 
+            TorchCollider.SetActive(false);
+
         }
 
     }
