@@ -20,20 +20,21 @@ public class puzzleWindplateTorch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TorchCollider = GameObject.Find("Torch_Collider");
         IsAble = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && IsAble == true)
+        if (Input.GetKeyDown(KeyCode.E) && IsAble == true && IsActivated == false)
         {
             BridgeSprites.SetActive(true);
             BridgeCollider.SetActive(false);
-            TorchCollider.SetActive(false);
+            TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerOnlyDeactivate();
             IsActivated = true;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchLit;
+
+            TorchCollider.SetActive(false);
 
         }
 

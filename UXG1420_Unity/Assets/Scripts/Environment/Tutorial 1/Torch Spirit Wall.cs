@@ -20,6 +20,7 @@ public class TorchSpiritWall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -30,7 +31,8 @@ public class TorchSpiritWall : MonoBehaviour
             if (IsActivatedCheck() == false)
             {
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchLit;
-                DeactivateBarrier();
+                //DeactivateBarrier();
+                TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerBarrier();
                 IsActivated = true;
                 
 
@@ -43,7 +45,8 @@ public class TorchSpiritWall : MonoBehaviour
             else 
             {
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchUnLit;
-                ActivateBarrier();
+                TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerBarrier();
+                //ActivateBarrier();
                 IsActivated = false;
 
                 try

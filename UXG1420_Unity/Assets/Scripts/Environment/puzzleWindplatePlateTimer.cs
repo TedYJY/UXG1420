@@ -10,6 +10,8 @@ public class puzzleWindplatePlateTimer : MonoBehaviour
     public Sprite Unpressed;
     public Sprite Pressed;
 
+    private bool Is_Pressed = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,33 +27,37 @@ public class puzzleWindplatePlateTimer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.tag == "BigPlayer")
+        if (coll.tag == "BigPlayer" && Torch.GetComponent<puzzleWindplateTorch>().IsActivatedCheck() == false && Is_Pressed == false)
         {
             try
             {
-                TorchCollider.SetActive(false);
+                Is_Pressed = true;
+                TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerBarrier();
                 this.GetComponent<SpriteRenderer>().sprite = Pressed;
+                Debug.Log("Press_Triggered");
             }
             catch
             {
-
+                Debug.Log("Press_Trigger_Fail");
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D coll)
     {
-        if (coll.tag == "BigPlayer" && Torch.GetComponent<puzzleWindplateTorch>().IsActivatedCheck() == false)
+        if (coll.tag == "BigPlayer" && Torch.GetComponent<puzzleWindplateTorch>().IsActivatedCheck() == false && Is_Pressed == true)
         {
             try
             {
-                TorchCollider.SetActive(true);
+                Is_Pressed = false;
+                TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerBarrier();
                 this.GetComponent<SpriteRenderer>().sprite = Unpressed;
+                Debug.Log("Unpress_Triggered");
             }
 
             catch
             {
-
+                Debug.Log("Unpress_Trigger_Fail");
             }
 
         }

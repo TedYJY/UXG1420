@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Planned Final/Tutorial 2.unity
     guid: 96677bed46d50714f8d7d7a8a58833bb
   - enabled: 1
+    path: Assets/Scenes/Planned Final/Tutorial 3.unity
+    guid: 34db040f912de0745845859571e2e781
+  - enabled: 1
     path: Assets/Scenes/Planned Final/Lvl 1.unity
     guid: c7bcfc9bac72acc4ba8491a6eea57b62
   - enabled: 1
