@@ -6,8 +6,8 @@ using UnityEngine.UIElements;
 public class puzzle2x1 : MonoBehaviour
 {
     [Header("Torch Allocation")]
-    [SerializeField] private GameObject leftTorch;
-    [SerializeField] private GameObject rightTorch;
+    [SerializeField] private GameObject topTorch;
+    [SerializeField] private GameObject bottomTorch;
     //[SerializeField] private GameObject middleTorch;
 
     public Sprite Unpressed;
@@ -29,18 +29,18 @@ public class puzzle2x1 : MonoBehaviour
 
     private void SwapStates()
     {
-        if (leftTorch.GetComponent<puzzle2x1Torch>().CheckActivated() != rightTorch.GetComponent<puzzle2x1Torch>().CheckActivated())
+        if (topTorch.GetComponent<puzzle2x1Torch>().CheckActivated() != bottomTorch.GetComponent<puzzle2x1Torch>().CheckActivated())
         {
-            bool temp = leftTorch.GetComponent<puzzle2x1Torch>().CheckActivated();
-            leftTorch.GetComponent<puzzle2x1Torch>().SwapActivated(rightTorch.GetComponent<puzzle2x1Torch>().CheckActivated());
-            rightTorch.GetComponent<puzzle2x1Torch>().SwapActivated(temp);
+            bool temp = topTorch.GetComponent<puzzle2x1Torch>().CheckActivated();
+            topTorch.GetComponent<puzzle2x1Torch>().SwapActivated(bottomTorch.GetComponent<puzzle2x1Torch>().CheckActivated());
+            bottomTorch.GetComponent<puzzle2x1Torch>().SwapActivated(temp);
         }
 
-        /*else if (middleTorch.GetComponent<puzzle2x1Torch>().CheckActivated() != rightTorch.GetComponent<puzzle2x1Torch>().CheckActivated())
+        /*else if (middleTorch.GetComponent<puzzle2x1Torch>().CheckActivated() != bottomTorch.GetComponent<puzzle2x1Torch>().CheckActivated())
         {
             bool temp = middleTorch.GetComponent<puzzle2x1Torch>().CheckActivated();
-            middleTorch.GetComponent<puzzle2x1Torch>().SwapActivated(rightTorch.GetComponent<puzzle2x1Torch>().CheckActivated());
-            rightTorch.GetComponent<puzzle2x1Torch>().SwapActivated(temp);
+            middleTorch.GetComponent<puzzle2x1Torch>().SwapActivated(bottomTorch.GetComponent<puzzle2x1Torch>().CheckActivated());
+            bottomTorch.GetComponent<puzzle2x1Torch>().SwapActivated(temp);
 
         }*/
     }

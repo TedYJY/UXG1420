@@ -34,6 +34,7 @@ public class puzzleWindplatePlateTimer : MonoBehaviour
                 Is_Pressed = true;
                 TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerBarrier();
                 this.GetComponent<SpriteRenderer>().sprite = Pressed;
+                this.GetComponent<PressurePlate_Sound_Script>().PlayPush();
                 Debug.Log("Press_Triggered");
             }
             catch
@@ -52,6 +53,7 @@ public class puzzleWindplatePlateTimer : MonoBehaviour
                 Is_Pressed = false;
                 TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerBarrier();
                 this.GetComponent<SpriteRenderer>().sprite = Unpressed;
+                this.GetComponent<PressurePlate_Sound_Script>().PlayRelease();
                 Debug.Log("Unpress_Triggered");
             }
 

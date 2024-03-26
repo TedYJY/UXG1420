@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -28,13 +29,14 @@ public class puzzleBridge : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D coll)
     {
-            if (coll.tag == "Rock" || coll.tag == "BigPlayer" /*&& ItemsOnPlate == 0*/)
+            if (coll.tag == "Rock" || coll.tag == "BigPlayer")
             {
                 ItemsOnPlate++;
                 //Debug.Log(this.ItemsOnPlate);
                 IsActivated = true;
                 CheckRequirement();
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = Pressed;
+                this.GetComponent<PressurePlate_Sound_Script>().PlayPush();
 
             }
     }
@@ -52,6 +54,7 @@ public class puzzleBridge : MonoBehaviour
             else if (ItemsOnPlate == 1)
             {
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = Unpressed;
+                this.GetComponent<PressurePlate_Sound_Script>().PlayRelease();
                 IsActivated = false;
                 ItemsOnPlate--;
                 //Debug.Log(this.ItemsOnPlate);

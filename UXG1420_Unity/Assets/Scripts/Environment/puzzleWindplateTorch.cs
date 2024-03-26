@@ -8,6 +8,7 @@ public class puzzleWindplateTorch : MonoBehaviour
 
     public GameObject BridgeSprites;
     public Sprite TorchLit;
+    public GameObject TorchFire;
 
     [SerializeField]
     private GameObject BridgeCollider;
@@ -32,7 +33,8 @@ public class puzzleWindplateTorch : MonoBehaviour
             BridgeCollider.SetActive(false);
             TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerOnlyDeactivate();
             IsActivated = true;
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchLit;
+            //this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchLit;
+            TorchFire.GetComponent<Torch_Fire_Activation>().StartFire();
 
             TorchCollider.SetActive(false);
 

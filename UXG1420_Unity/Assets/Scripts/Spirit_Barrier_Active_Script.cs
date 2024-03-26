@@ -8,7 +8,11 @@ public class Spirit_Barrier_Active_Script : MonoBehaviour
 
     public bool IsActive;
 
+    //private bool IsAnimating = false;
+
     private static readonly int Is_On_Hash = Animator.StringToHash("Is_On");
+
+    private static readonly int Is_Animating_Hash = Animator.StringToHash("Is_Animating");
 
     private EdgeCollider2D this_Collider;
 
@@ -27,29 +31,43 @@ public class Spirit_Barrier_Active_Script : MonoBehaviour
 
     public void TriggerBarrier()
     {
-        this_Collider.enabled = !this_Collider.enabled;
+        
+        
         animator.SetTrigger("Fade");
+        this_Collider.enabled = !this_Collider.enabled;
+        this.GetComponent<Animator>().SetBool(Is_Animating_Hash, true);
+
+
     }
 
     public void TriggerOnlyActivate()
     {
-        this_Collider.enabled = true;
         animator.SetTrigger("Fade");
+        this_Collider.enabled = true;
+        this.GetComponent<Animator>().SetBool(Is_Animating_Hash, true);
+
+
     }
 
     public void TriggerOnlyDeactivate()
     {
-        this_Collider.enabled = false;
         animator.SetTrigger("Fade");
+        this_Collider.enabled = false;
+        this.GetComponent<Animator>().SetBool(Is_Animating_Hash, true);
+
     }
 
     public void ActivateBarrier()
     {
         this.GetComponent<Animator>().SetBool(Is_On_Hash, true);
+        this.GetComponent<Animator>().SetBool(Is_Animating_Hash, false);
+
     }
 
     public void DeactivateBarrier() 
     {
         this.GetComponent<Animator>().SetBool(Is_On_Hash, false);
+        this.GetComponent<Animator>().SetBool(Is_Animating_Hash, false);
+
     }
 }

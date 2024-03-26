@@ -11,9 +11,10 @@ public class puzzle3x1Torch : MonoBehaviour
     private static int tracker = 0;
 
     [Header("Sprite Allocation")]
-    [SerializeField] private Sprite activatedTorch;
-    [SerializeField] private Sprite deactivatedTorch;
-    [SerializeField] private Sprite finishedTorch;
+    [SerializeField] private GameObject TorchFire;
+    //[SerializeField] private Sprite activatedTorch;
+    //[SerializeField] private Sprite deactivatedTorch;
+    //[SerializeField] private Sprite finishedTorch;
 
     [SerializeField] private GameObject lPressure;
     [SerializeField] private GameObject rPressure;
@@ -78,13 +79,15 @@ public class puzzle3x1Torch : MonoBehaviour
         if (isActivated)
         {
             ++tracker;
-            this.GetComponent<SpriteRenderer>().sprite = activatedTorch;
+            //this.GetComponent<SpriteRenderer>().sprite = activatedTorch;
+            TorchFire.GetComponent<Torch_Fire_Activation>().StartFire();
         }
 
         else
         {
             --tracker;
-            this.GetComponent<SpriteRenderer>().sprite = deactivatedTorch;
+            //this.GetComponent<SpriteRenderer>().sprite = deactivatedTorch;
+            TorchFire.GetComponent<Torch_Fire_Activation>().StopFire();
         }
 
     }
