@@ -10,6 +10,7 @@ public class TorchBridgeSpiritWall : MonoBehaviour
     public Sprite TorchLit;
     public Sprite TorchUnLit;
     public GameObject TorchCollider;
+    public GameObject TorchFire;
     
 
     private GameObject BridgeCollision;
@@ -29,7 +30,7 @@ public class TorchBridgeSpiritWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && IsAble == true)
+        if (Input.GetKeyDown(KeyCode.E) && IsAble == true && TorchCollider.GetComponent<Animator>().GetBool("Is_Animating") == false)
         {
             if (IsActivatedCheck() == false)
             {
@@ -39,7 +40,8 @@ public class TorchBridgeSpiritWall : MonoBehaviour
                 BridgeSprites.SetActive(true);
                 TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerBarrier();
                 IsActivated = true;
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchLit;
+                //this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchLit;
+                TorchFire.GetComponent<Torch_Fire_Activation>().StartFire();
 
                 try
                 {
@@ -56,7 +58,8 @@ public class TorchBridgeSpiritWall : MonoBehaviour
                 BridgeSprites.SetActive(false);
                 TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerBarrier();
                 IsActivated = false;
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchUnLit;
+                //this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchUnLit;
+                TorchFire.GetComponent<Torch_Fire_Activation>().StopFire();
 
                 try
                 {

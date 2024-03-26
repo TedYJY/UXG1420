@@ -11087,6 +11087,7 @@ GameObject:
   - component: {fileID: 778739920}
   - component: {fileID: 778739919}
   - component: {fileID: 778739918}
+  - component: {fileID: 778739921}
   m_Layer: 0
   m_Name: Pressure Plate
   m_TagString: Untagged
@@ -11226,6 +11227,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &778739921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778739916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef5de626440c0641a2395acefaff02b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level_MusicHandler: {fileID: 1008922589}
+  Push_Sound: {fileID: 8300000, guid: 879d961e32a30ec4598ad1e819c42777, type: 3}
+  Release_Sound: {fileID: 8300000, guid: 630536f9d60d23a47b2b479c7332283d, type: 3}
 --- !u!1 &780897664
 GameObject:
   m_ObjectHideFlags: 0
@@ -12344,6 +12360,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 709811164648326800, guid: 0a8d1ffd546eeb04dadfa685630d2077, type: 3}
   m_PrefabInstance: {fileID: 1008589777}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1008922589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1643178009226210435, guid: 02b4bd44475038c45ae1835dd0c45c41, type: 3}
+  m_PrefabInstance: {fileID: 122469209}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1010680441
 PrefabInstance:

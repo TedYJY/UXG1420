@@ -32,6 +32,7 @@ public class PressurePlateWind : MonoBehaviour
             IsActivated = true;
             CheckRequirement();
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Pressed;
+            this.GetComponent<PressurePlate_Sound_Script>().PlayPush();
         }
     }
 
@@ -42,6 +43,7 @@ public class PressurePlateWind : MonoBehaviour
 
             ItemsOnPlate--;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Unpressed;
+            this.GetComponent<PressurePlate_Sound_Script>().PlayRelease();
             IsActivated = false;
             CheckRequirement();
             try

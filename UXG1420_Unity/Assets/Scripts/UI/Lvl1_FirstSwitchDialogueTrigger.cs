@@ -21,7 +21,7 @@ public class Lvl1_FirstSwitchDialogueTrigger : MonoBehaviour
     {
 
 
-        if (collision.gameObject.tag == "BigPlayer" && dialogueTracker == true && this.GetComponentInParent<SpriteRenderer>().sprite == this.GetComponentInParent<puzzle3x1>().Pressed)
+        if (collision.gameObject.tag == "BigPlayer" && dialogueTracker == true && this.GetComponentInParent<SpriteRenderer>().sprite == this.GetComponentInParent<puzzle2x1>().Pressed)
         {
             //stops triggering dialogue box after colliding once with torch
             Debug.Log("stops triggering dialogue box after colliding once with torch");
