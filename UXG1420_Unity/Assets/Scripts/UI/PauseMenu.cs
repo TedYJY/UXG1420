@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+//using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject pauseButton;
+    public GameObject resumeButton;
     // Update is called once per frame
 
     void Start()
@@ -25,27 +28,35 @@ public class PauseMenu : MonoBehaviour
         {
             if (GameIsPaused)
             {
+                Debug.Log("shit worksRESUME");
                 GameResume();
             }
             else
             {
+                Debug.Log("shit worksPAUSE");
                 PauseGame();
+                
             }
         }//*/
     }
 
+    //
+
     public void GameResume()
     {
         pauseMenuUI.SetActive(false);
+        pauseButton.SetActive(true);
+        resumeButton.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
-
 
     public void PauseGame()
     {
         Debug.Log("PAUSE");
         pauseMenuUI.SetActive(true);
+        pauseButton.SetActive(false);
+        resumeButton.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }//*/
