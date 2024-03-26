@@ -9,6 +9,7 @@ public class TorchSpiritWall : MonoBehaviour
     public Sprite TorchLit;
     public Sprite TorchUnLit;
     public GameObject TorchCollider;
+    public GameObject TorchFire;
     
 
     [SerializeField]
@@ -30,7 +31,8 @@ public class TorchSpiritWall : MonoBehaviour
         {
             if (IsActivatedCheck() == false)
             {
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchLit;
+                //this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchLit;
+                TorchFire.GetComponent<Torch_Fire_Activation>().StartFire();
                 //DeactivateBarrier();
                 TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerBarrier();
                 IsActivated = true;
@@ -44,7 +46,8 @@ public class TorchSpiritWall : MonoBehaviour
             }
             else 
             {
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchUnLit;
+                //this.gameObject.GetComponent<SpriteRenderer>().sprite = TorchUnLit;
+                TorchFire.GetComponent<Torch_Fire_Activation>().StopFire();
                 TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerBarrier();
                 //ActivateBarrier();
                 IsActivated = false;

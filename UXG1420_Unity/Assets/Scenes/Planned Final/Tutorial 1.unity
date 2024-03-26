@@ -596,6 +596,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &289080774 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2490628864984399954, guid: f1a571877c8c81a47a75adce814bea8b, type: 3}
+  m_PrefabInstance: {fileID: 656307761}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &289080775 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8731045541811476386, guid: f1a571877c8c81a47a75adce814bea8b, type: 3}
+  m_PrefabInstance: {fileID: 656307761}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &320761439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7328,6 +7338,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1001 &656307761
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1286415388}
+    m_Modifications:
+    - target: {fileID: 1896190843040414486, guid: f1a571877c8c81a47a75adce814bea8b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490628864984399954, guid: f1a571877c8c81a47a75adce814bea8b, type: 3}
+      propertyPath: m_Name
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490628864984399954, guid: f1a571877c8c81a47a75adce814bea8b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731045541811476386, guid: f1a571877c8c81a47a75adce814bea8b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731045541811476386, guid: f1a571877c8c81a47a75adce814bea8b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731045541811476386, guid: f1a571877c8c81a47a75adce814bea8b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.656482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731045541811476386, guid: f1a571877c8c81a47a75adce814bea8b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731045541811476386, guid: f1a571877c8c81a47a75adce814bea8b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731045541811476386, guid: f1a571877c8c81a47a75adce814bea8b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731045541811476386, guid: f1a571877c8c81a47a75adce814bea8b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731045541811476386, guid: f1a571877c8c81a47a75adce814bea8b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731045541811476386, guid: f1a571877c8c81a47a75adce814bea8b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731045541811476386, guid: f1a571877c8c81a47a75adce814bea8b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1a571877c8c81a47a75adce814bea8b, type: 3}
 --- !u!114 &676225402 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
@@ -8804,6 +8879,7 @@ Transform:
   m_LocalScale: {x: 0.63, y: 0.63, z: 0.63}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 289080775}
   - {fileID: 83983059}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8822,6 +8898,7 @@ MonoBehaviour:
   TorchLit: {fileID: 21300000, guid: 08225a8b4458fc44794cbb1d9c335c98, type: 3}
   TorchUnLit: {fileID: 21300000, guid: 463b66412bfdc4243a85ebac2ce8252a, type: 3}
   TorchCollider: {fileID: 1944380816}
+  TorchFire: {fileID: 289080774}
   IsAble: 0
   BridgeCollider: {fileID: 0}
 --- !u!1 &1302451389
