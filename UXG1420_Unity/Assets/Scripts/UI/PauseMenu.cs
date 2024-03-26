@@ -31,7 +31,7 @@ public class PauseMenu : MonoBehaviour
             {
                 PauseGame();
             }
-        }
+        }//*/
     }
 
     public void GameResume()
@@ -41,12 +41,22 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
     }
 
-    void PauseGame()
+
+    public void PauseGame()
+    {
+        Debug.Log("PAUSE");
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }//*/
+
+
+    /*void PauseGame()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-    }
+    }//*/
 
     public void LoadMenu()
     {
