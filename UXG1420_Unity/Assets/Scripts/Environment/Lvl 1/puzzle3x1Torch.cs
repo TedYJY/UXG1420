@@ -7,6 +7,7 @@ public class puzzle3x1Torch : MonoBehaviour
 
     [SerializeField] private bool isAble;
     [SerializeField] private bool isActivated;
+    [SerializeField] private GameObject ObjectiveHandler;
 
     private static int tracker = 0;
 
@@ -47,8 +48,10 @@ public class puzzle3x1Torch : MonoBehaviour
 
             try
             {
+                ObjectiveHandler.GetComponent<Lvl1_ObjectiveHandler>().ManualChangeObjective();
                 Bridge_Collider.SetActive(false);
                 Bridge_Sprite.SetActive(true);
+                
             }
             catch
             {
