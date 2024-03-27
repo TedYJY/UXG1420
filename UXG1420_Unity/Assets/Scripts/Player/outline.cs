@@ -11,6 +11,7 @@ public class outline : MonoBehaviour
 
     private bool Is_colliding;
 
+    [SerializeField]
     private GameObject currentPlayer;
 
     // Start is called before the first frame update
@@ -55,8 +56,7 @@ public class outline : MonoBehaviour
     {
         if (col.tag == "Ghost")
         {
-            currentPlayer.GetComponent<playerHandler>().outlineNearby(null, false);    
-            currentPlayer = null;
+            currentPlayer.GetComponent<playerHandler>().outlineNearby(null, false);
             Glow.TriggerOnlyDeactivate();
 
 
