@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class outline : MonoBehaviour
 {
+    private Beary_Glow_Script Glow;
 
     private SpriteRenderer outlineColor;
+
+    private bool Is_colliding;
 
     private GameObject currentPlayer;
 
@@ -14,12 +17,13 @@ public class outline : MonoBehaviour
     void Start()
     {
         outlineColor = this.gameObject.GetComponent<SpriteRenderer>();
+        Glow = this.GetComponentInChildren<Beary_Glow_Script>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -27,13 +31,16 @@ public class outline : MonoBehaviour
         if (col.tag == "Ghost")
         {
             //Outlines the nearby player
-            outlineColor.color = UnityEngine.Color.cyan;
+            //outlineColor.color = UnityEngine.Color.cyan;
+
+            //Activate Glow
+            Glow.TriggerOnlyActivate();
 
             //Tags the current player and changes condition of "swapping" script to enable possessing
             currentPlayer = col.gameObject;
             currentPlayer.GetComponent<playerHandler>().outlineNearby(this.gameObject, true);
 
-
+            Is_colliding = true;
         }
 
         /*if (col.tag == "BigPlayer")
@@ -50,6 +57,8 @@ public class outline : MonoBehaviour
         {
             currentPlayer.GetComponent<playerHandler>().outlineNearby(null, false);    
             currentPlayer = null;
+            Glow.TriggerOnlyDeactivate();
+
 
             try
             {
@@ -62,7 +71,7 @@ public class outline : MonoBehaviour
             }
         }
 
-        outlineColor.color = UnityEngine.Color.white;
-
+        //outlineColor.color = UnityEngine.Color.white;
+        
     }
 }
