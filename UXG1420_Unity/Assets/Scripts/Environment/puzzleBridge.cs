@@ -36,7 +36,7 @@ public class puzzleBridge : MonoBehaviour
                 IsActivated = true;
                 CheckRequirement();
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = Pressed;
-                this.GetComponent<PressurePlate_Sound_Script>().PlayPush();
+                this.gameObject.GetComponent<PressurePlate_Sound_Script>().PlayPush();
 
             }
     }
@@ -53,10 +53,12 @@ public class puzzleBridge : MonoBehaviour
 
             else if (ItemsOnPlate == 1)
             {
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = Unpressed;
-                this.GetComponent<PressurePlate_Sound_Script>().PlayRelease();
-                IsActivated = false;
                 ItemsOnPlate--;
+                IsActivated = false;
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = Unpressed;
+                this.gameObject.GetComponent<PressurePlate_Sound_Script>().PlayRelease();
+                
+                
                 //Debug.Log(this.ItemsOnPlate);
                 CheckRequirement();
                 try
