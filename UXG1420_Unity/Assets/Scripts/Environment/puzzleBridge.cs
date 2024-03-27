@@ -32,12 +32,16 @@ public class puzzleBridge : MonoBehaviour
     {
             if (coll.tag == "Rock" || coll.tag == "BigPlayer")
             {
+                if (ItemsOnPlate == 0)
+                {
+                this.gameObject.GetComponent<PressurePlate_Sound_Script>().PlayPush();
+                }
                 ItemsOnPlate++;
                 //Debug.Log(this.ItemsOnPlate);
                 IsActivated = true;
                 CheckRequirement();
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = Pressed;
-                //this.gameObject.GetComponent<PressurePlate_Sound_Script>().PlayPush();
+                
 
             }
     }
@@ -117,7 +121,6 @@ public class puzzleBridge : MonoBehaviour
             try
             {
                 Debug.Log("Activating Bridge");
-                this.gameObject.GetComponent<PressurePlate_Sound_Script>().PlayPush();
                 DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.green;
             }
             catch
