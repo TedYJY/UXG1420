@@ -11,6 +11,9 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject pauseButton;
     public GameObject resumeButton;
+    public GameObject restartButton;
+    public GameObject homeButton;
+    public GameObject quitButton;
     // Update is called once per frame
 
     void Start()
@@ -72,6 +75,7 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Debug.Log("Load");
+        homeButton.SetActive(true);
         Time.timeScale = 1f;
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         SceneManager.LoadScene("Start Menu");
@@ -80,13 +84,14 @@ public class PauseMenu : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("qUIT");
+        quitButton.SetActive(true);
         Application.Quit();
     }
 
     public void RestartGame()
     {
         Debug.Log("restart");
-        
+        restartButton.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
