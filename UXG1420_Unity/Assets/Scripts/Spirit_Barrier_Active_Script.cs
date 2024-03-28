@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Spirit_Barrier_Active_Script : MonoBehaviour
 {
-    [SerializeField] private Animator animator = null;
+    [SerializeField] 
+    private Animator animator = null;
 
     public bool IsActive;
 
     //private bool IsAnimating = false;
 
     private static readonly int Is_On_Hash = Animator.StringToHash("Is_On");
-
     private static readonly int Is_Animating_Hash = Animator.StringToHash("Is_Animating");
 
     private EdgeCollider2D this_Collider;

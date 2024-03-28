@@ -11,6 +11,9 @@ public class puzzleWindplateTorch : MonoBehaviour
     public GameObject TorchFire;
 
     [SerializeField]
+    private GameObject ObjectiveHandler;
+
+    [SerializeField]
     private GameObject BridgeCollider;
 
     [SerializeField]
@@ -37,6 +40,13 @@ public class puzzleWindplateTorch : MonoBehaviour
             TorchFire.GetComponent<Torch_Fire_Activation>().StartFire();
 
             TorchCollider.SetActive(false);
+
+            try
+            {
+                ObjectiveHandler.GetComponent<Lvl2_ObjectiveHandler>().ManualChangeObjective();
+            }
+
+            catch { }
 
         }
 

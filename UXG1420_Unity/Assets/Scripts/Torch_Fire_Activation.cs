@@ -26,11 +26,13 @@ public class Torch_Fire_Activation : MonoBehaviour
 
     public void StopFire()
     {
+        Debug.Log("Stopping Fire");
         this.GetComponentInChildren<ParticleSystem>().Stop(true, ParticleSystemStopBehavior.StopEmitting);
     }
 
     public void StartFire()
     {
+        Debug.Log("Starting Fire");
         this.GetComponentInChildren<ParticleSystem>().Play(true);
     }
 }

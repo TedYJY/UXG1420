@@ -11,6 +11,7 @@ public class puzzleBridge : MonoBehaviour
     public GameObject BridgeSprites;
     public GameObject ExtraPressurePlate = null;
     public bool IsActivated;
+    public bool BridgeIsActivated = false;
     public int ItemsOnPlate;
 
     public Sprite Unpressed;
@@ -31,12 +32,16 @@ public class puzzleBridge : MonoBehaviour
     {
             if (coll.tag == "Rock" || coll.tag == "BigPlayer")
             {
+                if (ItemsOnPlate == 0)
+                {
+                this.gameObject.GetComponent<PressurePlate_Sound_Script>().PlayPush();
+                }
                 ItemsOnPlate++;
                 //Debug.Log(this.ItemsOnPlate);
                 IsActivated = true;
                 CheckRequirement();
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = Pressed;
-                this.GetComponent<PressurePlate_Sound_Script>().PlayPush();
+                
 
             }
     }
@@ -53,10 +58,12 @@ public class puzzleBridge : MonoBehaviour
 
             else if (ItemsOnPlate == 1)
             {
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = Unpressed;
-                this.GetComponent<PressurePlate_Sound_Script>().PlayRelease();
-                IsActivated = false;
                 ItemsOnPlate--;
+                IsActivated = false;
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = Unpressed;
+                this.gameObject.GetComponent<PressurePlate_Sound_Script>().PlayRelease();
+                
+                
                 //Debug.Log(this.ItemsOnPlate);
                 CheckRequirement();
                 try
@@ -80,6 +87,7 @@ public class puzzleBridge : MonoBehaviour
             /*DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = false;
             DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.green;
             BridgeSprites.SetActive(false);*/
+
             ActivateBridge();
         }
 
@@ -107,30 +115,43 @@ public class puzzleBridge : MonoBehaviour
 
     private void ActivateBridge()
     {
-        DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = false;
-        try
-        { 
-            DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.green; 
-        }
-        catch
+        if (BridgeIsActivated == false)
         {
+            DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = false;
+            try
+            {
+                Debug.Log("Activating Bridge");
+                DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.green;
+            }
+            catch
+            {
 
+            }
+            BridgeSprites.SetActive(true);
+
+            BridgeIsActivated = true;
         }
-        BridgeSprites.SetActive(true);
+
     }
 
     private void DeactivateBridge()
     {
-        DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = true;
-        try
+        if (BridgeIsActivated == true)
         {
-            DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.red;
-        }
-        catch
-        {
+            DrawbridgeTrigger.GetComponent<BoxCollider2D>().enabled = true;
+            try
+            {
+                DrawbridgeTrigger.GetComponent<SpriteRenderer>().color = Color.red;
+            }
+            catch
+            {
 
+            }
+            BridgeSprites.SetActive(false);
+
+            BridgeIsActivated = false;
         }
-        BridgeSprites.SetActive(false);
+
     }
 
 
