@@ -8,8 +8,7 @@ public class Beary_Glow_Script : MonoBehaviour
     [SerializeField]
     private Animator animator;
     public bool IsActive;
-    public SpriteRenderer Beary_Renderer;
-
+    
     private static readonly int Is_On_Hash = Animator.StringToHash("Is_On");
     private static readonly int Is_Animating_Hash = Animator.StringToHash("Is_Animating");
 

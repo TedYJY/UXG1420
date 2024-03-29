@@ -102,7 +102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4620390760200230960
 Transform:
   m_ObjectHideFlags: 0
@@ -153,7 +153,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5902327673937047531}
   IsActive: 0
-  Beary_Renderer: {fileID: 4700793752411644433}
 --- !u!212 &604571796328351798
 SpriteRenderer:
   m_ObjectHideFlags: 0
