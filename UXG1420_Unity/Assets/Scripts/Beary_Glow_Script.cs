@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Beary_Glow_Script : MonoBehaviour
@@ -7,6 +8,7 @@ public class Beary_Glow_Script : MonoBehaviour
     [SerializeField]
     private Animator animator;
     public bool IsActive;
+    public SpriteRenderer Beary_Renderer;
 
     private static readonly int Is_On_Hash = Animator.StringToHash("Is_On");
     private static readonly int Is_Animating_Hash = Animator.StringToHash("Is_Animating");
@@ -17,6 +19,7 @@ public class Beary_Glow_Script : MonoBehaviour
     void Start()
     {
         this.GetComponent<Animator>().SetBool(Is_On_Hash, IsActive);
+        //Beary_Renderer = GetComponentInParent<SpriteRenderer>();
     }
 
     // Update is called once per frame
