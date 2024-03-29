@@ -5405,6 +5405,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -37.113}
+--- !u!1 &486132177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7877420493616636447, guid: 82ae32ee2ebd8bb40aed02c75b0567ae, type: 3}
+  m_PrefabInstance: {fileID: 1487050388}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &489850549
 GameObject:
   m_ObjectHideFlags: 0
@@ -9272,6 +9277,10 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 975281587}
+    - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 486132177}
     - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: DialogueAnim
       value: 
