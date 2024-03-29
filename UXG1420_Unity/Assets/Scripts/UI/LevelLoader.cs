@@ -30,6 +30,7 @@ public class LevelLoader : MonoBehaviour
         }
         else
         {
+            // try catch to handle the errors because some scenes do not have a pause button, example start menu
             try
             {
                 pauseButton.SetActive(true);

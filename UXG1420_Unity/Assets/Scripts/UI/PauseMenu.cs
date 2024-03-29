@@ -43,10 +43,9 @@ public class PauseMenu : MonoBehaviour
         }//*/
     }
 
-    //
-
     public void GameResume()
     {
+        //set active here to ghetto turn on and off icons accordingly
         pauseMenuUI.SetActive(false);
         pauseButton.SetActive(true);
         resumeButton.SetActive(false);
@@ -56,6 +55,7 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
+        //set active here to ghetto turn on and off icons accordingly
         Debug.Log("PAUSE");
         pauseMenuUI.SetActive(true);
         pauseButton.SetActive(false);

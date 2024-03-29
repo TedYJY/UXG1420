@@ -7,6 +7,8 @@ public class ButtonScripts : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 {
     // Start is called before the first frame update
 
+
+    //Button script here is suppose to trigger button pressed and button unpressed, but its not wokring
     public GameObject ButtonPressed;
 
     public void OnPointerDown(PointerEventData eventData)
