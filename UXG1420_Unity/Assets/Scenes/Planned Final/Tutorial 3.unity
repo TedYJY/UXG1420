@@ -6505,6 +6505,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 975281587}
     - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 1487050389}
+    - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: DialogueAnim
       value: 
       objectReference: {fileID: 1642725412}
@@ -15133,6 +15137,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82ae32ee2ebd8bb40aed02c75b0567ae, type: 3}
+--- !u!1 &1487050389 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7877420493616636447, guid: 82ae32ee2ebd8bb40aed02c75b0567ae, type: 3}
+  m_PrefabInstance: {fileID: 1487050388}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1493730189
 GameObject:
   m_ObjectHideFlags: 0

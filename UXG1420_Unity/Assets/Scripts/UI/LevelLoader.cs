@@ -17,6 +17,8 @@ public class LevelLoader : MonoBehaviour
     public float transitionTime = 1f;
     // Update is called once per frame
 
+    public GameObject pauseButton;
+
     [SerializeField] //pairs along with private objects
     private GameObject dialogueUI; //to drag dialogueSystem in the inspector
 
@@ -28,6 +30,16 @@ public class LevelLoader : MonoBehaviour
         }
         else
         {
+            try
+            {
+                pauseButton.SetActive(true);
+                Debug.Log("cringe");
+                Debug.Log(SceneManager.GetActiveScene().buildIndex);
+            }
+            catch
+            {
+
+            }
             Invoke("NewDialogueBoxAnim", 3);
         }//*/
         //Invoke("DialogueBoxFadeInAnim", 3);
@@ -47,6 +59,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
+        pauseButton.SetActive(false);
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
         
         

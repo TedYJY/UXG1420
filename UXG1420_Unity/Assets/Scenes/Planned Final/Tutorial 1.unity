@@ -10044,6 +10044,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7877420493616636447, guid: 82ae32ee2ebd8bb40aed02c75b0567ae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11461,6 +11465,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &1423693114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7877420493616636447, guid: 82ae32ee2ebd8bb40aed02c75b0567ae, type: 3}
+  m_PrefabInstance: {fileID: 1010680441}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1429902572
 GameObject:
   m_ObjectHideFlags: 0
@@ -12338,6 +12347,10 @@ PrefabInstance:
       propertyPath: dialogueUI
       value: 
       objectReference: {fileID: 1336811973}
+    - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 1423693114}
     - target: {fileID: 8285344421712882550, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: DialogueAnim
       value: 
