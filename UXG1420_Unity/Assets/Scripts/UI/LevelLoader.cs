@@ -59,7 +59,16 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        pauseButton.SetActive(false);
+        try 
+        {
+            pauseButton.SetActive(false);
+        }
+
+        catch
+        {
+
+        }
+        
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
         
         
