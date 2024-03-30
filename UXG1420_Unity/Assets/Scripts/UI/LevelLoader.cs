@@ -26,7 +26,7 @@ public class LevelLoader : MonoBehaviour
 
     void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex==4)
+        if (SceneManager.GetActiveScene().buildIndex==69)
         {
             //NewDialogueBoxAnim();
         }
