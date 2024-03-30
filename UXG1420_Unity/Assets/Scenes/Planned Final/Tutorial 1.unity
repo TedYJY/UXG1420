@@ -6535,11 +6535,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -7416,11 +7416,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 165071037596242278, guid: 6f9bcd5f9b55a624da17665335635235, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -81.8
+      value: -66.07
       objectReference: {fileID: 0}
     - target: {fileID: 165071037596242278, guid: 6f9bcd5f9b55a624da17665335635235, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.2
+      value: -7.1
       objectReference: {fileID: 0}
     - target: {fileID: 165071037596242278, guid: 6f9bcd5f9b55a624da17665335635235, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11785,11 +11785,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1701915022544085295, guid: 9718ce274ffbf354eab22fa354771357, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -36.02
+      value: -34.79
       objectReference: {fileID: 0}
     - target: {fileID: 1701915022544085295, guid: 9718ce274ffbf354eab22fa354771357, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.15
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 1701915022544085295, guid: 9718ce274ffbf354eab22fa354771357, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11826,6 +11826,22 @@ PrefabInstance:
     - target: {fileID: 7363217940964550955, guid: 9718ce274ffbf354eab22fa354771357, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 9048964887933524228, guid: 9718ce274ffbf354eab22fa354771357, type: 3}
+      propertyPath: topLimit
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9048964887933524228, guid: 9718ce274ffbf354eab22fa354771357, type: 3}
+      propertyPath: leftLimit
+      value: -39.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9048964887933524228, guid: 9718ce274ffbf354eab22fa354771357, type: 3}
+      propertyPath: rightLimit
+      value: -34.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9048964887933524228, guid: 9718ce274ffbf354eab22fa354771357, type: 3}
+      propertyPath: bottomLimit
+      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

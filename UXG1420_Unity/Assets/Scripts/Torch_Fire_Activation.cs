@@ -5,6 +5,8 @@ using UnityEngine;
 public class Torch_Fire_Activation : MonoBehaviour
 {
     public bool Is_Active;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +30,13 @@ public class Torch_Fire_Activation : MonoBehaviour
     {
         Debug.Log("Stopping Fire");
         this.GetComponentInChildren<ParticleSystem>().Stop(true, ParticleSystemStopBehavior.StopEmitting);
+        
     }
 
     public void StartFire()
     {
         Debug.Log("Starting Fire");
         this.GetComponentInChildren<ParticleSystem>().Play(true);
+        this.GetComponent<AudioSource>().Play();
     }
 }
