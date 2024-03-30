@@ -13,8 +13,10 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] //pairs along with private objects
     private Animator DialogueAnim; //to drag the dialogueAnimation in the inspector
 
+    [SerializeField]
+    private Animator bush_Animator;
 
-    public float transitionTime = 1f;
+    public float transitionTime = 2f;
     // Update is called once per frame
 
     public GameObject pauseButton;
@@ -80,6 +82,10 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex)
     {
+        yield return new WaitForSeconds(transitionTime);
+
+        bush_Animator.SetTrigger("Start");
+
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTime);
