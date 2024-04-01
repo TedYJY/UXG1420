@@ -10,6 +10,7 @@ public class BGM_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(transform.gameObject);
         BGM_Player.PlayOneShot(BGM_Front);
         BGM_Player.PlayScheduled(AudioSettings.dspTime + BGM_Front.length);
     }
