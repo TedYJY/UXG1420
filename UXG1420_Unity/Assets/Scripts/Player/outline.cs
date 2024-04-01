@@ -18,7 +18,7 @@ public class outline : MonoBehaviour
     void Start()
     {
         outlineColor = this.gameObject.GetComponent<SpriteRenderer>();
-        Glow = this.GetComponentInChildren<Beary_Glow_Script>();
+        Glow = this.GetComponentInParent<Beary_Glow_Script>();
     }
 
     // Update is called once per frame
