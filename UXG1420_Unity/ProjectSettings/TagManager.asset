@@ -16,6 +16,7 @@ TagManager:
   - Torch
   - LevelLoader
   - DialogueManager
+  - Pause
   layers:
   - Default
   - TransparentFX
