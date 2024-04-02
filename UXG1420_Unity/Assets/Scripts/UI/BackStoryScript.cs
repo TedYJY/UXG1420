@@ -6,7 +6,7 @@ public class BackStoryScript : MonoBehaviour
 {
     public GameObject levelLoader;
     public Animator transition;
-    public float transitionTime = 1f;
+    public float transitionTime = 4f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +17,15 @@ public class BackStoryScript : MonoBehaviour
     IEnumerator CutSceneStart()
     {
         yield return new WaitForSeconds(transitionTime);
+
+        transition.SetTrigger("Next");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        transition.SetTrigger("Next");
+
+        yield return new WaitForSeconds(transitionTime);
+
         levelLoader.GetComponent<LevelLoader>().LoadNextLevel();
     }
 

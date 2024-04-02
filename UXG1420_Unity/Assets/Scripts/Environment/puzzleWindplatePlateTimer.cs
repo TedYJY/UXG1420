@@ -22,7 +22,7 @@ public class puzzleWindplatePlateTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D coll)
@@ -31,11 +31,13 @@ public class puzzleWindplatePlateTimer : MonoBehaviour
         {
             try
             {
+                Debug.Log("Press_Triggered");
                 Is_Pressed = true;
-                TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerBarrier();
+                //if (TorchCollider.GetComponent<Animator>().GetBool("Is_Animating"))
+                TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerOnlyDeactivate();
                 this.GetComponent<SpriteRenderer>().sprite = Pressed;
                 this.GetComponent<PressurePlate_Sound_Script>().PlayPush();
-                Debug.Log("Press_Triggered");
+                
             }
             catch
             {
@@ -50,11 +52,12 @@ public class puzzleWindplatePlateTimer : MonoBehaviour
         {
             try
             {
+                Debug.Log("Unpress_Triggered");
                 Is_Pressed = false;
-                TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerBarrier();
+                TorchCollider.GetComponent<Spirit_Barrier_Active_Script>().TriggerOnlyActivate();
                 this.GetComponent<SpriteRenderer>().sprite = Unpressed;
                 this.GetComponent<PressurePlate_Sound_Script>().PlayRelease();
-                Debug.Log("Unpress_Triggered");
+                
             }
 
             catch

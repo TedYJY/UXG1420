@@ -40,7 +40,7 @@ public class puzzle3x1Torch : MonoBehaviour
 
         if (tracker == 3)
         {
-            this.GetComponent<SpriteRenderer>().color = Color.green;
+            //this.GetComponent<SpriteRenderer>().color = Color.green;
 
             lPressure.GetComponent<puzzle3x1>().enabled = false;
             rPressure.GetComponent<puzzle3x1>().enabled = false;

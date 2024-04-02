@@ -42,32 +42,46 @@ public class Spirit_Barrier_Active_Script : MonoBehaviour
 
     public void TriggerOnlyActivate()
     {
+        this.GetComponent<Animator>().SetBool(Is_On_Hash, false);
+        Debug.Log("Is on to false");
         animator.SetTrigger("Fade");
+        Debug.Log("Start anim");
         this_Collider.enabled = true;
+        Debug.Log("Collider On");
         this.GetComponent<Animator>().SetBool(Is_Animating_Hash, true);
+        Debug.Log("Is anim to true");
 
 
     }
 
     public void TriggerOnlyDeactivate()
     {
+        this.GetComponent<Animator>().SetBool(Is_On_Hash, true);
+        Debug.Log("Is on to true");
         animator.SetTrigger("Fade");
+        Debug.Log("Start anim");
         this_Collider.enabled = false;
+        Debug.Log("Collider Off");
         this.GetComponent<Animator>().SetBool(Is_Animating_Hash, true);
+        Debug.Log("Is anim to true");
 
     }
 
     public void ActivateBarrier()
     {
         this.GetComponent<Animator>().SetBool(Is_On_Hash, true);
+        Debug.Log("finished anim, Is on to true");
         this.GetComponent<Animator>().SetBool(Is_Animating_Hash, false);
+        Debug.Log("Is anim to false, finished anim");
 
     }
 
     public void DeactivateBarrier() 
     {
         this.GetComponent<Animator>().SetBool(Is_On_Hash, false);
+        Debug.Log("finished anim, Is on to false");
         this.GetComponent<Animator>().SetBool(Is_Animating_Hash, false);
+        Debug.Log("Is anim to false, finished anim");
 
     }
 }

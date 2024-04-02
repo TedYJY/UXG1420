@@ -97,4 +97,11 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void RestartGameWithoutPause()
+    {
+        Debug.Log("restarting without pause");
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
