@@ -17,6 +17,8 @@ TagManager:
   - LevelLoader
   - DialogueManager
   - Pause
+  - NotDestroyed
+  - Bush_Audio
   layers:
   - Default
   - TransparentFX

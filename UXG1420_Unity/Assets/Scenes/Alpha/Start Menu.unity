@@ -169,6 +169,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1319952713505828403, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
+      propertyPath: Bush_Audio_Source
+      value: 
+      objectReference: {fileID: 978524392}
     - target: {fileID: 1581272655713670023, guid: 4f995a1fd4349ee4591b0114c6a7dd28, type: 3}
       propertyPath: m_Controller
       value: 
@@ -891,6 +895,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933346226}
   m_CullTransparentMesh: 1
+--- !u!82 &978524392 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4268138104753038177, guid: 7c174741293209e49844479185351029, type: 3}
+  m_PrefabInstance: {fileID: 1238297601}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1122840534
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,6 +1254,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BGM_Music_Handler
       objectReference: {fileID: 0}
+    - target: {fileID: 1993396426037990422, guid: 7c174741293209e49844479185351029, type: 3}
+      propertyPath: BGM_Loop
+      value: 
+      objectReference: {fileID: 8300000, guid: b30b5686fb01a30428e1598e5e1110ff, type: 3}
+    - target: {fileID: 1993396426037990422, guid: 7c174741293209e49844479185351029, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3688490105719428039, guid: 7c174741293209e49844479185351029, type: 3}
       propertyPath: m_LocalPosition.x
       value: -37.88338
@@ -1285,7 +1302,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4268138104753038177, guid: 7c174741293209e49844479185351029, type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268138104753038177, guid: 7c174741293209e49844479185351029, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2461005698925578491, guid: 7c174741293209e49844479185351029, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

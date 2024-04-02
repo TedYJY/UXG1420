@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class finishingPointScript : MonoBehaviour
+public class Tut1_ObjectiveTrigger : MonoBehaviour
 {
-    public LevelLoader LevelLoader;
-
-    private AudioSource Completion_Audio;
+    [SerializeField]
+    private GameObject ObjectiveHandler;
 
     // Start is called before the first frame update
     void Start()
     {
-        Completion_Audio = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -24,8 +23,8 @@ public class finishingPointScript : MonoBehaviour
     {
         if (collision.tag == "BigPlayer")
         {
-            LevelLoader.LoadNextLevel();
-            Completion_Audio.Play();
+            ObjectiveHandler.GetComponent<Tut1_ObjectiveHandler>().ManualChangeObjective();
+            this.gameObject.SetActive(false);
         }
     }
 }
