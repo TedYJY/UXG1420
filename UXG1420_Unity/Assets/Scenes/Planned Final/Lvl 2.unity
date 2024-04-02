@@ -20660,8 +20660,8 @@ MonoBehaviour:
   dialogue:
     name: Ghosty
     sentences:
-    - There seem to be a torch on the other side.
-    - I should fly over to take a look.
+    - I need to find a way to hold this pressure plate down...
+    - The torch on the other side might help
   dialogueTracker: 1
 --- !u!1 &1717413009
 GameObject:

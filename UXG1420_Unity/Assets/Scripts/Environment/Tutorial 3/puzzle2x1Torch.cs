@@ -39,7 +39,7 @@ public class puzzle2x1Torch : MonoBehaviour
 
         if (tracker == 2)
         {
-            this.GetComponent<SpriteRenderer>().color = Color.green;
+            //this.GetComponent<SpriteRenderer>().color = Color.green;
             Pressure.GetComponent<puzzle2x1>().enabled = false;
             this.GetComponent<puzzle2x1Torch>().enabled = false;
 
