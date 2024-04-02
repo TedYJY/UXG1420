@@ -11,7 +11,7 @@ public class BGM_Script : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
-        DontDestroyOnLoad(this.transform.GetChild(0).gameObject);
+        //DontDestroyOnLoad(this.transform.GetChild(0).gameObject);
  
         BGM_Player.PlayOneShot(BGM_Front);
         Debug.Log("playingfront");

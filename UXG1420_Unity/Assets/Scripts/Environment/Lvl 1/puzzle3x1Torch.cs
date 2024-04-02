@@ -26,7 +26,7 @@ public class puzzle3x1Torch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        tracker = 0;
     }
 
     // Update is called once per frame
