@@ -5366,6 +5366,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7016926720374084021, guid: e236654dfd123cf4a9f123984172db19, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20661,7 +20665,7 @@ MonoBehaviour:
     name: Ghosty
     sentences:
     - I need to find a way to hold this pressure plate down...
-    - The torch on the other side might help
+    - The torch on the other side might help.
   dialogueTracker: 1
 --- !u!1 &1717413009
 GameObject:
@@ -23547,11 +23551,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectiveNumber: 0
-  objective1: {fileID: 0}
-  objective2: {fileID: 0}
-  objective3: {fileID: 0}
-  objective4: {fileID: 0}
-  objective5: {fileID: 0}
+  objective1: {fileID: 1135258551}
+  objective2: {fileID: 155731130}
+  objective3: {fileID: 1136089439}
+  objective4: {fileID: 1001048645}
+  objective5: {fileID: 1422001382}
   objective2Trigger: {fileID: 1339380624}
 --- !u!1 &2014690319
 GameObject:
